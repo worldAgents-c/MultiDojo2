@@ -1,6 +1,6 @@
 {
   "training_index_sha256": "ea6216ccc57301a4bf268a9417b82988e99a2d2bf7c8c756869c43c178612554",
-  "logo_sha256": "bc7ea02aece70cd87334fffc6ac923a83bed49abc1988f85168de7a6f546cd7e",
+  "logo_sha256": "0fdbf6b9845749e31cad1559fdceeb5d4ef201846bd2b7f1cb2cdde6f5acb2c4",
   "dataset_example": {
     "task": "IsomorphicDualArm/BananaAppleToPlates",
     "episode": "2026-10-13_11_52_48_159487",
@@ -59,7 +59,7 @@
   "graphics": "Original code-rendered presentation assets",
   "rsi_diagram": "Workflow for integrating recommendations with a training pipeline",
   "files": {
-    "readme-hero.png": "54002f591567abacefa3cb68bc20bb0e51e112b22d9058022b1e19c902c64307",
+    "readme-hero.png": "64904d10d200e5598cd817114d9fa5794da346afbbd657012274fce534474d30",
     "dataset-perspectives.png": "dec5da28d0e72fe9a08604f3c9710fd20270c37466e7d8afb89a061016250791",
     "rsi-workflow.png": "8e7efacfb69f1ebc4d9e4c6c60253329bca3251f78a7aec4dfe93b3e5d245242"
   }
