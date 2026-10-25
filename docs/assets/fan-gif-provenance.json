@@ -1,0 +1,58 @@
+{
+  "purpose": "GitHub README animated previews linked to the reviewed MP4 excerpts",
+  "simulation_demonstrations": true,
+  "not_scored_task_results": true,
+  "scenes": {
+    "isomorphic": {
+      "video": "fan-isomorphic.mp4",
+      "video_sha256": "29a14632390fdb0b15a38c34d2ae16567d290ef830c75c18b6f565caefec913a",
+      "gif": "fan-isomorphic.gif",
+      "gif_sha256": "f77beea119d7f7b7560ef2ae994a388de9eee3741c3c2954216317a8eade3c35",
+      "dimensions": [
+        960,
+        432
+      ],
+      "frames": 192,
+      "fps": 8,
+      "duration_seconds": 24,
+      "decoded_all_frames": true,
+      "contains_entire_source_excerpt": true,
+      "scene_cropped": false,
+      "source_video_unchanged": true
+    },
+    "heterogeneous": {
+      "video": "fan-heterogeneous.mp4",
+      "video_sha256": "966ba0a07d88a0b47bf38b2541c064c10abf241fb61ce96b18b7f5e8b25c0030",
+      "gif": "fan-heterogeneous.gif",
+      "gif_sha256": "4751788f640d003abc0b133e9b2001e1fe0e51ef61e1903b0b063df7102bdf5e",
+      "dimensions": [
+        960,
+        432
+      ],
+      "frames": 192,
+      "fps": 8,
+      "duration_seconds": 24,
+      "decoded_all_frames": true,
+      "contains_entire_source_excerpt": true,
+      "scene_cropped": false,
+      "source_video_unchanged": true
+    },
+    "humanoid": {
+      "video": "fan-humanoid.mp4",
+      "video_sha256": "5f0591806ab3eb87cb1407ce9004011624a7f0aa2764f4bf09cbc5a788999706",
+      "gif": "fan-humanoid.gif",
+      "gif_sha256": "aef2e47616a646a1a3acdbd80e24ed5685013eb03bc3d9b615ed3da5ef01970a",
+      "dimensions": [
+        960,
+        432
+      ],
+      "frames": 192,
+      "fps": 8,
+      "duration_seconds": 24,
+      "decoded_all_frames": true,
+      "contains_entire_source_excerpt": true,
+      "scene_cropped": false,
+      "source_video_unchanged": true
+    }
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "source_master_sha256": "fdd0f8dde4993ddee2c1af9ad34a0a6cf62922ceb149e09444a690519ea308a2",
+  "source_interval_seconds": [
+    30,
+    84
+  ],
+  "dimensions": [
+    3840,
+    2160
+  ],
+  "duration_seconds": 54,
+  "fps": 30,
+  "training_episode_videos": 2000,
+  "fan_exhibition_videos": 3,
+  "simultaneous_views_approximately": 216,
+  "full_scroll_period_included": true,
+  "original_scene_colors_and_backgrounds_preserved": true,
+  "editorial_header_replaced": true,
+  "scene_region_unchanged_y_pixels": [
+    420,
+    2160
+  ],
+  "playback": "Edited training demonstrations; not submitted policy results",
+  "gif_interval_seconds": [
+    8,
+    14
+  ],
+  "gif_dimensions": [
+    960,
+    540
+  ],
+  "gif_fps": 6,
+  "files": {
+    "trajectory-wall.mp4": "5a83905c74229d59796133624d45d87d62fd407fbfedfeda4ab406e73f96144d",
+    "trajectory-wall.gif": "5240c08a4ba73ab31f30d37d991ed241acbba2cd99cd651e53a6305326a2c85f",
+    "trajectory-wall.jpg": "38cfad031299b1f00acae4f5b597edb384259782713fb4ffc54854b5309ce3e6"
+  }
+}

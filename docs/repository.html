@@ -1,0 +1,251 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Multidojo² · GitHub README Preview</title><link rel="icon" href="assets/favicon.png"><link rel="stylesheet" href="repository.css"></head><body>
+<div class="preview-bar"><span>Multidojo² · GitHub README 预览</span><a href="./">项目网站 ↗</a></div>
+<header class="repo-header"><div class="repo-title"><img src="assets/mark.png" alt=""><span>Multidojo²</span><span class="label">Research benchmark</span></div><nav class="tabs" aria-label="Project navigation"><span class="selected">README</span><a href="#dataset">Dataset</a><a href="#evaluation">Evaluation</a><a href="./">Project website ↗</a></nav></header>
+<main class="repo-layout"><article class="readme"><div class="file-title"><span>README.md</span><a href="README.md" download>Raw Markdown ↓</a></div><div class="markdown-body"><p align="center"><img src="assets/mark.png" width="64" alt="Multidojo² logo"></p>
+
+<h1 align="center">Multidojo²</h1>
+
+<p align="center"><strong>A Benchmark for Multi-Robot Collaboration</strong></p>
+
+<p align="center"><a href="index.html">Project website</a> · <a href="#dataset">Dataset</a> · <a href="#tasks">Tasks</a> · <a href="#evaluation">Evaluation</a> · <a href="#rsi">RSI</a> · <a href="#quick-start">Get started</a></p>
+
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Training demonstrations</th>
+<th style="text-align: center;">Task families</th>
+<th style="text-align: center;">Robot teams</th>
+<th style="text-align: center;">Evaluation scenes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><strong>2,000</strong></td>
+<td style="text-align: center;"><strong>20</strong> · 100 demos each</td>
+<td style="text-align: center;"><strong>2 / 3 / 4 / 8 arms</strong></td>
+<td style="text-align: center;"><strong>2,000</strong> · 100 per task</td>
+</tr>
+</tbody>
+</table>
+<h2 id="collaboration-in-action">Collaboration in action</h2>
+<p><a href="assets/fan-isomorphic.mp4"><img alt="Ten homogeneous robot arms assemble a fan" src="assets/fan-isomorphic.gif" /></a></p>
+<p align="center"><a href="assets/fan-isomorphic.mp4">▶ Watch ten-arm fan assembly</a> · <a href="assets/collaboration-overview.mp4">Watch the collection overview</a></p>
+
+<p>Ten matching arms share an assembly sequence, transferring a workpiece between stations and coordinating each step toward a completed fan.</p>
+<h2 id="dataset">Dataset</h2>
+<p><strong>A balanced collection of 2,000 reviewed simulation demonstrations across 20 collaborative manipulation tasks.</strong> Each task contributes 100 episodes, covering handovers, relays, shared transport, ordered stacking, and parallel manipulation.</p>
+<p><a href="assets/dataset-perspectives.png"><img alt="Four synchronized camera views from one recorded episode, aligned with robot states and actions" src="assets/dataset-perspectives.png" /></a></p>
+<ul>
+<li><strong>See the team and the local interaction.</strong> Every arm has a first-person view, accompanied by third-person views of the shared workspace. Follow grasping details and inter-robot coordination on the same timeline.</li>
+<li><strong>Learn from aligned observations and actions.</strong> RGB, robot state, native joint commands, next observations, and camera calibration preserve the connection between what each robot sees and how it moves.</li>
+<li><strong>Study collaboration across robot designs.</strong> Homogeneous and heterogeneous teams span two, three, four, and eight arms. Native joint orders, units, and actuator masks retain each robot's control semantics.</li>
+<li><strong>Explore meaningful scene variation.</strong> Object and goal positions, workspaces, and scene appearance vary while preserving the task's manipulation objective.</li>
+<li><strong>Use physically reviewed episodes.</strong> Acceptance checks cover grasping and contact, object support, placement stability, arm-to-arm collision constraints, synchronized images, and file integrity.</li>
+</ul>
+<p><a href="PROJECT.md#dataset">Data format &amp; loader example →</a> · <a href="assets/task-catalog.json">Machine-readable task catalog →</a></p>
+<p><br></p>
+<h2 id="collaboration-across-embodiments">Collaboration across embodiments</h2>
+<h3 id="heterogeneous-robot-teams">Heterogeneous robot teams</h3>
+<p><a href="assets/fan-heterogeneous.mp4"><img alt="Different robot arms collaborate on fan assembly" src="assets/fan-heterogeneous.gif" /></a></p>
+<p>Different manipulators take complementary roles in the same assembly workflow, coordinating transfers and operations around a shared workpiece.</p>
+<p align="center"><a href="assets/fan-heterogeneous.mp4">▶ Watch heterogeneous fan assembly</a></p>
+
+<p><br></p>
+<h3 id="humanoids-and-manipulators">Humanoids and manipulators</h3>
+<p><a href="assets/fan-humanoid.mp4"><img alt="Humanoid robots and manipulators work together on fan assembly" src="assets/fan-humanoid.gif" /></a></p>
+<p>Humanoids and robot arms extend the collaboration across body types, working together through the assembly sequence.</p>
+<p align="center"><a href="assets/fan-humanoid.mp4">▶ Watch humanoid–manipulator collaboration</a></p>
+
+<p><em>Research showcases · edited simulation footage at 3× playback speed. The fan-assembly teams complement the 20-task manipulation suite described below.</em></p>
+<h2 id="all-to-one-one-to-all">All-to-One. One-to-All.</h2>
+<p><strong>Robot automation scales through collaboration.</strong> Shared tasks call for a shared understanding of the workspace, coordinated timing, and actions suited to each robot's role.</p>
+<p><strong>All-to-One</strong> brings observations and states into a common view of the world. <strong>One-to-All</strong> turns that shared understanding into coordinated actions across different robots. <strong>One World, One Model</strong> expresses the research vision behind this approach.</p>
+<p><img alt="All-to-One brings robot observations into shared world understanding; One-to-All coordinates actions across robot teams" src="assets/collaboration-principle.png" /></p>
+<h2 id="tasks">Tasks</h2>
+<p>The suite spans <strong>five collaboration skills</strong>: handover, relay, shared lifting, stacking, and parallel manipulation. Each task pairs <strong>100 training demonstrations</strong> with <strong>100 reproducible evaluation scenes</strong>.</p>
+<table>
+<thead>
+<tr>
+<th>ID</th>
+<th>Task</th>
+<th>Team</th>
+<th>Skill</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>00</td>
+<td>Banana handover into a pan</td>
+<td>Homogeneous · 2 arms</td>
+<td>Handover</td>
+</tr>
+<tr>
+<td>01</td>
+<td>Banana and apple to plates</td>
+<td>Homogeneous · 2 arms</td>
+<td>Parallel manipulation</td>
+</tr>
+<tr>
+<td>02</td>
+<td>Collaborative carton transport</td>
+<td>Homogeneous · 2 arms</td>
+<td>Shared lifting</td>
+</tr>
+<tr>
+<td>03</td>
+<td>Two-stage cup relay</td>
+<td>Homogeneous · 2 arms</td>
+<td>Relay</td>
+</tr>
+<tr>
+<td>04</td>
+<td>Place and stack blocks</td>
+<td>Homogeneous · 2 arms</td>
+<td>Stacking</td>
+</tr>
+<tr>
+<td>05</td>
+<td>Franka–Piper long-block handover</td>
+<td>Heterogeneous · 2 arms</td>
+<td>Handover</td>
+</tr>
+<tr>
+<td>06</td>
+<td>Three-arm block relay</td>
+<td>Homogeneous · 3 arms</td>
+<td>Relay</td>
+</tr>
+<tr>
+<td>07</td>
+<td>Apples to baskets</td>
+<td>Homogeneous · 4 arms</td>
+<td>Parallel manipulation</td>
+</tr>
+<tr>
+<td>08</td>
+<td>Four-arm block relay</td>
+<td>Homogeneous · 4 arms</td>
+<td>Relay</td>
+</tr>
+<tr>
+<td>09</td>
+<td>Ordered four-color stacking</td>
+<td>Homogeneous · 4 arms</td>
+<td>Stacking</td>
+</tr>
+<tr>
+<td>10</td>
+<td>Cookies to boxes</td>
+<td>Homogeneous · 4 arms</td>
+<td>Parallel manipulation</td>
+</tr>
+<tr>
+<td>11</td>
+<td>Household objects to boxes</td>
+<td>Homogeneous · 4 arms</td>
+<td>Parallel manipulation</td>
+</tr>
+<tr>
+<td>12</td>
+<td>Eight-arm blocks to boxes</td>
+<td>Homogeneous · 8 arms</td>
+<td>Parallel manipulation</td>
+</tr>
+<tr>
+<td>13</td>
+<td>Three-arm block relay</td>
+<td>Heterogeneous · 3 arms</td>
+<td>Relay</td>
+</tr>
+<tr>
+<td>14</td>
+<td>Four-arm block relay</td>
+<td>Heterogeneous · 4 arms</td>
+<td>Relay</td>
+</tr>
+<tr>
+<td>15</td>
+<td>Eight-arm blocks to boxes</td>
+<td>Heterogeneous · 8 arms</td>
+<td>Parallel manipulation</td>
+</tr>
+<tr>
+<td>16</td>
+<td>Three-arm banana relay</td>
+<td>Heterogeneous · 3 arms</td>
+<td>Relay</td>
+</tr>
+<tr>
+<td>17</td>
+<td>Three-arm white-cup relay</td>
+<td>Heterogeneous · 3 arms</td>
+<td>Relay</td>
+</tr>
+<tr>
+<td>18</td>
+<td>Four-arm banana relay</td>
+<td>Heterogeneous · 4 arms</td>
+<td>Relay</td>
+</tr>
+<tr>
+<td>19</td>
+<td>Four-arm white-cup relay</td>
+<td>Heterogeneous · 4 arms</td>
+<td>Relay</td>
+</tr>
+</tbody>
+</table>
+<details>
+<summary>Canonical task identifiers</summary>
+<pre>00  BananaDualArmHandover
+01  IsomorphicDualArm/BananaAppleToPlates
+02  IsomorphicDualArm/CollabLiftLongBox
+03  IsomorphicDualArm/CupLeftToMidToRight
+04  IsomorphicDualArm/LeftPlaceRightStack
+05  HeterogeneousDualArm/FrankPiperBananaHandover
+06  IsomorphicTripleArm/BlockZoneRelay
+07  IsomorphicQuadArm/AppleToBasket
+08  IsomorphicQuadArm/BlockZoneRelay
+09  IsomorphicQuadArm/ColorBlockCenterStack
+10  IsomorphicQuadArm/CookieToBox
+11  IsomorphicQuadArm/HouseholdToBox
+12  IsomorphicOctaArm/BlocksToBoxes
+13  HeterogeneousTripleArm/BlockZoneRelay
+14  HeterogeneousQuadArm/BlockZoneRelay
+15  HeterogeneousOctaArm/BlocksToBoxes
+16  HeterogeneousTripleArm/BananaZoneRelay
+17  HeterogeneousTripleArm/WhiteCupZoneRelay
+18  HeterogeneousQuadArm/BananaZoneRelay
+19  HeterogeneousQuadArm/WhiteCupZoneRelay</pre>
+</details>
+
+<p>The <a href="assets/task-catalog.json">task catalog</a> connects IDs <strong>00–19</strong> with task names, camera sets, and episode ranges in the training index. <a href="PROJECT.md#task-ids">Task and identifier guide →</a></p>
+<h2 id="evaluation">Evaluation</h2>
+<p><strong>Test collaboration under controlled scene variation.</strong> Object and goal positions and permitted appearance changes vary across 100 fixed randomized scenes per task, preserving the task instruction and physical requirements.</p>
+<pre><code class="language-text">Task success rate = successful trials / 100
+Overall score = 100 × mean(task success rate across all 20 tasks)
+</code></pre>
+<p>Success combines task completion with the required grasp, transfer order, support, destination, stability, and collision constraints. Equal weighting across task families makes results easy to compare, while recorded execution evidence supports reproducibility and review.</p>
+<p><a href="PROJECT.md#evaluation">Evaluation protocol &amp; policy integration →</a></p>
+<h2 id="rsi">RSI</h2>
+<p><strong>Turn replay evidence into a focused training objective.</strong> RSI connects execution records with failure explanations and concrete follow-up tasks, helping researchers decide what a policy should practise next.</p>
+<p><a href="assets/rsi-workflow.png"><img alt="RSI workflow: replay, diagnosis, task specification, physical validation, training, and re-evaluation" src="assets/rsi-workflow.png" /></a></p>
+<p>A training recommendation specifies the participating robots, object, initial and goal ranges, collaboration order, motion constraints, and success conditions. Candidate scenes pass native physical validation before entering training; re-evaluation measures the effect of the next training round.</p>
+<p>Use the <a href="PROJECT.md#rsi">RSI workflow guide</a> to connect scene recommendations to your training pipeline. <a href="RSI-USER.zh.md">RSI interface guide / 中文 →</a></p>
+<h2 id="quick-start">Quick start</h2>
+<p>Preview the project with <strong>Python 3.10+</strong>:</p>
+<pre><code class="language-sh">python3 scripts/check_release.py
+python3 -m http.server 8000 --bind 127.0.0.1 --directory .
+</code></pre>
+<p>Open <a href="http://localhost:8000/">localhost:8000</a>, then explore the dataset, task catalog, and evaluation guide.</p>
+<p><a href="PROJECT.md">Research &amp; usage guide</a> · <a href="RELATED_WORK.md">Related work</a> · <a href="PROJECT.md#deployment">Deployment guide</a></p>
+<p>For questions or contributions, include the task ID, episode or trial ID, and the steps needed to reproduce the issue.</p>
+<p>Website code and documentation: <a href="LICENSE">MIT License</a> · <a href="NOTICE.md">Attribution</a>.</p>
+<p><br></p>
+<p><a id="one-collection-thousands-of-collaborative-moments"></a></p>
+<h2 id="2000-trajectories-in-motion">2,000 trajectories in motion</h2>
+<p><a href="assets/trajectory-wall.mp4"><img alt="A continuously scrolling gallery of collaborative robot scenes" src="assets/trajectory-wall.gif" /></a></p>
+<p align="center"><a href="assets/trajectory-wall.mp4">▶ Explore the full collection · 4K · 54 seconds</a></p>
+
+<p>From dual-arm handovers to eight-arm workstations: a continuous tour of the training collection, with approximately <strong>216 scenes on screen at once</strong>, accompanied by assembly showcases.</p></div></article>
+<aside class="aside"><section class="about"><p class="aside-kicker">MULTIDOJO²</p><h2>Learning to collaborate.</h2><p>Multi-view demonstrations and reproducible evaluation for diverse robot teams.</p><a class="aside-action" href="#dataset">Explore the dataset <span>↗</span></a><div class="topics"><span>multi-robot</span><span>dataset</span><span>embodied-ai</span><span>RSI</span></div></section><section><h2>At a glance</h2><dl><dt>Training episodes</dt><dd>2,000</dd><dt>Task families</dt><dd>20</dd><dt>Arms per team</dt><dd>2 / 3 / 4 / 8</dd><dt>Trials per task</dt><dd>100</dd></dl></section><section><h2>Inside the dataset</h2><ul class="aside-features"><li>Every arm's first-person view</li><li>Shared third-person views</li><li>Aligned states and actions</li><li>Physical acceptance records</li></ul></section><nav class="section-nav" aria-label="README contents"><h2>Explore</h2><a href="#collaboration-in-action">Collaboration in action</a><a href="#dataset">Dataset</a><a href="#collaboration-across-embodiments">Robot teams</a><a href="#tasks">Task suite</a><a href="#evaluation">Evaluation</a><a href="#rsi">RSI workflow</a><a href="#quick-start">Get started</a><a href="#2000-trajectories-in-motion">Scene gallery</a></nav><div class="aside-principle"><strong>All-to-One.<br>One-to-All.</strong><p>A shared world.<br>Coordinated action.</p></div></aside></main><footer class="footer"><strong>Multidojo²</strong><span>A Benchmark for Multi-Robot Collaboration</span></footer></body></html>

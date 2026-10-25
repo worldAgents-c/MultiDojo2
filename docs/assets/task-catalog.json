@@ -1,0 +1,571 @@
+{
+  "schema": "multidojo-public-task-catalog-v1",
+  "suite_sha256": "96b17a4b84abfe15f44ebe4d038381ec4e2e5e96e7ef2872f2885909abfc9ccb",
+  "training_index_sha256": "ea6216ccc57301a4bf268a9417b82988e99a2d2bf7c8c756869c43c178612554",
+  "index_row_semantics": "One-based line numbers in the identified train.jsonl; not numeric episode folder IDs.",
+  "task_count": 20,
+  "training_episodes": 2000,
+  "exam_scenes": 2000,
+  "tasks": [
+    {
+      "id": "00",
+      "task": "BananaDualArmHandover",
+      "title": "Banana handover into a pan",
+      "title_zh": "双臂香蕉空中交接入锅",
+      "family": "handover",
+      "arms": 2,
+      "team": "homogeneous",
+      "training_episodes": 100,
+      "exam_scenes": 100,
+      "training_index_rows_1_based": [
+        [
+          1,
+          100
+        ]
+      ],
+      "view_sets": [
+        [
+          "obs_camera",
+          "obs_camera_2",
+          "wrist_1",
+          "wrist_2"
+        ]
+      ]
+    },
+    {
+      "id": "01",
+      "task": "IsomorphicDualArm/BananaAppleToPlates",
+      "title": "Banana and apple to plates",
+      "title_zh": "双臂香蕉苹果入盘",
+      "family": "independent",
+      "arms": 2,
+      "team": "homogeneous",
+      "training_episodes": 100,
+      "exam_scenes": 100,
+      "training_index_rows_1_based": [
+        [
+          101,
+          200
+        ]
+      ],
+      "view_sets": [
+        [
+          "obs_camera",
+          "obs_camera_2",
+          "wrist_1",
+          "wrist_2"
+        ]
+      ]
+    },
+    {
+      "id": "02",
+      "task": "IsomorphicDualArm/CollabLiftLongBox",
+      "title": "Collaborative carton transport",
+      "title_zh": "双臂共同搬纸箱",
+      "family": "collaborative_lift",
+      "arms": 2,
+      "team": "homogeneous",
+      "training_episodes": 100,
+      "exam_scenes": 100,
+      "training_index_rows_1_based": [
+        [
+          201,
+          300
+        ]
+      ],
+      "view_sets": [
+        [
+          "obs_camera",
+          "obs_camera_2",
+          "wrist_1",
+          "wrist_2"
+        ]
+      ]
+    },
+    {
+      "id": "03",
+      "task": "IsomorphicDualArm/CupLeftToMidToRight",
+      "title": "Two-stage cup relay",
+      "title_zh": "双臂杯子两段接力",
+      "family": "relay",
+      "arms": 2,
+      "team": "homogeneous",
+      "training_episodes": 100,
+      "exam_scenes": 100,
+      "training_index_rows_1_based": [
+        [
+          301,
+          400
+        ]
+      ],
+      "view_sets": [
+        [
+          "obs_camera",
+          "obs_camera_2",
+          "wrist_1",
+          "wrist_2"
+        ]
+      ]
+    },
+    {
+      "id": "04",
+      "task": "IsomorphicDualArm/LeftPlaceRightStack",
+      "title": "Place and stack blocks",
+      "title_zh": "双臂积木叠放",
+      "family": "stack",
+      "arms": 2,
+      "team": "homogeneous",
+      "training_episodes": 100,
+      "exam_scenes": 100,
+      "training_index_rows_1_based": [
+        [
+          401,
+          500
+        ]
+      ],
+      "view_sets": [
+        [
+          "obs_camera",
+          "obs_camera_2",
+          "wrist_1",
+          "wrist_2"
+        ]
+      ]
+    },
+    {
+      "id": "05",
+      "task": "HeterogeneousDualArm/FrankPiperBananaHandover",
+      "title": "Franka–Piper long-block handover",
+      "title_zh": "Franka/Piper 长方块空中交接",
+      "family": "handover",
+      "arms": 2,
+      "team": "heterogeneous",
+      "training_episodes": 100,
+      "exam_scenes": 100,
+      "training_index_rows_1_based": [
+        [
+          501,
+          600
+        ]
+      ],
+      "view_sets": [
+        [
+          "obs_camera",
+          "obs_camera_2",
+          "wrist_1",
+          "wrist_2"
+        ]
+      ]
+    },
+    {
+      "id": "06",
+      "task": "IsomorphicTripleArm/BlockZoneRelay",
+      "title": "Three-arm block relay",
+      "title_zh": "同构三臂方块接力",
+      "family": "relay",
+      "arms": 3,
+      "team": "homogeneous",
+      "training_episodes": 100,
+      "exam_scenes": 100,
+      "training_index_rows_1_based": [
+        [
+          601,
+          700
+        ]
+      ],
+      "view_sets": [
+        [
+          "obs_camera",
+          "obs_camera_2",
+          "wrist_1",
+          "wrist_2",
+          "wrist_3"
+        ]
+      ]
+    },
+    {
+      "id": "07",
+      "task": "IsomorphicQuadArm/AppleToBasket",
+      "title": "Apples to baskets",
+      "title_zh": "同构四臂苹果入篮",
+      "family": "independent",
+      "arms": 4,
+      "team": "homogeneous",
+      "training_episodes": 100,
+      "exam_scenes": 100,
+      "training_index_rows_1_based": [
+        [
+          701,
+          800
+        ]
+      ],
+      "view_sets": [
+        [
+          "obs_camera",
+          "obs_camera_2",
+          "station_1",
+          "station_2",
+          "station_3",
+          "station_4",
+          "wrist_1",
+          "wrist_2",
+          "wrist_3",
+          "wrist_4"
+        ]
+      ]
+    },
+    {
+      "id": "08",
+      "task": "IsomorphicQuadArm/BlockZoneRelay",
+      "title": "Four-arm block relay",
+      "title_zh": "同构四臂方块接力",
+      "family": "relay",
+      "arms": 4,
+      "team": "homogeneous",
+      "training_episodes": 100,
+      "exam_scenes": 100,
+      "training_index_rows_1_based": [
+        [
+          801,
+          900
+        ]
+      ],
+      "view_sets": [
+        [
+          "obs_camera",
+          "obs_camera_2",
+          "wrist_1",
+          "wrist_2",
+          "wrist_3",
+          "wrist_4"
+        ]
+      ]
+    },
+    {
+      "id": "09",
+      "task": "IsomorphicQuadArm/ColorBlockCenterStack",
+      "title": "Ordered four-color stacking",
+      "title_zh": "同构四臂四色叠放",
+      "family": "stack",
+      "arms": 4,
+      "team": "homogeneous",
+      "training_episodes": 100,
+      "exam_scenes": 100,
+      "training_index_rows_1_based": [
+        [
+          901,
+          1000
+        ]
+      ],
+      "view_sets": [
+        [
+          "obs_camera",
+          "obs_camera_2",
+          "wrist_1",
+          "wrist_2",
+          "wrist_3",
+          "wrist_4"
+        ]
+      ]
+    },
+    {
+      "id": "10",
+      "task": "IsomorphicQuadArm/CookieToBox",
+      "title": "Cookies to boxes",
+      "title_zh": "同构四臂饼干入盒",
+      "family": "independent",
+      "arms": 4,
+      "team": "homogeneous",
+      "training_episodes": 100,
+      "exam_scenes": 100,
+      "training_index_rows_1_based": [
+        [
+          1001,
+          1100
+        ]
+      ],
+      "view_sets": [
+        [
+          "obs_camera",
+          "obs_camera_2",
+          "station_1",
+          "station_2",
+          "station_3",
+          "station_4",
+          "wrist_1",
+          "wrist_2",
+          "wrist_3",
+          "wrist_4"
+        ]
+      ]
+    },
+    {
+      "id": "11",
+      "task": "IsomorphicQuadArm/HouseholdToBox",
+      "title": "Household objects to boxes",
+      "title_zh": "同构四臂日用品入盒",
+      "family": "independent",
+      "arms": 4,
+      "team": "homogeneous",
+      "training_episodes": 100,
+      "exam_scenes": 100,
+      "training_index_rows_1_based": [
+        [
+          1101,
+          1200
+        ]
+      ],
+      "view_sets": [
+        [
+          "obs_camera",
+          "obs_camera_2",
+          "station_1",
+          "station_2",
+          "station_3",
+          "station_4",
+          "wrist_1",
+          "wrist_2",
+          "wrist_3",
+          "wrist_4"
+        ]
+      ]
+    },
+    {
+      "id": "12",
+      "task": "IsomorphicOctaArm/BlocksToBoxes",
+      "title": "Eight-arm blocks to boxes",
+      "title_zh": "同构八臂方块入盒",
+      "family": "independent",
+      "arms": 8,
+      "team": "homogeneous",
+      "training_episodes": 100,
+      "exam_scenes": 100,
+      "training_index_rows_1_based": [
+        [
+          1201,
+          1300
+        ]
+      ],
+      "view_sets": [
+        [
+          "obs_camera",
+          "obs_camera_2",
+          "station_1",
+          "station_2",
+          "station_3",
+          "station_4",
+          "station_5",
+          "station_6",
+          "station_7",
+          "station_8",
+          "wrist_1",
+          "wrist_2",
+          "wrist_3",
+          "wrist_4",
+          "wrist_5",
+          "wrist_6",
+          "wrist_7",
+          "wrist_8"
+        ]
+      ]
+    },
+    {
+      "id": "13",
+      "task": "HeterogeneousTripleArm/BlockZoneRelay",
+      "title": "Three-arm block relay",
+      "title_zh": "异构三臂方块接力",
+      "family": "relay",
+      "arms": 3,
+      "team": "heterogeneous",
+      "training_episodes": 100,
+      "exam_scenes": 100,
+      "training_index_rows_1_based": [
+        [
+          1301,
+          1400
+        ]
+      ],
+      "view_sets": [
+        [
+          "obs_camera",
+          "obs_camera_2",
+          "wrist_1",
+          "wrist_2",
+          "wrist_3"
+        ]
+      ]
+    },
+    {
+      "id": "14",
+      "task": "HeterogeneousQuadArm/BlockZoneRelay",
+      "title": "Four-arm block relay",
+      "title_zh": "异构四臂方块接力",
+      "family": "relay",
+      "arms": 4,
+      "team": "heterogeneous",
+      "training_episodes": 100,
+      "exam_scenes": 100,
+      "training_index_rows_1_based": [
+        [
+          1401,
+          1500
+        ]
+      ],
+      "view_sets": [
+        [
+          "obs_camera",
+          "obs_camera_2",
+          "wrist_1",
+          "wrist_2",
+          "wrist_3",
+          "wrist_4"
+        ]
+      ]
+    },
+    {
+      "id": "15",
+      "task": "HeterogeneousOctaArm/BlocksToBoxes",
+      "title": "Eight-arm blocks to boxes",
+      "title_zh": "异构八臂方块入盒",
+      "family": "independent",
+      "arms": 8,
+      "team": "heterogeneous",
+      "training_episodes": 100,
+      "exam_scenes": 100,
+      "training_index_rows_1_based": [
+        [
+          1501,
+          1600
+        ]
+      ],
+      "view_sets": [
+        [
+          "obs_camera",
+          "obs_camera_2",
+          "station_1",
+          "station_2",
+          "station_3",
+          "station_4",
+          "station_5",
+          "station_6",
+          "station_7",
+          "station_8",
+          "wrist_1",
+          "wrist_2",
+          "wrist_3",
+          "wrist_4",
+          "wrist_5",
+          "wrist_6",
+          "wrist_7",
+          "wrist_8"
+        ]
+      ]
+    },
+    {
+      "id": "16",
+      "task": "HeterogeneousTripleArm/BananaZoneRelay",
+      "title": "Three-arm banana relay",
+      "title_zh": "异构三臂香蕉接力",
+      "family": "relay",
+      "arms": 3,
+      "team": "heterogeneous",
+      "training_episodes": 100,
+      "exam_scenes": 100,
+      "training_index_rows_1_based": [
+        [
+          1601,
+          1700
+        ]
+      ],
+      "view_sets": [
+        [
+          "obs_camera",
+          "obs_camera_2",
+          "wrist_1",
+          "wrist_2",
+          "wrist_3"
+        ]
+      ]
+    },
+    {
+      "id": "17",
+      "task": "HeterogeneousTripleArm/WhiteCupZoneRelay",
+      "title": "Three-arm white-cup relay",
+      "title_zh": "异构三臂白杯接力",
+      "family": "relay",
+      "arms": 3,
+      "team": "heterogeneous",
+      "training_episodes": 100,
+      "exam_scenes": 100,
+      "training_index_rows_1_based": [
+        [
+          1701,
+          1800
+        ]
+      ],
+      "view_sets": [
+        [
+          "obs_camera",
+          "obs_camera_2",
+          "wrist_1",
+          "wrist_2",
+          "wrist_3"
+        ]
+      ]
+    },
+    {
+      "id": "18",
+      "task": "HeterogeneousQuadArm/BananaZoneRelay",
+      "title": "Four-arm banana relay",
+      "title_zh": "异构四臂香蕉接力",
+      "family": "relay",
+      "arms": 4,
+      "team": "heterogeneous",
+      "training_episodes": 100,
+      "exam_scenes": 100,
+      "training_index_rows_1_based": [
+        [
+          1801,
+          1900
+        ]
+      ],
+      "view_sets": [
+        [
+          "obs_camera",
+          "obs_camera_2",
+          "wrist_1",
+          "wrist_2",
+          "wrist_3",
+          "wrist_4"
+        ]
+      ]
+    },
+    {
+      "id": "19",
+      "task": "HeterogeneousQuadArm/WhiteCupZoneRelay",
+      "title": "Four-arm white-cup relay",
+      "title_zh": "异构四臂白杯接力",
+      "family": "relay",
+      "arms": 4,
+      "team": "heterogeneous",
+      "training_episodes": 100,
+      "exam_scenes": 100,
+      "training_index_rows_1_based": [
+        [
+          1901,
+          2000
+        ]
+      ],
+      "view_sets": [
+        [
+          "obs_camera",
+          "obs_camera_2",
+          "wrist_1",
+          "wrist_2",
+          "wrist_3",
+          "wrist_4"
+        ]
+      ]
+    }
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "source_master_sha256": "fdd0f8dde4993ddee2c1af9ad34a0a6cf62922ceb149e09444a690519ea308a2",
+  "source_web_video_sha256": "1247f41e5c832f27b92c70ed4b8483d6740071eda03551e994709e1799485295",
+  "video_seconds": 84,
+  "video_resolution": [
+    1920,
+    1080
+  ],
+  "training_trajectories": 2000,
+  "training_tasks": 20,
+  "extra_exhibition_clips": 3,
+  "simultaneous_wall_views_approximately": 216,
+  "original_scene_colors_preserved": true,
+  "teaser_segments_seconds": [
+    [
+      0,
+      2
+    ],
+    [
+      14,
+      16
+    ],
+    [
+      17,
+      19
+    ],
+    [
+      36,
+      38
+    ]
+  ],
+  "files": {
+    "collaboration-overview.mp4": "1247f41e5c832f27b92c70ed4b8483d6740071eda03551e994709e1799485295",
+    "collaboration-overview.jpg": "9890e5170d35a1cfef994c541318982cbec3894d4b04fd4db7222243c1486efb",
+    "collaboration-teaser.gif": "0534de09c908753587083bdfc42d57f92a92704032bb279eec9b77049e3285cd"
+  }
+}

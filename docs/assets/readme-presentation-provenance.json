@@ -1,0 +1,66 @@
+{
+  "training_index_sha256": "ea6216ccc57301a4bf268a9417b82988e99a2d2bf7c8c756869c43c178612554",
+  "logo_sha256": "0325f213e9022796491c5505591ac6d3ef573fad329f6db80607cfc35fab6e84",
+  "dataset_example": {
+    "task": "IsomorphicDualArm/BananaAppleToPlates",
+    "episode": "2026-10-13_11_52_48_159487",
+    "source_frame": 421,
+    "source_time_s": 14.033333333333333,
+    "frame_rate_hz": 30,
+    "cameras": [
+      {
+        "camera": "wrist_1",
+        "video_sha256": "7cbc832b76595463eff95e4f0f108e803b72857933cde36402965d4d6b6705f9",
+        "source_frame": 421,
+        "source_time_s": 14.033333333333333,
+        "source_dimensions": [
+          640,
+          480
+        ],
+        "scene_pixels_unchanged": true
+      },
+      {
+        "camera": "wrist_2",
+        "video_sha256": "ca50c88d1e166b1441e54cb3f5e92de9f3c39e9eab60fb2f70a536fbb39875d6",
+        "source_frame": 421,
+        "source_time_s": 14.033333333333333,
+        "source_dimensions": [
+          640,
+          480
+        ],
+        "scene_pixels_unchanged": true
+      },
+      {
+        "camera": "obs_camera",
+        "video_sha256": "776dc0c88ee4bd32fd2723f9504e3ee8be57a093ac3daeee9f190869d2692517",
+        "source_frame": 421,
+        "source_time_s": 14.033333333333333,
+        "source_dimensions": [
+          640,
+          480
+        ],
+        "scene_pixels_unchanged": true
+      },
+      {
+        "camera": "obs_camera_2",
+        "video_sha256": "7bd5c87ce422d79a29ab86aae4a7bc07eddb7e537ba17f6df834fe3d3f1b62c2",
+        "source_frame": 421,
+        "source_time_s": 14.033333333333333,
+        "source_dimensions": [
+          640,
+          480
+        ],
+        "scene_pixels_unchanged": true
+      }
+    ],
+    "presentation_only": true,
+    "training_files_modified": false
+  },
+  "graphics": "Original code-rendered presentation assets",
+  "rsi_diagram": "Workflow for integrating recommendations with a training pipeline",
+  "files": {
+    "readme-hero.png": "cba31ff21c80da93b3cb733ba74593869bcde55fbca77e262033d28ee19f1af4",
+    "dataset-perspectives.png": "70644c5781fc64866704f784426b59f011c651b33dbcccadb51801961efacb9d",
+    "rsi-workflow.png": "8e7efacfb69f1ebc4d9e4c6c60253329bca3251f78a7aec4dfe93b3e5d245242"
+  }
+}

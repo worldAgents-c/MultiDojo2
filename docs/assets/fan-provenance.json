@@ -1,0 +1,79 @@
+{
+  "brand": "Multidojo",
+  "purpose": "Homepage exhibition excerpts, outside the scored 20-task suite",
+  "source_playback_speed": 3,
+  "excerpts_have_temporal_cuts": true,
+  "training_data_modified": false,
+  "title_annotation": "Replace the source full-process label with excerpt; scene content is retained",
+  "scenes": {
+    "isomorphic": {
+      "source_video_sha256": "321de9d83b545f1211a5d925b70c5d8d69d396664b8d6f7e1127ffc9b835263b",
+      "native_acceptance_sha256": "3ea1cfc3a0cd616462cf39e874a05915ba4179d20c8a51ece3da72d1eb9e8083",
+      "source_frames": 7848,
+      "source_duration_seconds": 261.6,
+      "excerpt_start_seconds": [
+        20.928,
+        88.944,
+        164.808,
+        235.44
+      ],
+      "excerpt_length_seconds": 6,
+      "video": "fan-isomorphic.mp4",
+      "video_sha256": "29a14632390fdb0b15a38c34d2ae16567d290ef830c75c18b6f565caefec913a",
+      "poster": "fan-isomorphic.jpg",
+      "poster_sha256": "0929706cf79b5b2d13f9e851803d1d150443b065accd428996459c9f54ee052e",
+      "duration_seconds": 24,
+      "dimensions": [
+        1280,
+        576
+      ],
+      "decoded_all_frames": true
+    },
+    "heterogeneous": {
+      "source_video_sha256": "7f1017a54d7dced81197a6acd335a905cbd83ccb51d71125f456078e1c3653aa",
+      "native_acceptance_sha256": "d6cade4f6c4fd6b66cc00722bce7c122997f992f9e930cdc8d383986a117683f",
+      "source_frames": 11257,
+      "source_duration_seconds": 375.23333333333335,
+      "excerpt_start_seconds": [
+        30.019,
+        127.579,
+        236.397,
+        337.71
+      ],
+      "excerpt_length_seconds": 6,
+      "video": "fan-heterogeneous.mp4",
+      "video_sha256": "966ba0a07d88a0b47bf38b2541c064c10abf241fb61ce96b18b7f5e8b25c0030",
+      "poster": "fan-heterogeneous.jpg",
+      "poster_sha256": "f9253edec688ae9f7f97cc4fcfa4f7ed76b4f5c7a61c8ad7519660d47643f601",
+      "duration_seconds": 24,
+      "dimensions": [
+        1280,
+        576
+      ],
+      "decoded_all_frames": true
+    },
+    "humanoid": {
+      "source_video_sha256": "01bd1a7d27ea92b5edc75502ef999f3756c49518881c5c8f2ef366972bc0c4d6",
+      "native_acceptance_sha256": "17e5c58e776ff2f58197c19d6c6794a2d26a989208521011fd513b5a2cd2c54e",
+      "source_frames": 13313,
+      "source_duration_seconds": 443.76666666666665,
+      "excerpt_start_seconds": [
+        35.501,
+        150.881,
+        279.573,
+        399.39
+      ],
+      "excerpt_length_seconds": 6,
+      "video": "fan-humanoid.mp4",
+      "video_sha256": "5f0591806ab3eb87cb1407ce9004011624a7f0aa2764f4bf09cbc5a788999706",
+      "poster": "fan-humanoid.jpg",
+      "poster_sha256": "49dc9fec63e5fa7e674086e07458d1edf43567f204a84b6ced002742f2d43ee1",
+      "duration_seconds": 24,
+      "dimensions": [
+        1280,
+        576
+      ],
+      "decoded_all_frames": true
+    }
+  }
+}
