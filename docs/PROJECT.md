@@ -8,7 +8,7 @@ RoboDojo² studies collaborative manipulation across homogeneous and heterogeneo
 
 [Project website](https://worldagents-c.github.io/RoboDojo2/index.en.html) · [GitHub repository](https://github.com/worldAgents-c/RoboDojo2)
 
-**Online evaluation is coming soon. Dataset downloads will open with the data release.**
+**Online evaluation is coming soon. [Download the 301-episode yellow-tabletop training subset on Hugging Face](https://huggingface.co/datasets/WorldAgents-c/RoboDojo2-YellowTabletops).**
 
 ## Quick start
 
@@ -32,7 +32,7 @@ Use HTTP so the browser can load the task catalog and project resources.
 
 ## Dataset
 
-The training collection comprises **2,000+ reviewed simulation episodes, with 100 demonstrations per task**. Dataset downloads are coming soon; the website presents the collection, task catalog, and data specification.
+The training collection comprises **2,000+ reviewed simulation episodes, with 100 demonstrations per task**. The **301-episode yellow-tabletop subset across all 20 task families** is [available on Hugging Face](https://huggingface.co/datasets/WorldAgents-c/RoboDojo2-YellowTabletops). It retains all camera streams, states/actions, calibration, and acceptance records. Per-task subset counts are listed in that repository’s `tasks.json`.
 
 Each accepted episode provides:
 
@@ -73,7 +73,7 @@ finally:
 
 The frozen suite uses zero-based IDs **00–19**. [task-catalog.json](assets/task-catalog.json) maps each ID to its canonical identifier, English/Chinese names, camera set, counts, and row spans in the training index.
 
-`training_index_rows_1_based` gives line numbers in the index identified by `training_index_sha256`. Join recordings by `task` and `episode`.
+`training_index_rows_1_based` gives line numbers in the full source index identified by `training_index_sha256`. The public yellow-tabletop subset has its own 301-row `train.jsonl`; use `tasks.json` and `source_training_index_row_1_based` in that dataset to map subset rows back to the collection. Join recordings by `task` and `episode`.
 
 Trial `09-047` is the 48th zero-based trial of task 09, homogeneous four-arm ordered color-block stacking. Task 05 retains a historical `Banana` identifier; its manipulation object is a **long block**, passed from Franka to Piper and placed on the yellow target. Heterogeneous teams combine robot designs, with some models appearing more than once.
 
@@ -128,7 +128,7 @@ The manifest records file hashes. Review the rendered page and check results bef
 
 **Which data should I use for training?** The synchronized observation/action release and its authoritative `train.jsonl` index. Website GIFs and MP4s illustrate the collection.
 
-**Where can I download the dataset?** Dataset downloads are coming soon. Release information will be available on the project website and GitHub repository.
+**Where can I download the dataset?** The [yellow-tabletop training subset on Hugging Face](https://huggingface.co/datasets/WorldAgents-c/RoboDojo2-YellowTabletops) provides 301 complete episodes across 20 tasks, approximately 133 GiB. Follow the dataset repository’s download, verification, and loader instructions.
 
 **What is the license?** The original website code and documentation are [MIT licensed](LICENSE). Scope and attribution are documented in [NOTICE.md](NOTICE.md). Datasets, evaluation runtimes, and third-party assets retain their respective release terms.
 
@@ -142,6 +142,6 @@ The manifest records file hashes. Review the rendered page and check results bef
 - **RSI 评估**：依据回放与执行证据定位协作问题，将改进方向具体化为物体、起终点范围、机械臂分工及验收条件。场景通过物理与数据验收后进入补强训练，再通过复测检验效果。
 - **协作研究展示**：同构十机器人、异构机器人，以及人形机器人与机械臂共同装配风扇，展现跨组合、跨形态的协作研究方向。
 
-**线上测评服务即将上线。数据集下载即将开放。**
+**线上测评服务即将上线。[黄桌面训练子集已在 Hugging Face 开放下载](https://huggingface.co/datasets/WorldAgents-c/RoboDojo2-YellowTabletops)：301 条完整轨迹，覆盖 20 类任务，约 133 GiB。**
 
 [浏览项目官网](https://worldagents-c.github.io/RoboDojo2/) · [访问 GitHub](https://github.com/worldAgents-c/RoboDojo2) · [RSI 使用指南](RSI-USER.zh.md)

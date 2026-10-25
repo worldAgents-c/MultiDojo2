@@ -32,7 +32,9 @@ Ten matching arms share an assembly sequence, transferring a workpiece between s
 - **Explore meaningful scene variation.** Object and goal positions, workspaces, and scene appearance vary while preserving the task's manipulation objective.
 - **Use physically reviewed episodes.** Acceptance checks cover grasping and contact, object support, placement stability, arm-to-arm collision constraints, synchronized images, and file integrity.
 
-**Dataset downloads are coming soon.**
+**[Download the yellow-tabletop subset on Hugging Face →](https://huggingface.co/datasets/WorldAgents-c/RoboDojo2-YellowTabletops)**
+
+The first public data release contains **301 complete demonstrations across all 20 task families**, with synchronized first-person and third-person views, native states/actions, and acceptance records. It selects yellow and warm-yellow tabletops from the collection; per-task subset counts and loading instructions are provided in the dataset repository.
 
 [Data format & loader example →](PROJECT.md#dataset) · [Machine-readable task catalog →](assets/task-catalog.json)
 
