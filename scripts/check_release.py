@@ -98,6 +98,12 @@ def check():
     require(all(x>=0 for x in positions) and positions==sorted(positions),'Fan showcase order changed')
     require('All-to-One' in readme and 'One-to-All' in readme,'Collaboration principle missing')
     require(len(re.findall(r'^\| \d{2} \|',readme,re.M))==20,'README task catalog has incorrect row count')
+    chinese=(ROOT/'README.zh-CN.md').read_text()
+    require('%%' not in chinese,'Unresolved Chinese README template token')
+    require(len(re.findall(r'^\| \d{2} \|',chinese,re.M))==20,'Chinese README task catalog has incorrect row count')
+    require('href="README.zh-CN.md"' in readme and 'href="README.md"' in chinese,'README language switch is incomplete')
+    for task in tasks:
+        require(task['task'] in readme and task['task'] in chinese,f'Bilingual task identifier missing: {task["id"]}')
     pending=[key for key in ('official_site_url','github_url','live_benchmark_url') if config[key] is None]
     print(json.dumps(dict(passed=not issues,files=len(files),local_links=checked_links,task_families=len(tasks),training_rows=len(covered),pending_public_addresses=pending,issues=issues),ensure_ascii=False,indent=2))
     return 1 if issues else 0

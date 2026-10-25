@@ -1,0 +1,262 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Multidojo² · 中文项目概览</title><link rel="icon" href="assets/favicon.png"><link rel="stylesheet" href="repository.css"></head><body>
+<div class="preview-bar"><nav class="language-switch" aria-label="Language"><a href="repository.html" lang="en">English</a><strong lang="zh-CN">简体中文</strong></nav><span>Multidojo² · 中文项目概览</span><a href="./">项目网站 ↗</a></div>
+<header class="repo-header"><div class="repo-title"><img src="assets/mark.png" alt=""><span>Multidojo²</span><span class="label">协作评测基准</span></div><nav class="tabs" aria-label="项目导航"><span class="selected">README</span><a href="#dataset">数据集</a><a href="#evaluation">评测</a><a href="./">项目官网 ↗</a></nav></header>
+<main class="repo-layout"><article class="readme"><div class="file-title"><span>README.zh-CN.md</span><a href="README.zh-CN.md" download>下载原始 Markdown ↓</a></div><div class="markdown-body"><p align="center"><img src="assets/mark.png" width="64" alt="Multidojo² 标志"></p>
+
+<h1 align="center">Multidojo²</h1>
+
+<p align="center"><strong>面向多机器人协作的评测基准</strong></p>
+
+<p align="center"><a href="repository.html" lang="en">English</a> · <strong>简体中文</strong></p>
+
+<p align="center"><a href="index.html">项目官网</a> · <a href="#dataset">数据集</a> · <a href="#tasks">任务</a> · <a href="#evaluation">评测</a> · <a href="#rsi">RSI</a> · <a href="#quick-start">快速开始</a></p>
+
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">训练示范</th>
+<th style="text-align: center;">任务类别</th>
+<th style="text-align: center;">机器人组合</th>
+<th style="text-align: center;">评测场景</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><strong>2,000</strong></td>
+<td style="text-align: center;"><strong>20</strong> · 每类 100 条</td>
+<td style="text-align: center;"><strong>2 / 3 / 4 / 8 臂</strong></td>
+<td style="text-align: center;"><strong>2,000</strong> · 每类 100 场</td>
+</tr>
+</tbody>
+</table>
+<p><a id="collaboration-in-action"></a></p>
+<h2 id="_1">看见协作</h2>
+<p><a href="assets/fan-isomorphic.mp4"><img alt="十台同构机械臂协作组装风扇" src="assets/fan-isomorphic.gif" /></a></p>
+<p align="center"><a href="assets/fan-isomorphic.mp4">▶ 观看十臂风扇装配</a> · <a href="assets/collaboration-overview.mp4">观看协作总览</a></p>
+
+<p>十台相同机械臂共同完成装配工序，在工位间传递工件、配合操作，一步步组装出完整风扇。</p>
+<p><a id="dataset"></a></p>
+<h2 id="_2">数据集</h2>
+<p><strong>20 类协作操作任务，2,000 条经审核的仿真示范。</strong> 每类 100 条轨迹，覆盖物体交接、区域接力、共同搬运、顺序叠放与并行操作。</p>
+<p><a href="assets/dataset-perspectives.png"><img alt="同一条轨迹的四路同步视角，与机器人状态和动作对齐" src="assets/dataset-perspectives.png" /></a></p>
+<ul>
+<li><strong>既看局部操作，也看团队配合。</strong> 每个机械臂均有第一视角，并配有共享工作空间的第三视角。在同一时间线上观察抓取细节与机械臂之间的协作。</li>
+<li><strong>观测与动作同步记录。</strong> RGB、机器人状态、原生关节指令、下一时刻观测与相机标定，保留感知和执行之间的对应关系。</li>
+<li><strong>覆盖不同机器人组合。</strong> 同构与异构团队包含双臂、三臂、四臂和八臂，保留各机器人原生关节顺序、单位及执行器掩码。</li>
+<li><strong>具有实际意义的场景变化。</strong> 在保持操作目标的前提下，改变物体与终点位置、工作空间分布和场景外观。</li>
+<li><strong>逐条进行物理与完整性验收。</strong> 检查抓取与接触、物体支撑、放置稳定性、机械臂间禁止碰撞约束、图像同步和文件完整性。</li>
+</ul>
+<p><strong>数据集下载即将开放。</strong></p>
+<p><a href="PROJECT.md#dataset">数据格式与加载示例 →</a> · <a href="assets/task-catalog.json">机器可读的任务目录 →</a></p>
+<p><br></p>
+<p><a id="collaboration-across-embodiments"></a></p>
+<h2 id="_3">跨形态协作</h2>
+<h3 id="_4">异构机器人团队</h3>
+<p><a href="assets/fan-heterogeneous.mp4"><img alt="不同型号机械臂共同组装风扇" src="assets/fan-heterogeneous.gif" /></a></p>
+<p>不同机械臂在同一装配流程中承担互补角色，围绕共享工件完成传递与操作。</p>
+<p align="center"><a href="assets/fan-heterogeneous.mp4">▶ 观看异构风扇装配</a></p>
+
+<p><br></p>
+<h3 id="_5">人形机器人与机械臂</h3>
+<p><a href="assets/fan-humanoid.mp4"><img alt="人形机器人与机械臂共同完成风扇装配" src="assets/fan-humanoid.gif" /></a></p>
+<p>人形机器人与机械臂跨越本体形态差异，在连续装配工序中分工配合。</p>
+<p align="center"><a href="assets/fan-humanoid.mp4">▶ 观看人形与机械臂协作</a></p>
+
+<p><em>研究展示 · 仿真录像以 3 倍速剪辑。风扇装配展示与下方 20 类计分操作任务共同呈现多机器人协作的研究方向。</em></p>
+<h2 id="all-to-one-one-to-all">All-to-One. One-to-All.</h2>
+<p><strong>机器人自动化的规模化发展，离不开协作。</strong> 共享任务需要共享的工作空间理解、相互配合的操作时序，以及适合各机器人分工的动作。</p>
+<p><strong>All-to-One</strong> 将多机器人的观测与状态汇聚为统一的世界认知；<strong>One-to-All</strong> 将共享认知转化为适合各机器人本体与角色的协同行动。<strong>One World, One Model</strong> 表达了这一研究愿景。</p>
+<p><img alt="All-to-One 汇聚观测与状态，One-to-All 协调不同机器人团队的行动" src="assets/collaboration-principle.png" /></p>
+<p><a id="tasks"></a></p>
+<h2 id="_6">任务</h2>
+<p>任务集围绕 <strong>五类协作技能</strong> 展开：交接、接力、共同搬运、叠放与并行操作。每个任务对应 <strong>100 条训练示范</strong> 和 <strong>100 个可复现评测场景</strong>。</p>
+<table>
+<thead>
+<tr>
+<th>ID</th>
+<th>任务</th>
+<th>团队</th>
+<th>协作技能</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>00</td>
+<td>双臂香蕉空中交接入锅</td>
+<td>同构 · 2 臂</td>
+<td>交接</td>
+</tr>
+<tr>
+<td>01</td>
+<td>双臂香蕉苹果入盘</td>
+<td>同构 · 2 臂</td>
+<td>并行操作</td>
+</tr>
+<tr>
+<td>02</td>
+<td>双臂共同搬纸箱</td>
+<td>同构 · 2 臂</td>
+<td>共同搬运</td>
+</tr>
+<tr>
+<td>03</td>
+<td>双臂杯子两段接力</td>
+<td>同构 · 2 臂</td>
+<td>接力</td>
+</tr>
+<tr>
+<td>04</td>
+<td>双臂积木叠放</td>
+<td>同构 · 2 臂</td>
+<td>叠放</td>
+</tr>
+<tr>
+<td>05</td>
+<td>Franka/Piper 长方块空中交接</td>
+<td>异构 · 2 臂</td>
+<td>交接</td>
+</tr>
+<tr>
+<td>06</td>
+<td>同构三臂方块接力</td>
+<td>同构 · 3 臂</td>
+<td>接力</td>
+</tr>
+<tr>
+<td>07</td>
+<td>同构四臂苹果入篮</td>
+<td>同构 · 4 臂</td>
+<td>并行操作</td>
+</tr>
+<tr>
+<td>08</td>
+<td>同构四臂方块接力</td>
+<td>同构 · 4 臂</td>
+<td>接力</td>
+</tr>
+<tr>
+<td>09</td>
+<td>同构四臂四色叠放</td>
+<td>同构 · 4 臂</td>
+<td>叠放</td>
+</tr>
+<tr>
+<td>10</td>
+<td>同构四臂饼干入盒</td>
+<td>同构 · 4 臂</td>
+<td>并行操作</td>
+</tr>
+<tr>
+<td>11</td>
+<td>同构四臂日用品入盒</td>
+<td>同构 · 4 臂</td>
+<td>并行操作</td>
+</tr>
+<tr>
+<td>12</td>
+<td>同构八臂方块入盒</td>
+<td>同构 · 8 臂</td>
+<td>并行操作</td>
+</tr>
+<tr>
+<td>13</td>
+<td>异构三臂方块接力</td>
+<td>异构 · 3 臂</td>
+<td>接力</td>
+</tr>
+<tr>
+<td>14</td>
+<td>异构四臂方块接力</td>
+<td>异构 · 4 臂</td>
+<td>接力</td>
+</tr>
+<tr>
+<td>15</td>
+<td>异构八臂方块入盒</td>
+<td>异构 · 8 臂</td>
+<td>并行操作</td>
+</tr>
+<tr>
+<td>16</td>
+<td>异构三臂香蕉接力</td>
+<td>异构 · 3 臂</td>
+<td>接力</td>
+</tr>
+<tr>
+<td>17</td>
+<td>异构三臂白杯接力</td>
+<td>异构 · 3 臂</td>
+<td>接力</td>
+</tr>
+<tr>
+<td>18</td>
+<td>异构四臂香蕉接力</td>
+<td>异构 · 4 臂</td>
+<td>接力</td>
+</tr>
+<tr>
+<td>19</td>
+<td>异构四臂白杯接力</td>
+<td>异构 · 4 臂</td>
+<td>接力</td>
+</tr>
+</tbody>
+</table>
+<details>
+<summary>任务原始标识</summary>
+<pre>00  BananaDualArmHandover
+01  IsomorphicDualArm/BananaAppleToPlates
+02  IsomorphicDualArm/CollabLiftLongBox
+03  IsomorphicDualArm/CupLeftToMidToRight
+04  IsomorphicDualArm/LeftPlaceRightStack
+05  HeterogeneousDualArm/FrankPiperBananaHandover
+06  IsomorphicTripleArm/BlockZoneRelay
+07  IsomorphicQuadArm/AppleToBasket
+08  IsomorphicQuadArm/BlockZoneRelay
+09  IsomorphicQuadArm/ColorBlockCenterStack
+10  IsomorphicQuadArm/CookieToBox
+11  IsomorphicQuadArm/HouseholdToBox
+12  IsomorphicOctaArm/BlocksToBoxes
+13  HeterogeneousTripleArm/BlockZoneRelay
+14  HeterogeneousQuadArm/BlockZoneRelay
+15  HeterogeneousOctaArm/BlocksToBoxes
+16  HeterogeneousTripleArm/BananaZoneRelay
+17  HeterogeneousTripleArm/WhiteCupZoneRelay
+18  HeterogeneousQuadArm/BananaZoneRelay
+19  HeterogeneousQuadArm/WhiteCupZoneRelay</pre>
+</details>
+
+<p><a href="assets/task-catalog.json">任务目录</a> 将 <strong>00–19</strong> 号任务与任务名称、相机集合、训练索引中的轨迹范围对应起来。<a href="PROJECT.md#task-ids">任务与标识说明 →</a></p>
+<p><a id="evaluation"></a></p>
+<h2 id="_7">评测</h2>
+<p><strong>在受控的场景变化中检验协作。</strong> 每类任务提供 100 个冻结随机场景，改变物体与终点位置及允许变化的外观，同时保持任务指令和物理要求。</p>
+<pre><code class="language-text">任务成功率 = 成功试次 / 100
+总分 = 100 × 20 类任务成功率的平均值
+</code></pre>
+<p>成功判定结合任务完成情况与真实抓取、交接顺序、物体支撑、终点位置、稳定性及碰撞约束。各任务等权参与总分，执行记录支持复现与复核。</p>
+<p><strong>线上测评服务即将上线。</strong></p>
+<p><a href="PROJECT.md#evaluation">评测协议与策略使用指南 →</a></p>
+<h2 id="rsi">RSI</h2>
+<p><strong>把回放证据转化为具体的训练目标。</strong> RSI 连接执行记录、失败说明与后续训练任务，帮助研究者明确策略下一步需要练习什么。</p>
+<p><a href="assets/rsi-workflow.png"><img alt="RSI 工作流：回放、诊断、任务定义、物理验证、训练与复测" src="assets/rsi-workflow.png" /></a></p>
+<p>训练建议具体到参与的机器人、操作物体、起点与终点范围、协作顺序、运动约束和成功条件。候选场景通过原生物理验收后进入训练，再通过复测衡量下一轮训练的效果。</p>
+<p><a href="PROJECT.md#rsi">RSI 工作流说明</a> · <a href="RSI-USER.zh.md">RSI 使用指南 →</a></p>
+<p><a id="quick-start"></a></p>
+<h2 id="_8">快速开始</h2>
+<p>使用 <strong>Python 3.10+</strong> 在本地浏览项目：</p>
+<pre><code class="language-sh">python3 scripts/check_release.py
+python3 -m http.server 8000 --bind 127.0.0.1 --directory .
+</code></pre>
+<p>打开 <a href="http://localhost:8000/">localhost:8000</a>，浏览数据集介绍、任务目录和评测指南。</p>
+<p><a href="PROJECT.md#中文说明">研究与使用指南</a> · <a href="RELATED_WORK.md">相关研究</a> · <a href="PROJECT.md#deployment">部署指南</a></p>
+<p>提出问题或贡献时，请附上任务 ID、轨迹或试次 ID，以及复现步骤。</p>
+<p>网站代码与文档：<a href="LICENSE">MIT 许可证</a> · <a href="NOTICE.md">素材与第三方归属</a>。</p>
+<p><br></p>
+<p><a id="one-collection-thousands-of-collaborative-moments"></a>
+<a id="2000-trajectories-in-motion"></a></p>
+<h2 id="2000">2,000 条轨迹，汇成协作图景</h2>
+<p><a href="assets/trajectory-wall.mp4"><img alt="多机器人协作场景持续滚动的视频墙" src="assets/trajectory-wall.gif" /></a></p>
+<p align="center"><a href="assets/trajectory-wall.mp4">▶ 浏览完整场景墙 · 4K · 54 秒</a></p>
+
+<p>从双臂交接到八臂工位：约 <strong>216 个场景同时播放</strong>，连续呈现多机器人训练轨迹，并穿插装配研究展示。</p></div></article>
+<aside class="aside"><section class="about"><p class="aside-kicker">MULTIDOJO²</p><h2>让机器人学会协作。</h2><p>面向多种机器人组合的多视角示范与可复现评测。</p><a class="aside-action" href="#dataset">了解数据集 <span>↗</span></a><div class="topics"><span>multi-robot</span><span>dataset</span><span>embodied-ai</span><span>RSI</span></div></section><section><h2>项目概览</h2><dl><dt>训练轨迹</dt><dd>2,000</dd><dt>任务类别</dt><dd>20</dd><dt>每组机械臂数</dt><dd>2 / 3 / 4 / 8</dd><dt>每类考试次数</dt><dd>100</dd></dl></section><section><h2>数据集包含</h2><ul class="aside-features"><li>每个机械臂的第一视角</li><li>共享工作空间的第三视角</li><li>同步的状态与动作</li><li>物理验收记录</li></ul></section><nav class="section-nav" aria-label="目录"><h2>浏览</h2><a href="#collaboration-in-action">看见协作</a><a href="#dataset">数据集</a><a href="#collaboration-across-embodiments">机器人组合</a><a href="#tasks">任务集</a><a href="#evaluation">评测</a><a href="#rsi">RSI 工作流</a><a href="#quick-start">快速开始</a><a href="#2000-trajectories-in-motion">场景墙</a></nav><div class="aside-principle"><strong>All-to-One.<br>One-to-All.</strong><p>共享世界认知。<br>协调群体行动。</p></div></aside></main><footer class="footer"><strong>Multidojo²</strong><span>面向多机器人协作的评测基准</span></footer></body></html>

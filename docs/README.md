@@ -4,6 +4,8 @@
 
 <p align="center"><strong>A Benchmark for Multi-Robot Collaboration</strong></p>
 
+<p align="center"><strong>English</strong> · <a href="README.zh-CN.md" lang="zh-CN">简体中文</a></p>
+
 <p align="center"><a href="index.html">Project website</a> · <a href="#dataset">Dataset</a> · <a href="#tasks">Tasks</a> · <a href="#evaluation">Evaluation</a> · <a href="#rsi">RSI</a> · <a href="#quick-start">Get started</a></p>
 
 | Training demonstrations | Task families | Robot teams | Evaluation scenes |

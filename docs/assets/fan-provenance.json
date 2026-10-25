@@ -4,7 +4,7 @@
   "source_playback_speed": 3,
   "excerpts_have_temporal_cuts": true,
   "training_data_modified": false,
-  "title_annotation": "Replace the source full-process label with excerpt; scene content is retained",
+  "presentation": "Scene-only overview and close-up; source annotation bands removed",
   "scenes": {
     "isomorphic": {
       "source_video_sha256": "321de9d83b545f1211a5d925b70c5d8d69d396664b8d6f7e1127ffc9b835263b",
@@ -19,15 +19,27 @@
       ],
       "excerpt_length_seconds": 6,
       "video": "fan-isomorphic.mp4",
-      "video_sha256": "29a14632390fdb0b15a38c34d2ae16567d290ef830c75c18b6f565caefec913a",
+      "video_sha256": "0f52c6098b1f2308c7165e15caff0b25e9bd3e48c56476f5a0e931c8d740b2ea",
       "poster": "fan-isomorphic.jpg",
-      "poster_sha256": "0929706cf79b5b2d13f9e851803d1d150443b065accd428996459c9f54ee052e",
+      "poster_sha256": "1b5c716ab168b35678fc47eb7484af7011af33da6b49ba52a525c90c13ff695e",
       "duration_seconds": 24,
       "dimensions": [
-        1280,
-        576
+        1920,
+        720
       ],
-      "decoded_all_frames": true
+      "decoded_all_frames": true,
+      "source_dimensions": [
+        1920,
+        864
+      ],
+      "source_crop_xywh": [
+        0,
+        88,
+        1920,
+        720
+      ],
+      "source_annotation_bands_removed": true,
+      "scene_views_preserved": true
     },
     "heterogeneous": {
       "source_video_sha256": "7f1017a54d7dced81197a6acd335a905cbd83ccb51d71125f456078e1c3653aa",
@@ -42,15 +54,27 @@
       ],
       "excerpt_length_seconds": 6,
       "video": "fan-heterogeneous.mp4",
-      "video_sha256": "966ba0a07d88a0b47bf38b2541c064c10abf241fb61ce96b18b7f5e8b25c0030",
+      "video_sha256": "ed4872c25cd1e2d5c231aed9b074e00631d759548b265e07c31345b657dc6b5f",
       "poster": "fan-heterogeneous.jpg",
-      "poster_sha256": "f9253edec688ae9f7f97cc4fcfa4f7ed76b4f5c7a61c8ad7519660d47643f601",
+      "poster_sha256": "44503f71718b2d1aec5d53ace5e2c5f30a02e8d7157c2b7bc721a4d0637b7458",
       "duration_seconds": 24,
       "dimensions": [
-        1280,
-        576
+        1920,
+        720
       ],
-      "decoded_all_frames": true
+      "decoded_all_frames": true,
+      "source_dimensions": [
+        1920,
+        864
+      ],
+      "source_crop_xywh": [
+        0,
+        88,
+        1920,
+        720
+      ],
+      "source_annotation_bands_removed": true,
+      "scene_views_preserved": true
     },
     "humanoid": {
       "source_video_sha256": "01bd1a7d27ea92b5edc75502ef999f3756c49518881c5c8f2ef366972bc0c4d6",
@@ -65,15 +89,27 @@
       ],
       "excerpt_length_seconds": 6,
       "video": "fan-humanoid.mp4",
-      "video_sha256": "5f0591806ab3eb87cb1407ce9004011624a7f0aa2764f4bf09cbc5a788999706",
+      "video_sha256": "4ca0d45ac0c198d98505d19b84f369f0f624dabc88418ea398a7bdf09e511d4b",
       "poster": "fan-humanoid.jpg",
-      "poster_sha256": "49dc9fec63e5fa7e674086e07458d1edf43567f204a84b6ced002742f2d43ee1",
+      "poster_sha256": "dd28728f909d39a55d992da38bbcd7a79235bd830c5f542fc9d0d24f03cc3255",
       "duration_seconds": 24,
       "dimensions": [
-        1280,
-        576
+        1920,
+        720
       ],
-      "decoded_all_frames": true
+      "decoded_all_frames": true,
+      "source_dimensions": [
+        1920,
+        864
+      ],
+      "source_crop_xywh": [
+        0,
+        88,
+        1920,
+        720
+      ],
+      "source_annotation_bands_removed": true,
+      "scene_views_preserved": true
     }
   }
 }

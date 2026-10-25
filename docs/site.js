@@ -12,7 +12,7 @@ async function chooseScene(name,play=false){
   if(!Object.hasOwn(scenes,name))return;
   const token=++sceneToken;
   const scene=scenes[name];
-  video.pause();video.poster=`assets/${scene.asset}.jpg`;video.src=`assets/${scene.asset}.mp4`;video.style.aspectRatio=scene.ratio||'1280 / 576';video.load();
+  video.pause();video.poster=`assets/${scene.asset}.jpg`;video.src=`assets/${scene.asset}.mp4`;video.style.aspectRatio=scene.ratio||'8 / 3';video.load();
   document.getElementById('demo-label').textContent=scene.label;video.setAttribute('aria-label',scene.label+'精选录像');
   document.getElementById('demo-caption').textContent=scene.caption||fanCaption;
   document.getElementById('demo-download').href=`assets/${scene.asset}.mp4`;

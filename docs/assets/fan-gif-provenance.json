@@ -5,53 +5,59 @@
   "scenes": {
     "isomorphic": {
       "video": "fan-isomorphic.mp4",
-      "video_sha256": "29a14632390fdb0b15a38c34d2ae16567d290ef830c75c18b6f565caefec913a",
+      "video_sha256": "0f52c6098b1f2308c7165e15caff0b25e9bd3e48c56476f5a0e931c8d740b2ea",
       "gif": "fan-isomorphic.gif",
-      "gif_sha256": "f77beea119d7f7b7560ef2ae994a388de9eee3741c3c2954216317a8eade3c35",
+      "gif_sha256": "365a4da709ea7f82006e559edfbaf6d37facb9d3214c31979305fc483e9cf116",
       "dimensions": [
         960,
-        432
+        360
       ],
+      "palette_colors": 64,
       "frames": 192,
       "fps": 8,
       "duration_seconds": 24,
       "decoded_all_frames": true,
       "contains_entire_source_excerpt": true,
       "scene_cropped": false,
+      "annotation_bands_removed": true,
       "source_video_unchanged": true
     },
     "heterogeneous": {
       "video": "fan-heterogeneous.mp4",
-      "video_sha256": "966ba0a07d88a0b47bf38b2541c064c10abf241fb61ce96b18b7f5e8b25c0030",
+      "video_sha256": "ed4872c25cd1e2d5c231aed9b074e00631d759548b265e07c31345b657dc6b5f",
       "gif": "fan-heterogeneous.gif",
-      "gif_sha256": "4751788f640d003abc0b133e9b2001e1fe0e51ef61e1903b0b063df7102bdf5e",
+      "gif_sha256": "179de4d733df0c2a1eb4ec5ec52fae7c6e94c02d5abc20634208b7bfb53fff6f",
       "dimensions": [
         960,
-        432
+        360
       ],
+      "palette_colors": 64,
       "frames": 192,
       "fps": 8,
       "duration_seconds": 24,
       "decoded_all_frames": true,
       "contains_entire_source_excerpt": true,
       "scene_cropped": false,
+      "annotation_bands_removed": true,
       "source_video_unchanged": true
     },
     "humanoid": {
       "video": "fan-humanoid.mp4",
-      "video_sha256": "5f0591806ab3eb87cb1407ce9004011624a7f0aa2764f4bf09cbc5a788999706",
+      "video_sha256": "4ca0d45ac0c198d98505d19b84f369f0f624dabc88418ea398a7bdf09e511d4b",
       "gif": "fan-humanoid.gif",
-      "gif_sha256": "aef2e47616a646a1a3acdbd80e24ed5685013eb03bc3d9b615ed3da5ef01970a",
+      "gif_sha256": "b3a95e01ad1c4066c23754180e7a2e749f139e9faa70d415a7f31c3e83078422",
       "dimensions": [
         960,
-        432
+        360
       ],
+      "palette_colors": 64,
       "frames": 192,
       "fps": 8,
       "duration_seconds": 24,
       "decoded_all_frames": true,
       "contains_entire_source_excerpt": true,
       "scene_cropped": false,
+      "annotation_bands_removed": true,
       "source_video_unchanged": true
     }
   }
