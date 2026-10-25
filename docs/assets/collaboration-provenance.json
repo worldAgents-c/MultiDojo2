@@ -29,11 +29,11 @@
     ]
   ],
   "files": {
-    "collaboration-overview.mp4": "ba9a5f55b13e12f347ecffe113c9652f143f90c7f297ca9e9c7015b491880611",
-    "collaboration-overview.jpg": "3b1eb43b134fd25394712ce0cd10520b3a222493e7f1594da68b9ddc50082079",
-    "collaboration-teaser.gif": "af56ec36f63c09e560290aacd95e1663fdaa5dd2859ced3f18fce7ed45f6ca07"
+    "collaboration-overview.mp4": "6367e5af1178d0d2dc7c17723f377edccfc8f53f1dbb2ccd8095f7b89586c45d",
+    "collaboration-overview.jpg": "44ad053bf6aebea756700b04054132d38d2c7090e96cd8628a62e8886b6e4b8e",
+    "collaboration-teaser.gif": "3c17f1e040e2f534ce7fd07a2bc48ecc8920b225b8d00d1fd0fb79dbde69ffd9"
   },
-  "previous_web_video_sha256": "1247f41e5c832f27b92c70ed4b8483d6740071eda03551e994709e1799485295",
+  "previous_web_video_sha256": "ba9a5f55b13e12f347ecffe113c9652f143f90c7f297ca9e9c7015b491880611",
   "editorial_header_replaced": true,
   "scene_region_preserved_y_pixels": [
     210,

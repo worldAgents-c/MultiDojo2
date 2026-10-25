@@ -1,4 +1,4 @@
-"""Check a RoboDojo² website repository or standalone site; standard library only."""
+"""Check a MultiDojo² website repository or standalone site; standard library only."""
 import hashlib
 from html.parser import HTMLParser
 import json
@@ -70,7 +70,7 @@ def check():
                 require(unquote(value.fragment) in ids(target),f'Missing anchor: {relative}: {link}')
     config=json.loads((SITE/'project-config.json').read_text())
     require(set(config)=={'brand','deployment','official_site_url','github_url','live_benchmark_url'},'Unexpected public config keys')
-    require(config.get('brand')=='RoboDojo²' and config.get('deployment')=='static','Incorrect static configuration')
+    require(config.get('brand')=='MultiDojo²' and config.get('deployment')=='static','Incorrect static configuration')
     for key in ('official_site_url','github_url','live_benchmark_url'):
         if config.get(key) is None:continue
         value=config[key]
@@ -104,7 +104,6 @@ def check():
         require('class="site-language"' in raw and f'href="{other}" lang=' in raw,f'Homepage language control incomplete: {filename}')
         require('hreflang="en"' in raw and 'hreflang="zh-CN"' in raw,f'Homepage alternate language missing: {filename}')
         require(raw.count('aria-current="page"')==1,f'Homepage language selection is ambiguous: {filename}')
-        require('https://huggingface.co/datasets/WorldAgents-c/RoboDojo2-YellowTabletops' in raw and '301' in raw,f'Public dataset link missing: {filename}')
         overview='repository.zh-CN.html' if language=='zh-CN' else 'repository.html'
         require(f'href="{overview}"' in raw,f'Homepage overview language differs: {filename}')
         if language=='en':
@@ -126,7 +125,7 @@ def check():
         require('Multidojo²' not in copy and 'MULTIDOJO²' not in copy,f'Outdated brand: {name}')
         require(not re.search(r'3\s*(?:×|倍速)|216\s*(?:scenes|个场景|路视频)|100 reproducible evaluation scenes',copy,re.I),f'Outdated presentation copy: {name}')
     for name, copy in [('English README',readme),('Chinese README',chinese)]:
-        require('RoboDojo²' in copy and '2,000+' in copy and '20+' in copy,f'Project identity or collection scale missing: {name}')
+        require('MultiDojo²' in copy and '2,000+' in copy and '20+' in copy,f'Project identity or collection scale missing: {name}')
     for task in tasks:
         require(task['task'] in readme and task['task'] in chinese,f'Bilingual task identifier missing: {task["id"]}')
     pending=[key for key in ('official_site_url','github_url','live_benchmark_url') if config[key] is None]

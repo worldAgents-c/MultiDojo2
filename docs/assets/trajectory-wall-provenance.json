@@ -30,9 +30,9 @@
   ],
   "gif_fps": 6,
   "files": {
-    "trajectory-wall.mp4": "1cac0a32a9b06fed1ee22c8c5efbf0beaf566a011e075777be8e9140d79de405",
-    "trajectory-wall.gif": "012a24a5989a7e64f5c9325b3287dccb7e771bf75066b039c2e971e1ae0fc095",
-    "trajectory-wall.jpg": "1358988f5a4704d41b769fcd546c1ee519b7ead5c57cc8ce0aedfcd93221a3c1"
+    "trajectory-wall.mp4": "11f488fe7cc4ecfb566850b5d80b20b2074f4a3b0193d9e5bedde6381db80f20",
+    "trajectory-wall.gif": "41b6699d1b7032fc3292fd240c4407a7f7f7488318fd2eae198af03f375d0084",
+    "trajectory-wall.jpg": "3a94458fa21b5c9abe9b1210a59337159a571b30df3097d19fa2db17f334256d"
   },
-  "previous_web_video_sha256": "5a83905c74229d59796133624d45d87d62fd407fbfedfeda4ab406e73f96144d"
+  "previous_web_video_sha256": "1cac0a32a9b06fed1ee22c8c5efbf0beaf566a011e075777be8e9140d79de405"
 }

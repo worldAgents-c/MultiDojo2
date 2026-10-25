@@ -1,12 +1,12 @@
-<p align="center"><img src="docs/assets/mark.png" width="64" alt="RoboDojo² 标志"></p>
+<p align="center"><img src="docs/assets/mark.png" width="64" alt="MultiDojo² 标志"></p>
 
-<h1 align="center">RoboDojo²</h1>
+<h1 align="center">MultiDojo²</h1>
 
 <p align="center"><strong>全球首个异构多机器人自进化榜单</strong></p>
 
 <p align="center"><a href="README.md" lang="en">English</a> · <strong>简体中文</strong></p>
 
-<p align="center"><a href="https://worldagents-c.github.io/RoboDojo2/">项目官网</a> · <a href="#dataset">数据集</a> · <a href="#tasks">任务</a> · <a href="#evaluation">评测</a> · <a href="#rsi">RSI</a> · <a href="#quick-start">快速开始</a></p>
+<p align="center"><a href="https://worldagents-c.github.io/MultiDojo2/">项目官网</a> · <a href="#dataset">数据集</a> · <a href="#tasks">任务</a> · <a href="#evaluation">评测</a> · <a href="#rsi">RSI</a> · <a href="#quick-start">快速开始</a></p>
 
 | 训练示范 | 任务类别 | 机器人组合 | RSI |
 | :---: | :---: | :---: | :---: |
@@ -36,9 +36,7 @@
 - **具有实际意义的场景变化。** 在保持操作目标的前提下，改变物体与终点位置、工作空间分布和场景外观。
 - **逐条进行物理与完整性验收。** 检查抓取与接触、物体支撑、放置稳定性、机械臂间禁止碰撞约束、图像同步和文件完整性。
 
-**[前往 Hugging Face 下载黄桌面子集 →](https://huggingface.co/datasets/WorldAgents-c/RoboDojo2-YellowTabletops)**
-
-首批公开数据包含 **301 条完整轨迹，覆盖全部 20 类任务**，同步保留每臂第一视角、第三视角、原生状态动作与验收记录。本批从正式数据中筛选黄色和暖黄色桌面，各任务子集数量及加载方法见数据集页面。
+**数据集下载即将开放。**
 
 [数据格式与加载示例 →](docs/PROJECT.md#dataset) · [机器可读的任务目录 →](docs/assets/task-catalog.json)
 

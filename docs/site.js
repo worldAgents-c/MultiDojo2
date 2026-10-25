@@ -70,7 +70,7 @@ function disableLiveLinks(message){document.querySelectorAll('[data-live-path]')
 disableLiveLinks(copy.comingSoon);
 async function init(){
   const config=await json('project-config.json');
-  if(config.brand!=='RoboDojo²'||!['local','static'].includes(config.deployment))throw Error(copy.badConfig);
+  if(config.brand!=='MultiDojo²'||!['local','static'].includes(config.deployment))throw Error(copy.badConfig);
   const official=safeURL(config.official_site_url),github=safeURL(config.github_url),service=safeURL(config.live_benchmark_url);
   if(official){
     const base=official.href.endsWith('/')?official.href:official.href+'/';
