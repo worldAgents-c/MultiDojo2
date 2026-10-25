@@ -28,7 +28,7 @@ Review the page at desktop and mobile sizes before publishing.
 
 ## Dataset and evaluation
 
-The project describes 2,000+ training demonstrations across 20+ task families, together with randomized evaluation of varied scene conditions and initial states. Dataset downloads and online evaluation are coming soon. [Research and usage guide](docs/PROJECT.md).
+The project describes 2,000+ training demonstrations across 20+ task families, together with randomized evaluation of varied scene conditions and initial states. The [training data release](https://huggingface.co/datasets/WorldAgents-c/MultiDojo2) is available on Hugging Face with 301 complete episodes across 20 tasks. Online evaluation is coming soon. [Research and usage guide](docs/PROJECT.md).
 
 ## License and attribution
 

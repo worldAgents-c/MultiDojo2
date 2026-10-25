@@ -32,7 +32,9 @@ Ten matching arms share an assembly sequence, transferring a workpiece between s
 - **Explore meaningful scene variation.** Object and goal positions, workspaces, and scene appearance vary while preserving the task's manipulation objective.
 - **Use physically reviewed episodes.** Acceptance checks cover grasping and contact, object support, placement stability, arm-to-arm collision constraints, synchronized images, and file integrity.
 
-**Dataset downloads are coming soon.**
+**[Download training data on Hugging Face →](https://huggingface.co/datasets/WorldAgents-c/MultiDojo2)**
+
+The first public data release contains **301 complete demonstrations across all 20 task families**, with synchronized first-person and third-person views, native states/actions, and acceptance records. Per-task release counts and loading instructions are provided in the dataset repository.
 
 [Data format & loader example →](docs/PROJECT.md#dataset) · [Machine-readable task catalog →](docs/assets/task-catalog.json)
 
