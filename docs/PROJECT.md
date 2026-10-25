@@ -1,12 +1,12 @@
-# Multidojo² — Research and usage guide
+# RoboDojo² — Research and usage guide
 
-A Benchmark for Multi-Robot Collaboration.
+The World's First Self-Evolving Leaderboard for Heterogeneous Multi-Robot Collaboration.
 
 [Quick start](#quick-start) · [Dataset](#dataset) · [Task IDs](#task-ids) · [Evaluation](#evaluation) · [RSI](#rsi) · [Deployment](#deployment) · [FAQ](#faq) · [中文说明](#中文说明)
 
-Multidojo² studies collaborative manipulation across homogeneous and heterogeneous robot teams. The scored suite covers **20 task families with 2, 3, 4, or 8 arms**, complemented by research showcases of ten-robot fan assembly and humanoid–manipulator collaboration.
+RoboDojo² studies collaborative manipulation across homogeneous and heterogeneous robot teams. The scored suite covers **20+ task families with 2, 3, 4, or 8 arms**, complemented by research showcases of ten-robot fan assembly and humanoid–manipulator collaboration.
 
-[Project website](https://worldagents-c.github.io/Multidojo/) · [GitHub repository](https://github.com/worldAgents-c/Multidojo)
+[Project website](https://worldagents-c.github.io/RoboDojo2/) · [GitHub repository](https://github.com/worldAgents-c/RoboDojo2)
 
 **Online evaluation is coming soon. Dataset downloads will open with the data release.**
 
@@ -32,7 +32,7 @@ Use HTTP so the browser can load the task catalog and project resources.
 
 ## Dataset
 
-The training collection comprises **2,000 reviewed simulation episodes: 100 per task**. Dataset downloads are coming soon; the website presents the collection, task catalog, and data specification.
+The training collection comprises **2,000+ reviewed simulation episodes, with 100 demonstrations per task**. Dataset downloads are coming soon; the website presents the collection, task catalog, and data specification.
 
 Each accepted episode provides:
 
@@ -79,22 +79,22 @@ Trial `09-047` is the 48th zero-based trial of task 09, homogeneous four-arm ord
 
 ## Evaluation
 
-The exam provides **100 frozen randomized initial scenes per task**, bound to a suite revision and validated in native simulation. Policies are evaluated by executing all 2,000 trials under the same protocol.
+Evaluation tests policies across varied environments and initial states under a common protocol. Each evaluation run records its task set, scene definitions, and trial budget for reproducible comparison.
 
 Randomization changes permitted object/goal positions and scene appearance while preserving instructions, semantic colors, object identities, manipulation order, workspace feasibility, and physical requirements. Training episodes and exam scenes are separate inputs.
 
 ```text
-Task success rate = successful trials / 100
-Overall score = 100 × (sum of the 20 task success rates / 20)
+Task success rate = successful trials / evaluated trials
+Overall score = 100 × mean(success rates across evaluated task families)
 ```
 
 Task-specific completion and physical checks cover the required grasp/contact, transfer/order, support, destination, and final stability. Forbidden collisions, failures, timeouts, and runtime errors count as failed trials. RSI provides diagnostic feedback alongside these objective scores.
 
 The evaluation runtime uses GenManip/Isaac, CuRobo, and the corresponding robot/object assets. Its policy adapter defines observations, action semantics, and execution timing. The online evaluation service is coming soon.
 
-Official results cover all 20 tasks, retain frozen-suite and execution evidence, and undergo independent review and organizer verification. Script experts and visual policies are reported in separate tracks.
+Official results cover the declared evaluation task set, retain scene and execution evidence, and undergo independent review and organizer verification. Script experts and visual policies are reported in separate tracks.
 
-For reproducibility, record the suite revision/hash, policy/checkpoint, observation modalities/cameras, training split, action semantics, execution budget, every trial outcome, all 20 task rates, and overall macro-average. Improvement studies use a pre-frozen re-test split separate from diagnosis and training inputs.
+For reproducibility, record the suite revision/hash, policy/checkpoint, observation modalities/cameras, training split, action semantics, execution budget, every trial outcome, all per-task success rates, and overall macro-average. Improvement studies use a pre-frozen re-test split separate from diagnosis and training inputs.
 
 ## RSI
 
@@ -118,13 +118,13 @@ python3 scripts/check_release.py
 python3 -m http.server 8000 --bind 127.0.0.1 --directory docs
 ```
 
-The manifest records file hashes. Review the rendered page and check results before publishing. See [RELEASE.md](https://github.com/worldAgents-c/Multidojo/blob/main/RELEASE.md) in the GitHub repository for deployment details.
+The manifest records file hashes. Review the rendered page and check results before publishing. See [RELEASE.md](https://github.com/worldAgents-c/RoboDojo2/blob/main/RELEASE.md) in the GitHub repository for deployment details.
 
 ## FAQ
 
-**Which tasks contribute to the score?** The 20 task families in the task catalog. Fan assembly and humanoid–manipulator videos are complementary research showcases, edited at 3× playback speed.
+**Which tasks contribute to the score?** The task families declared by the evaluation protocol and mapped in the task catalog. Fan assembly and humanoid–manipulator videos extend the collaboration showcases.
 
-**How is the exam organized?** Each task has 100 frozen initial scenes. The score is computed from policy execution outcomes under the published task and physical criteria.
+**How is the exam organized?** Scene variation follows the task instruction and physical criteria. Every run records its evaluated scenes and outcomes; task success rates form the overall macro-average.
 
 **Which data should I use for training?** The synchronized observation/action release and its authoritative `train.jsonl` index. Website GIFs and MP4s illustrate the collection.
 
@@ -134,14 +134,14 @@ The manifest records file hashes. Review the rendered page and check results bef
 
 ## 中文说明
 
-**Multidojo² 面向同构与异构多机器人协作，连接多视角数据、随机化考试与 RSI 反馈。**
+**RoboDojo² 面向同构与异构多机器人协作，连接多视角数据、随机化考试与 RSI 反馈。**
 
-- **20 类协作任务**：覆盖双臂、三臂、四臂与八臂组合，包含交接、接力、共同搬运、顺序叠放和多工位并行操作。
-- **2,000 条训练轨迹**：每类 100 条，同步保存每臂第一视角、第三视角、机器人状态与动作；以 `train.jsonl` 为正式训练索引。
-- **2,000 个随机考试场景**：每类 100 个，提前冻结场景与版本，按统一任务和物理标准评分，20 类任务等权参与总分。
+- **20+ 类协作任务**：覆盖双臂、三臂、四臂与八臂组合，包含交接、接力、共同搬运、顺序叠放和多工位并行操作。
+- **2,000+ 条训练轨迹**：每类 100 条，同步保存每臂第一视角、第三视角、机器人状态与动作；以 `train.jsonl` 为正式训练索引。
+- **随机化评测**：围绕环境条件、物体与终点位置及初始状态组织变化，记录场景与执行证据，按统一任务和物理标准评分，各任务等权参与总分。
 - **RSI 评估**：依据回放与执行证据定位协作问题，将改进方向具体化为物体、起终点范围、机械臂分工及验收条件。场景通过物理与数据验收后进入补强训练，再通过复测检验效果。
 - **协作研究展示**：同构十机器人、异构机器人，以及人形机器人与机械臂共同装配风扇，展现跨组合、跨形态的协作研究方向。
 
 **线上测评服务即将上线。数据集下载即将开放。**
 
-[浏览项目官网](https://worldagents-c.github.io/Multidojo/) · [访问 GitHub](https://github.com/worldAgents-c/Multidojo) · [RSI 使用指南](RSI-USER.zh.md)
+[浏览项目官网](https://worldagents-c.github.io/RoboDojo2/) · [访问 GitHub](https://github.com/worldAgents-c/RoboDojo2) · [RSI 使用指南](RSI-USER.zh.md)

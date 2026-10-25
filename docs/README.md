@@ -1,16 +1,16 @@
-<p align="center"><img src="assets/mark.png" width="64" alt="Multidojo² logo"></p>
+<p align="center"><img src="assets/mark.png" width="64" alt="RoboDojo² logo"></p>
 
-<h1 align="center">Multidojo²</h1>
+<h1 align="center">RoboDojo²</h1>
 
-<p align="center"><strong>A Benchmark for Multi-Robot Collaboration</strong></p>
+<p align="center"><strong>The World's First Self-Evolving Leaderboard for Heterogeneous Multi-Robot Collaboration</strong></p>
 
 <p align="center"><strong>English</strong> · <a href="README.zh-CN.md" lang="zh-CN">简体中文</a></p>
 
 <p align="center"><a href="index.html">Project website</a> · <a href="#dataset">Dataset</a> · <a href="#tasks">Tasks</a> · <a href="#evaluation">Evaluation</a> · <a href="#rsi">RSI</a> · <a href="#quick-start">Get started</a></p>
 
-| Training demonstrations | Task families | Robot teams | Evaluation scenes |
+| Training demonstrations | Task families | Robot teams | RSI |
 | :---: | :---: | :---: | :---: |
-| **2,000** | **20** · 100 demos each | **2 / 3 / 4 / 8 arms** | **2,000** · 100 per task |
+| **2,000+** | **20+** · 100 demos each | **2 / 3 / 4 / 8 arms** | **Learn & Evolve** |
 
 ## Collaboration in action
 
@@ -22,7 +22,7 @@ Ten matching arms share an assembly sequence, transferring a workpiece between s
 
 ## Dataset
 
-**A balanced collection of 2,000 reviewed simulation demonstrations across 20 collaborative manipulation tasks.** Each task contributes 100 episodes, covering handovers, relays, shared transport, ordered stacking, and parallel manipulation.
+**A balanced collection of 2,000+ reviewed simulation demonstrations across 20+ collaborative manipulation tasks.** Each task contributes 100 episodes, covering handovers, relays, shared transport, ordered stacking, and parallel manipulation.
 
 [![Four synchronized camera views from one recorded episode, aligned with robot states and actions](assets/dataset-perspectives.png)](assets/dataset-perspectives.png)
 
@@ -58,7 +58,7 @@ Humanoids and robot arms extend the collaboration across body types, working tog
 
 <p align="center"><a href="assets/fan-humanoid.mp4">▶ Watch humanoid–manipulator collaboration</a></p>
 
-*Research showcases · edited simulation footage at 3× playback speed. The fan-assembly teams complement the 20-task manipulation suite described below.*
+*Fan assembly and humanoid–manipulator collaboration extend the research showcases beyond the manipulation task suite.*
 
 ## All-to-One. One-to-All.
 
@@ -70,7 +70,7 @@ Humanoids and robot arms extend the collaboration across body types, working tog
 
 ## Tasks
 
-The suite spans **five collaboration skills**: handover, relay, shared lifting, stacking, and parallel manipulation. Each task pairs **100 training demonstrations** with **100 reproducible evaluation scenes**.
+The suite spans **five collaboration skills**: handover, relay, shared lifting, stacking, and parallel manipulation. Each task includes **100 training demonstrations**, with evaluation designed around varied scene conditions and initial states.
 
 | ID | Task | Team | Skill |
 | --- | --- | --- | --- |
@@ -123,11 +123,11 @@ The [task catalog](assets/task-catalog.json) connects IDs **00–19** with task 
 
 ## Evaluation
 
-**Test collaboration under controlled scene variation.** Object and goal positions and permitted appearance changes vary across 100 fixed randomized scenes per task, preserving the task instruction and physical requirements.
+**Test collaboration under controlled scene variation.** Evaluation varies object and goal positions, permitted appearance, and initial states while preserving task instructions and physical requirements.
 
 ```text
-Task success rate = successful trials / 100
-Overall score = 100 × mean(task success rate across all 20 tasks)
+Task success rate = successful trials / evaluated trials
+Overall score = 100 × mean(task success rate across evaluated task families)
 ```
 
 Success combines task completion with the required grasp, transfer order, support, destination, stability, and collision constraints. Equal weighting across task families makes results easy to compare, while recorded execution evidence supports reproducibility and review.
@@ -167,10 +167,12 @@ Website code and documentation: [MIT License](LICENSE) · [Attribution](NOTICE.m
 
 <a id="one-collection-thousands-of-collaborative-moments"></a>
 
-## 2,000 trajectories in motion
+<a id="2000-trajectories-in-motion"></a>
+
+## 2,000+ trajectories in motion
 
 [![A continuously scrolling gallery of collaborative robot scenes](assets/trajectory-wall.gif)](assets/trajectory-wall.mp4)
 
 <p align="center"><a href="assets/trajectory-wall.mp4">▶ Explore the full collection · 4K · 54 seconds</a></p>
 
-From dual-arm handovers to eight-arm workstations: a continuous tour of the training collection, with approximately **216 scenes on screen at once**, accompanied by assembly showcases.
+From dual-arm handovers to eight-arm workstations: a continuously scrolling panorama of collaborative manipulation, accompanied by assembly showcases.

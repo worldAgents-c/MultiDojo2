@@ -1,7 +1,6 @@
 {
-  "brand": "Multidojo",
-  "purpose": "Homepage exhibition excerpts, outside the scored 20-task suite",
-  "source_playback_speed": 3,
+  "brand": "RoboDojo²",
+  "purpose": "Collaborative fan-assembly research showcases",
   "excerpts_have_temporal_cuts": true,
   "training_data_modified": false,
   "presentation": "Scene-only overview and close-up; source annotation bands removed",

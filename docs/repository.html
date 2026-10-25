@@ -1,11 +1,11 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Multidojo² · Project overview</title><link rel="icon" href="assets/favicon.png"><link rel="stylesheet" href="repository.css"></head><body>
-<div class="preview-bar"><nav class="language-switch" aria-label="Language"><strong lang="en">English</strong><a href="repository.zh-CN.html" lang="zh-CN">简体中文</a></nav><span>Multidojo² · Project overview</span><a href="./">Project website ↗</a></div>
-<header class="repo-header"><div class="repo-title"><img src="assets/mark.png" alt=""><span>Multidojo²</span><span class="label">Research benchmark</span></div><nav class="tabs" aria-label="Project navigation"><span class="selected">README</span><a href="#dataset">Dataset</a><a href="#evaluation">Evaluation</a><a href="./">Project website ↗</a></nav></header>
-<main class="repo-layout"><article class="readme"><div class="file-title"><span>README.md</span><a href="README.md" download>Raw Markdown ↓</a></div><div class="markdown-body"><p align="center"><img src="assets/mark.png" width="64" alt="Multidojo² logo"></p>
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>RoboDojo² · Project overview</title><link rel="icon" href="assets/favicon.png"><link rel="stylesheet" href="repository.css"></head><body>
+<div class="preview-bar"><nav class="language-switch" aria-label="Language"><strong lang="en">English</strong><a href="repository.zh-CN.html" lang="zh-CN">简体中文</a></nav><span>RoboDojo² · Project overview</span><a href="./">Project website ↗</a></div>
+<header class="repo-header"><div class="repo-title"><img src="assets/mark.png" alt=""><span>RoboDojo²</span><span class="label">Research benchmark</span></div><nav class="tabs" aria-label="Project navigation"><span class="selected">README</span><a href="#dataset">Dataset</a><a href="#evaluation">Evaluation</a><a href="./">Project website ↗</a></nav></header>
+<main class="repo-layout"><article class="readme"><div class="file-title"><span>README.md</span><a href="README.md" download>Raw Markdown ↓</a></div><div class="markdown-body"><p align="center"><img src="assets/mark.png" width="64" alt="RoboDojo² logo"></p>
 
-<h1 align="center">Multidojo²</h1>
+<h1 align="center">RoboDojo²</h1>
 
-<p align="center"><strong>A Benchmark for Multi-Robot Collaboration</strong></p>
+<p align="center"><strong>The World's First Self-Evolving Leaderboard for Heterogeneous Multi-Robot Collaboration</strong></p>
 
 <p align="center"><strong>English</strong> · <a href="repository.zh-CN.html" lang="zh-CN">简体中文</a></p>
 
@@ -17,15 +17,15 @@
 <th style="text-align: center;">Training demonstrations</th>
 <th style="text-align: center;">Task families</th>
 <th style="text-align: center;">Robot teams</th>
-<th style="text-align: center;">Evaluation scenes</th>
+<th style="text-align: center;">RSI</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td style="text-align: center;"><strong>2,000</strong></td>
-<td style="text-align: center;"><strong>20</strong> · 100 demos each</td>
+<td style="text-align: center;"><strong>2,000+</strong></td>
+<td style="text-align: center;"><strong>20+</strong> · 100 demos each</td>
 <td style="text-align: center;"><strong>2 / 3 / 4 / 8 arms</strong></td>
-<td style="text-align: center;"><strong>2,000</strong> · 100 per task</td>
+<td style="text-align: center;"><strong>Learn &amp; Evolve</strong></td>
 </tr>
 </tbody>
 </table>
@@ -35,7 +35,7 @@
 
 <p>Ten matching arms share an assembly sequence, transferring a workpiece between stations and coordinating each step toward a completed fan.</p>
 <h2 id="dataset">Dataset</h2>
-<p><strong>A balanced collection of 2,000 reviewed simulation demonstrations across 20 collaborative manipulation tasks.</strong> Each task contributes 100 episodes, covering handovers, relays, shared transport, ordered stacking, and parallel manipulation.</p>
+<p><strong>A balanced collection of 2,000+ reviewed simulation demonstrations across 20+ collaborative manipulation tasks.</strong> Each task contributes 100 episodes, covering handovers, relays, shared transport, ordered stacking, and parallel manipulation.</p>
 <p><a href="assets/dataset-perspectives.png"><img alt="Four synchronized camera views from one recorded episode, aligned with robot states and actions" src="assets/dataset-perspectives.png" /></a></p>
 <ul>
 <li><strong>See the team and the local interaction.</strong> Every arm has a first-person view, accompanied by third-person views of the shared workspace. Follow grasping details and inter-robot coordination on the same timeline.</li>
@@ -59,13 +59,13 @@
 <p>Humanoids and robot arms extend the collaboration across body types, working together through the assembly sequence.</p>
 <p align="center"><a href="assets/fan-humanoid.mp4">▶ Watch humanoid–manipulator collaboration</a></p>
 
-<p><em>Research showcases · edited simulation footage at 3× playback speed. The fan-assembly teams complement the 20-task manipulation suite described below.</em></p>
+<p><em>Fan assembly and humanoid–manipulator collaboration extend the research showcases beyond the manipulation task suite.</em></p>
 <h2 id="all-to-one-one-to-all">All-to-One. One-to-All.</h2>
 <p><strong>Robot automation scales through collaboration.</strong> Shared tasks call for a shared understanding of the workspace, coordinated timing, and actions suited to each robot's role.</p>
 <p><strong>All-to-One</strong> brings observations and states into a common view of the world. <strong>One-to-All</strong> turns that shared understanding into coordinated actions across different robots. <strong>One World, One Model</strong> expresses the research vision behind this approach.</p>
 <p><img alt="All-to-One brings robot observations into shared world understanding; One-to-All coordinates actions across robot teams" src="assets/collaboration-principle.png" /></p>
 <h2 id="tasks">Tasks</h2>
-<p>The suite spans <strong>five collaboration skills</strong>: handover, relay, shared lifting, stacking, and parallel manipulation. Each task pairs <strong>100 training demonstrations</strong> with <strong>100 reproducible evaluation scenes</strong>.</p>
+<p>The suite spans <strong>five collaboration skills</strong>: handover, relay, shared lifting, stacking, and parallel manipulation. Each task includes <strong>100 training demonstrations</strong>, with evaluation designed around varied scene conditions and initial states.</p>
 <table>
 <thead>
 <tr>
@@ -224,9 +224,9 @@
 
 <p>The <a href="assets/task-catalog.json">task catalog</a> connects IDs <strong>00–19</strong> with task names, camera sets, and episode ranges in the training index. <a href="PROJECT.md#task-ids">Task and identifier guide →</a></p>
 <h2 id="evaluation">Evaluation</h2>
-<p><strong>Test collaboration under controlled scene variation.</strong> Object and goal positions and permitted appearance changes vary across 100 fixed randomized scenes per task, preserving the task instruction and physical requirements.</p>
-<pre><code class="language-text">Task success rate = successful trials / 100
-Overall score = 100 × mean(task success rate across all 20 tasks)
+<p><strong>Test collaboration under controlled scene variation.</strong> Evaluation varies object and goal positions, permitted appearance, and initial states while preserving task instructions and physical requirements.</p>
+<pre><code class="language-text">Task success rate = successful trials / evaluated trials
+Overall score = 100 × mean(task success rate across evaluated task families)
 </code></pre>
 <p>Success combines task completion with the required grasp, transfer order, support, destination, stability, and collision constraints. Equal weighting across task families makes results easy to compare, while recorded execution evidence supports reproducibility and review.</p>
 <p><strong>Online evaluation is coming soon.</strong></p>
@@ -247,9 +247,10 @@ python3 -m http.server 8000 --bind 127.0.0.1 --directory .
 <p>Website code and documentation: <a href="LICENSE">MIT License</a> · <a href="NOTICE.md">Attribution</a>.</p>
 <p><br></p>
 <p><a id="one-collection-thousands-of-collaborative-moments"></a></p>
-<h2 id="2000-trajectories-in-motion">2,000 trajectories in motion</h2>
+<p><a id="2000-trajectories-in-motion"></a></p>
+<h2 id="2000-trajectories-in-motion">2,000+ trajectories in motion</h2>
 <p><a href="assets/trajectory-wall.mp4"><img alt="A continuously scrolling gallery of collaborative robot scenes" src="assets/trajectory-wall.gif" /></a></p>
 <p align="center"><a href="assets/trajectory-wall.mp4">▶ Explore the full collection · 4K · 54 seconds</a></p>
 
-<p>From dual-arm handovers to eight-arm workstations: a continuous tour of the training collection, with approximately <strong>216 scenes on screen at once</strong>, accompanied by assembly showcases.</p></div></article>
-<aside class="aside"><section class="about"><p class="aside-kicker">MULTIDOJO²</p><h2>Learning to collaborate.</h2><p>Multi-view demonstrations and reproducible evaluation for diverse robot teams.</p><a class="aside-action" href="#dataset">Explore the dataset <span>↗</span></a><div class="topics"><span>multi-robot</span><span>dataset</span><span>embodied-ai</span><span>RSI</span></div></section><section><h2>At a glance</h2><dl><dt>Training episodes</dt><dd>2,000</dd><dt>Task families</dt><dd>20</dd><dt>Arms per team</dt><dd>2 / 3 / 4 / 8</dd><dt>Trials per task</dt><dd>100</dd></dl></section><section><h2>Inside the dataset</h2><ul class="aside-features"><li>Every arm's first-person view</li><li>Shared third-person views</li><li>Aligned states and actions</li><li>Physical acceptance records</li></ul></section><nav class="section-nav" aria-label="README contents"><h2>Explore</h2><a href="#collaboration-in-action">Collaboration in action</a><a href="#dataset">Dataset</a><a href="#collaboration-across-embodiments">Robot teams</a><a href="#tasks">Task suite</a><a href="#evaluation">Evaluation</a><a href="#rsi">RSI workflow</a><a href="#quick-start">Get started</a><a href="#2000-trajectories-in-motion">Scene gallery</a></nav><div class="aside-principle"><strong>All-to-One.<br>One-to-All.</strong><p>A shared world.<br>Coordinated action.</p></div></aside></main><footer class="footer"><strong>Multidojo²</strong><span>A Benchmark for Multi-Robot Collaboration</span></footer></body></html>
+<p>From dual-arm handovers to eight-arm workstations: a continuously scrolling panorama of collaborative manipulation, accompanied by assembly showcases.</p></div></article>
+<aside class="aside"><section class="about"><p class="aside-kicker">ROBODOJO²</p><h2>Learning to collaborate.</h2><p>Multi-view demonstrations and reproducible evaluation for diverse robot teams.</p><a class="aside-action" href="#dataset">Explore the dataset <span>↗</span></a><div class="topics"><span>multi-robot</span><span>dataset</span><span>embodied-ai</span><span>RSI</span></div></section><section><h2>At a glance</h2><dl><dt>Training episodes</dt><dd>2,000+</dd><dt>Task families</dt><dd>20+</dd><dt>Arms per team</dt><dd>2 / 3 / 4 / 8</dd><dt>Learning loop</dt><dd>RSI</dd></dl></section><section><h2>Inside the dataset</h2><ul class="aside-features"><li>Every arm's first-person view</li><li>Shared third-person views</li><li>Aligned states and actions</li><li>Physical acceptance records</li></ul></section><nav class="section-nav" aria-label="README contents"><h2>Explore</h2><a href="#collaboration-in-action">Collaboration in action</a><a href="#dataset">Dataset</a><a href="#collaboration-across-embodiments">Robot teams</a><a href="#tasks">Task suite</a><a href="#evaluation">Evaluation</a><a href="#rsi">RSI workflow</a><a href="#quick-start">Get started</a><a href="#2000-trajectories-in-motion">Scene gallery</a></nav><div class="aside-principle"><strong>All-to-One.<br>One-to-All.</strong><p>A shared world.<br>Coordinated action.</p></div></aside></main><footer class="footer"><strong>RoboDojo²</strong><span>The World's First Self-Evolving Leaderboard for Heterogeneous Multi-Robot Collaboration</span></footer></body></html>

@@ -9,7 +9,6 @@
   "training_trajectories": 2000,
   "training_tasks": 20,
   "extra_exhibition_clips": 3,
-  "simultaneous_wall_views_approximately": 216,
   "original_scene_colors_preserved": true,
   "teaser_segments_seconds": [
     [
@@ -30,8 +29,14 @@
     ]
   ],
   "files": {
-    "collaboration-overview.mp4": "1247f41e5c832f27b92c70ed4b8483d6740071eda03551e994709e1799485295",
-    "collaboration-overview.jpg": "9890e5170d35a1cfef994c541318982cbec3894d4b04fd4db7222243c1486efb",
-    "collaboration-teaser.gif": "0534de09c908753587083bdfc42d57f92a92704032bb279eec9b77049e3285cd"
-  }
+    "collaboration-overview.mp4": "ba9a5f55b13e12f347ecffe113c9652f143f90c7f297ca9e9c7015b491880611",
+    "collaboration-overview.jpg": "3b1eb43b134fd25394712ce0cd10520b3a222493e7f1594da68b9ddc50082079",
+    "collaboration-teaser.gif": "af56ec36f63c09e560290aacd95e1663fdaa5dd2859ced3f18fce7ed45f6ca07"
+  },
+  "previous_web_video_sha256": "1247f41e5c832f27b92c70ed4b8483d6740071eda03551e994709e1799485295",
+  "editorial_header_replaced": true,
+  "scene_region_preserved_y_pixels": [
+    210,
+    1080
+  ]
 }

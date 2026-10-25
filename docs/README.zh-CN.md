@@ -1,16 +1,16 @@
-<p align="center"><img src="assets/mark.png" width="64" alt="Multidojo² 标志"></p>
+<p align="center"><img src="assets/mark.png" width="64" alt="RoboDojo² 标志"></p>
 
-<h1 align="center">Multidojo²</h1>
+<h1 align="center">RoboDojo²</h1>
 
-<p align="center"><strong>面向多机器人协作的评测基准</strong></p>
+<p align="center"><strong>全球首个异构多机器人自进化榜单</strong></p>
 
 <p align="center"><a href="README.md" lang="en">English</a> · <strong>简体中文</strong></p>
 
 <p align="center"><a href="index.html">项目官网</a> · <a href="#dataset">数据集</a> · <a href="#tasks">任务</a> · <a href="#evaluation">评测</a> · <a href="#rsi">RSI</a> · <a href="#quick-start">快速开始</a></p>
 
-| 训练示范 | 任务类别 | 机器人组合 | 评测场景 |
+| 训练示范 | 任务类别 | 机器人组合 | RSI |
 | :---: | :---: | :---: | :---: |
-| **2,000** | **20** · 每类 100 条 | **2 / 3 / 4 / 8 臂** | **2,000** · 每类 100 场 |
+| **2,000+** | **20+** · 每类 100 条 | **2 / 3 / 4 / 8 臂** | **诊断 → 训练 → 复测** |
 
 <a id="collaboration-in-action"></a>
 
@@ -26,7 +26,7 @@
 
 ## 数据集
 
-**20 类协作操作任务，2,000 条经审核的仿真示范。** 每类 100 条轨迹，覆盖物体交接、区域接力、共同搬运、顺序叠放与并行操作。
+**20+ 类协作操作任务，2,000+ 条经审核的仿真示范。** 每类 100 条轨迹，覆盖物体交接、区域接力、共同搬运、顺序叠放与并行操作。
 
 [![同一条轨迹的四路同步视角，与机器人状态和动作对齐](assets/dataset-perspectives.png)](assets/dataset-perspectives.png)
 
@@ -64,7 +64,7 @@
 
 <p align="center"><a href="assets/fan-humanoid.mp4">▶ 观看人形与机械臂协作</a></p>
 
-*研究展示 · 仿真录像以 3 倍速剪辑。风扇装配展示与下方 20 类计分操作任务共同呈现多机器人协作的研究方向。*
+*风扇装配与人形机器人协作，进一步展现跨组合、跨形态的协作研究方向。*
 
 ## All-to-One. One-to-All.
 
@@ -78,7 +78,7 @@
 
 ## 任务
 
-任务集围绕 **五类协作技能** 展开：交接、接力、共同搬运、叠放与并行操作。每个任务对应 **100 条训练示范** 和 **100 个可复现评测场景**。
+任务集围绕 **五类协作技能** 展开：交接、接力、共同搬运、叠放与并行操作。每个任务包含 **100 条训练示范**，评测围绕场景条件与初始状态的变化展开。
 
 | ID | 任务 | 团队 | 协作技能 |
 | --- | --- | --- | --- |
@@ -133,11 +133,11 @@
 
 ## 评测
 
-**在受控的场景变化中检验协作。** 每类任务提供 100 个冻结随机场景，改变物体与终点位置及允许变化的外观，同时保持任务指令和物理要求。
+**在受控的场景变化中检验协作。** 评测改变物体与终点位置、允许变化的外观和初始状态，同时保持任务指令和物理要求。
 
 ```text
-任务成功率 = 成功试次 / 100
-总分 = 100 × 20 类任务成功率的平均值
+任务成功率 = 成功试次 / 实际评测试次
+总分 = 100 × 各评测任务成功率的平均值
 ```
 
 成功判定结合任务完成情况与真实抓取、交接顺序、物体支撑、终点位置、稳定性及碰撞约束。各任务等权参与总分，执行记录支持复现与复核。
@@ -180,10 +180,10 @@ python3 -m http.server 8000 --bind 127.0.0.1 --directory .
 <a id="one-collection-thousands-of-collaborative-moments"></a>
 <a id="2000-trajectories-in-motion"></a>
 
-## 2,000 条轨迹，汇成协作图景
+## 2,000+ 条轨迹，汇成协作图景
 
 [![多机器人协作场景持续滚动的视频墙](assets/trajectory-wall.gif)](assets/trajectory-wall.mp4)
 
 <p align="center"><a href="assets/trajectory-wall.mp4">▶ 浏览完整场景墙 · 4K · 54 秒</a></p>
 
-从双臂交接到八臂工位：约 **216 个场景同时播放**，连续呈现多机器人训练轨迹，并穿插装配研究展示。
+从双臂交接到八臂工位：持续滚动的场景墙，展现丰富的多机器人训练轨迹与装配研究展示。

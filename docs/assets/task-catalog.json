@@ -5,7 +5,6 @@
   "index_row_semantics": "One-based line numbers in the identified train.jsonl; not numeric episode folder IDs.",
   "task_count": 20,
   "training_episodes": 2000,
-  "exam_scenes": 2000,
   "tasks": [
     {
       "id": "00",
@@ -16,7 +15,6 @@
       "arms": 2,
       "team": "homogeneous",
       "training_episodes": 100,
-      "exam_scenes": 100,
       "training_index_rows_1_based": [
         [
           1,
@@ -41,7 +39,6 @@
       "arms": 2,
       "team": "homogeneous",
       "training_episodes": 100,
-      "exam_scenes": 100,
       "training_index_rows_1_based": [
         [
           101,
@@ -66,7 +63,6 @@
       "arms": 2,
       "team": "homogeneous",
       "training_episodes": 100,
-      "exam_scenes": 100,
       "training_index_rows_1_based": [
         [
           201,
@@ -91,7 +87,6 @@
       "arms": 2,
       "team": "homogeneous",
       "training_episodes": 100,
-      "exam_scenes": 100,
       "training_index_rows_1_based": [
         [
           301,
@@ -116,7 +111,6 @@
       "arms": 2,
       "team": "homogeneous",
       "training_episodes": 100,
-      "exam_scenes": 100,
       "training_index_rows_1_based": [
         [
           401,
@@ -141,7 +135,6 @@
       "arms": 2,
       "team": "heterogeneous",
       "training_episodes": 100,
-      "exam_scenes": 100,
       "training_index_rows_1_based": [
         [
           501,
@@ -166,7 +159,6 @@
       "arms": 3,
       "team": "homogeneous",
       "training_episodes": 100,
-      "exam_scenes": 100,
       "training_index_rows_1_based": [
         [
           601,
@@ -192,7 +184,6 @@
       "arms": 4,
       "team": "homogeneous",
       "training_episodes": 100,
-      "exam_scenes": 100,
       "training_index_rows_1_based": [
         [
           701,
@@ -223,7 +214,6 @@
       "arms": 4,
       "team": "homogeneous",
       "training_episodes": 100,
-      "exam_scenes": 100,
       "training_index_rows_1_based": [
         [
           801,
@@ -250,7 +240,6 @@
       "arms": 4,
       "team": "homogeneous",
       "training_episodes": 100,
-      "exam_scenes": 100,
       "training_index_rows_1_based": [
         [
           901,
@@ -277,7 +266,6 @@
       "arms": 4,
       "team": "homogeneous",
       "training_episodes": 100,
-      "exam_scenes": 100,
       "training_index_rows_1_based": [
         [
           1001,
@@ -308,7 +296,6 @@
       "arms": 4,
       "team": "homogeneous",
       "training_episodes": 100,
-      "exam_scenes": 100,
       "training_index_rows_1_based": [
         [
           1101,
@@ -339,7 +326,6 @@
       "arms": 8,
       "team": "homogeneous",
       "training_episodes": 100,
-      "exam_scenes": 100,
       "training_index_rows_1_based": [
         [
           1201,
@@ -378,7 +364,6 @@
       "arms": 3,
       "team": "heterogeneous",
       "training_episodes": 100,
-      "exam_scenes": 100,
       "training_index_rows_1_based": [
         [
           1301,
@@ -404,7 +389,6 @@
       "arms": 4,
       "team": "heterogeneous",
       "training_episodes": 100,
-      "exam_scenes": 100,
       "training_index_rows_1_based": [
         [
           1401,
@@ -431,7 +415,6 @@
       "arms": 8,
       "team": "heterogeneous",
       "training_episodes": 100,
-      "exam_scenes": 100,
       "training_index_rows_1_based": [
         [
           1501,
@@ -470,7 +453,6 @@
       "arms": 3,
       "team": "heterogeneous",
       "training_episodes": 100,
-      "exam_scenes": 100,
       "training_index_rows_1_based": [
         [
           1601,
@@ -496,7 +478,6 @@
       "arms": 3,
       "team": "heterogeneous",
       "training_episodes": 100,
-      "exam_scenes": 100,
       "training_index_rows_1_based": [
         [
           1701,
@@ -522,7 +503,6 @@
       "arms": 4,
       "team": "heterogeneous",
       "training_episodes": 100,
-      "exam_scenes": 100,
       "training_index_rows_1_based": [
         [
           1801,
@@ -549,7 +529,6 @@
       "arms": 4,
       "team": "heterogeneous",
       "training_episodes": 100,
-      "exam_scenes": 100,
       "training_index_rows_1_based": [
         [
           1901,

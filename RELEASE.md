@@ -1,6 +1,6 @@
 # Release and deployment
 
-Multidojo² brings together the project website, documentation, task catalog, and collaborative manipulation showcases. The repository includes automated checks and a GitHub Pages deployment workflow.
+RoboDojo² brings together the project website, documentation, task catalog, and collaborative manipulation showcases. The repository includes automated checks and a GitHub Pages deployment workflow.
 
 ## Preview and verify
 
@@ -28,7 +28,7 @@ Review the page at desktop and mobile sizes before publishing.
 
 ## Dataset and evaluation
 
-The project describes 2,000 training demonstrations and 2,000 frozen evaluation scenes across 20 task families. Dataset downloads and online evaluation are coming soon. [Research and usage guide](docs/PROJECT.md).
+The project describes 2,000+ training demonstrations across 20+ task families, together with randomized evaluation of varied scene conditions and initial states. Dataset downloads and online evaluation are coming soon. [Research and usage guide](docs/PROJECT.md).
 
 ## License and attribution
 

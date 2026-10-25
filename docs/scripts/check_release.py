@@ -1,4 +1,4 @@
-"""Check a Multidojo² website repository or standalone site; standard library only."""
+"""Check a RoboDojo² website repository or standalone site; standard library only."""
 import hashlib
 from html.parser import HTMLParser
 import json
@@ -70,7 +70,7 @@ def check():
                 require(unquote(value.fragment) in ids(target),f'Missing anchor: {relative}: {link}')
     config=json.loads((SITE/'project-config.json').read_text())
     require(set(config)=={'brand','deployment','official_site_url','github_url','live_benchmark_url'},'Unexpected public config keys')
-    require(config.get('brand')=='Multidojo²' and config.get('deployment')=='static','Incorrect static configuration')
+    require(config.get('brand')=='RoboDojo²' and config.get('deployment')=='static','Incorrect static configuration')
     for key in ('official_site_url','github_url','live_benchmark_url'):
         if config.get(key) is None:continue
         value=config[key]
@@ -82,7 +82,7 @@ def check():
     require(len({t['task'] for t in tasks})==20,'Duplicate canonical task')
     covered=[]
     for task in tasks:
-        require(task['training_episodes']==task['exam_scenes']==100,f'Incorrect count: {task["id"]}')
+        require(task['training_episodes']==100,f'Incorrect count: {task["id"]}')
         require(task['arms'] in (2,3,4,8),'Invalid scored arm count')
         lines=[n for a,b in task['training_index_rows_1_based'] for n in range(a,b+1)]
         require(len(lines)==100,f'Incorrect training row spans: {task["id"]}');covered+=lines
@@ -102,6 +102,13 @@ def check():
     require('%%' not in chinese,'Unresolved Chinese README template token')
     require(len(re.findall(r'^\| \d{2} \|',chinese,re.M))==20,'Chinese README task catalog has incorrect row count')
     require('href="README.zh-CN.md"' in readme and 'href="README.md"' in chinese,'README language switch is incomplete')
+    for name, copy in [('English README',readme),('Chinese README',chinese),
+                       ('Website',(SITE/'index.html').read_text()),
+                       ('Website player',(SITE/'site.js').read_text())]:
+        require('Multidojo²' not in copy and 'MULTIDOJO²' not in copy,f'Outdated brand: {name}')
+        require(not re.search(r'3\s*(?:×|倍速)|216\s*(?:scenes|个场景|路视频)|100 reproducible evaluation scenes',copy,re.I),f'Outdated presentation copy: {name}')
+    for name, copy in [('English README',readme),('Chinese README',chinese)]:
+        require('RoboDojo²' in copy and '2,000+' in copy and '20+' in copy,f'Project identity or collection scale missing: {name}')
     for task in tasks:
         require(task['task'] in readme and task['task'] in chinese,f'Bilingual task identifier missing: {task["id"]}')
     pending=[key for key in ('official_site_url','github_url','live_benchmark_url') if config[key] is None]

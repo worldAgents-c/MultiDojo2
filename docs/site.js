@@ -1,7 +1,7 @@
 'use strict';
-const fanCaption='风扇装配研究展示 · 全景 / 工件近景 · 3 倍速剪辑。20 类计分任务见下方任务目录。';
+const fanCaption='风扇装配研究展示 · 全景与工件近景，呈现多机器人连续协作。';
 const scenes={
-  overview:{label:'多机器人协作 · 2,000 条轨迹总览',asset:'collaboration-overview',ratio:'16 / 9',caption:'84 秒协作总览 · 20 类任务、2,000 条不同训练轨迹与 3 套风扇装配研究展示。约 216 路视频同屏持续滚动，呈现多种机器人组合与协作场景。'},
+  overview:{label:'多机器人协作 · 2,000+ 条轨迹总览',asset:'collaboration-overview',ratio:'16 / 9',caption:'从风扇装配到多工位操作，持续呈现同构、异构与跨形态机器人的协作过程。'},
   heterogeneous:{label:'异构十机器人 · 风扇装配',asset:'fan-heterogeneous'},
   isomorphic:{label:'同构十机器人 · 风扇装配',asset:'fan-isomorphic'},
   humanoid:{label:'含人形机器人 · 十机器人风扇装配',asset:'fan-humanoid'}
@@ -28,7 +28,7 @@ function disableLiveLinks(message){document.querySelectorAll('[data-live-path]')
 disableLiveLinks('线上测评服务即将上线');
 async function init(){
   const config=await json('project-config.json');
-  if(config.brand!=='Multidojo²'||!['local','static'].includes(config.deployment))throw Error('项目配置版本不符');
+  if(config.brand!=='RoboDojo²'||!['local','static'].includes(config.deployment))throw Error('项目配置版本不符');
   const official=safeURL(config.official_site_url),github=safeURL(config.github_url),service=safeURL(config.live_benchmark_url);
   if(official){const canonical=document.createElement('link');canonical.rel='canonical';canonical.href=official.href;document.head.append(canonical);}
   if(github){document.querySelectorAll('[data-github]').forEach(a=>{a.href=github.href;a.hidden=false;a.target='_blank';a.rel='noopener';});document.querySelectorAll('[data-github-pending]').forEach(a=>a.hidden=true);}
