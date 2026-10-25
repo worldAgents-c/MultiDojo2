@@ -1,33 +1,35 @@
-# Publishing this repository
+# Release and deployment
 
-This folder is the uploadable **website and documentation repository**. It contains media, a static project site, and automated checks. The training dataset, evaluation runtime, and native simulator assets are separate distributions.
+Multidojo² brings together the project website, documentation, task catalog, and collaborative manipulation showcases. The repository includes automated checks and a GitHub Pages deployment workflow.
 
 ## Preview and verify
+
+Use **Python 3.10+**:
 
 ```sh
 python3 scripts/check_release.py
 python3 -m http.server 8000 --bind 127.0.0.1 --directory docs
 ```
 
-Open `http://localhost:8000/`. Python 3.10+ is sufficient. The checker validates the actual files, local links/anchors, task/row mapping, configuration and manifest hashes. It does not run a policy or certify physics.
+Open `http://localhost:8000/`. Release checks validate file hashes, local links and anchors, the task catalog, and training-index row mappings.
 
 ## GitHub Pages
 
-Upload the entire folder, including `docs/`, `scripts/`, `.github/`, README and this file. In repository Settings → Pages, select **GitHub Actions**. Pushes to `main` or `master` validate and publish `docs/`; pull requests validate without deploying. No Node/npm installation is required.
+In repository **Settings → Pages**, select **GitHub Actions**. Pushes to `main` or `master` validate and publish `docs/`; pull requests run validation. The website uses relative resource paths and supports repository subpaths.
 
-`docs/project-config.json` holds the actual public website, GitHub, and live-service roots. Unconfigured addresses stay `null`. A static Pages site works without a live benchmark; its service links explicitly explain their availability.
-
-If editing static files after export, refresh `docs/manifest.json` with:
+After editing published files, refresh the manifest and run the checker:
 
 ```sh
 python3 scripts/update_manifest.py
 python3 scripts/check_release.py
 ```
 
-This records changed bytes; it does not replace reviewing the change. Do not change the task catalog or original provenance to fix a failing check.
+Review the page at desktop and mobile sizes before publishing.
 
-## License and research metadata
+## Dataset and evaluation
 
-The original website code and documentation are MIT licensed. See LICENSE and NOTICE.md for scope and third-party attribution. The training dataset and evaluation runtime are separate releases with their own terms. Researcher author lists, paper/citation, and public data download addresses can be added when supplied by the maintainers. Website media are simulation research demonstrations; third-party runtime and assets retain their own terms.
+The project describes 2,000 training demonstrations and 2,000 frozen evaluation scenes across 20 task families. Dataset downloads and online evaluation are coming soon. [Research and usage guide](docs/PROJECT.md).
 
-The current exam is 2,000 validated frozen initial scenes, not a claim of 2,000 successful policy executions. Full external RSI and automatic retraining are pending; there is no complete model leaderboard score or closed-loop improvement result. Keep those availability statements accurate when enabling services later.
+## License and attribution
+
+The original website code and documentation are MIT licensed. See [LICENSE](LICENSE) and [NOTICE.md](NOTICE.md) for scope and attribution. Datasets, evaluation runtimes, and third-party assets retain their respective release terms.

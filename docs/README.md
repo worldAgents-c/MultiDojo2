@@ -30,6 +30,8 @@ Ten matching arms share an assembly sequence, transferring a workpiece between s
 - **Explore meaningful scene variation.** Object and goal positions, workspaces, and scene appearance vary while preserving the task's manipulation objective.
 - **Use physically reviewed episodes.** Acceptance checks cover grasping and contact, object support, placement stability, arm-to-arm collision constraints, synchronized images, and file integrity.
 
+**Dataset downloads are coming soon.**
+
 [Data format & loader example →](PROJECT.md#dataset) · [Machine-readable task catalog →](assets/task-catalog.json)
 
 <br>
@@ -127,6 +129,8 @@ Overall score = 100 × mean(task success rate across all 20 tasks)
 ```
 
 Success combines task completion with the required grasp, transfer order, support, destination, stability, and collision constraints. Equal weighting across task families makes results easy to compare, while recorded execution evidence supports reproducibility and review.
+
+**Online evaluation is coming soon.**
 
 [Evaluation protocol & policy integration →](PROJECT.md#evaluation)
 
