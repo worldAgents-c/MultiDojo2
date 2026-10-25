@@ -6,7 +6,7 @@
 
 <p align="center"><strong>English</strong> · <a href="README.zh-CN.md" lang="zh-CN">简体中文</a></p>
 
-<p align="center"><a href="https://worldagents-c.github.io/RoboDojo2/">Project website</a> · <a href="#dataset">Dataset</a> · <a href="#tasks">Tasks</a> · <a href="#evaluation">Evaluation</a> · <a href="#rsi">RSI</a> · <a href="#quick-start">Get started</a></p>
+<p align="center"><a href="https://worldagents-c.github.io/RoboDojo2/index.en.html">Project website</a> · <a href="#dataset">Dataset</a> · <a href="#tasks">Tasks</a> · <a href="#evaluation">Evaluation</a> · <a href="#rsi">RSI</a> · <a href="#quick-start">Get started</a></p>
 
 | Training demonstrations | Task families | Robot teams | RSI |
 | :---: | :---: | :---: | :---: |

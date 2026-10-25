@@ -6,7 +6,7 @@ The World's First Self-Evolving Leaderboard for Heterogeneous Multi-Robot Collab
 
 RoboDojo² studies collaborative manipulation across homogeneous and heterogeneous robot teams. The scored suite covers **20+ task families with 2, 3, 4, or 8 arms**, complemented by research showcases of ten-robot fan assembly and humanoid–manipulator collaboration.
 
-[Project website](https://worldagents-c.github.io/RoboDojo2/) · [GitHub repository](https://github.com/worldAgents-c/RoboDojo2)
+[Project website](https://worldagents-c.github.io/RoboDojo2/index.en.html) · [GitHub repository](https://github.com/worldAgents-c/RoboDojo2)
 
 **Online evaluation is coming soon. Dataset downloads will open with the data release.**
 

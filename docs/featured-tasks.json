@@ -10,6 +10,7 @@
         "Use the left arm to pick up the banana and hand it to the right arm in mid-air; the right arm then places the banana into the frying pan. Keep the two arms from colliding."
       ],
       "trials": 100,
+      "title_en": "Banana handover into a pan",
       "poster": "assets/task-00.jpg",
       "poster_sha256": "df598444a3e6dc8ea48902eda51326e4912b676df8edab2c4c01937bb6fbede3"
     },
@@ -23,6 +24,7 @@
         "两台机械臂分别抓住纸箱两侧，共同抬起并放到目标区"
       ],
       "trials": 100,
+      "title_en": "Collaborative carton transport",
       "poster": "assets/task-02.jpg",
       "poster_sha256": "7552044b96eac3a1d1845d1d555e8ce178d2b685718720b1ee90780e3dae5d2f"
     },
@@ -36,6 +38,7 @@
         "一个机械臂抓住长方块空中递给另一类型机械臂，对方抓住后放到盘子里"
       ],
       "trials": 100,
+      "title_en": "Franka–Piper long-block handover",
       "poster": "assets/task-05.jpg",
       "poster_sha256": "3df7c1a38041eb2e43a7c111ce1eefab8a7dd3cb7c7d9d9ef8f7cf8d6d1a8c09"
     },
@@ -49,6 +52,7 @@
         "四个机械臂把面前的红黄蓝绿方块按红、黄、蓝、绿顺序在中心叠起来"
       ],
       "trials": 100,
+      "title_en": "Ordered four-color stacking",
       "poster": "assets/task-09.jpg",
       "poster_sha256": "635e6071967a5b87b5b87b2a344d539341295d7a599cc0e11c3c07e2d722cfc7"
     },
@@ -62,6 +66,7 @@
         "四个机械臂接力：Franka→一号区，Robotiq→二号区，Piper C→三号区，Piper D→终点盘子"
       ],
       "trials": 100,
+      "title_en": "Four-arm block relay",
       "poster": "assets/task-14.jpg",
       "poster_sha256": "a736b0d69b04db972e8755abf3744fe7bfc3473b8a85932293525f1a516d0be2"
     },
@@ -75,6 +80,7 @@
         "Each arm picks up its own block and places it inside its own box, simultaneously."
       ],
       "trials": 100,
+      "title_en": "Eight-arm blocks to boxes",
       "poster": "assets/task-15.jpg",
       "poster_sha256": "da7e92bd11a4bc8219e6db2da9def32fa1eb112a496549cfbef4c8668165aecb"
     }

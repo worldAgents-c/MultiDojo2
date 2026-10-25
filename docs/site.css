@@ -15,3 +15,14 @@
 /* The overview is 16:9; scene selection sets the original fan aspect ratio. */
 .demo-stage video{aspect-ratio:16/9}
 @media(max-width:600px){.site-header nav{flex-wrap:wrap;justify-content:flex-start;column-gap:18px;row-gap:13px}}
+
+/* Both homepages share a compact, always-visible language selector. */
+.site-language{display:flex;flex-shrink:0;gap:3px;padding:3px;border:1px solid var(--line);border-radius:20px;background:#fffaff;font-size:11px;white-space:nowrap}
+.site-language a{padding:6px 9px;border-radius:16px;color:var(--muted)}
+.site-language a[aria-current=page]{background:#ede5f7;color:#65458f;font-weight:600}
+.site-language a:hover{text-decoration:none;background:#f0eafa}
+html[lang=en] .intro-hero h1{line-height:1.12;letter-spacing:-2px}
+html[lang=en] .numbers strong{font-size:29px}
+html[lang=en] .numbers p{line-height:1.7}
+@media(max-width:1150px){.site-header{flex-wrap:wrap}.site-header .wordmark span{display:none}.site-language{margin-left:auto}.site-header nav{order:3;width:100%;margin-left:0;justify-content:center;flex-wrap:wrap}}
+@media(max-width:600px){.site-header nav{justify-content:flex-start}.site-language{font-size:10px}.site-language a{padding:6px 7px}.site-header .wordmark>img{width:44px;height:44px}.site-header .wordmark{font-size:22px;gap:7px}.site-header{column-gap:6px}html[lang=en] .intro-hero h1{font-size:40px}html[lang=en] .hero-actions{flex-wrap:wrap}html[lang=en] .numbers strong{font-size:25px}.demo-toolbar{flex-wrap:wrap}.evolution-detail .kicker{overflow-wrap:anywhere}}

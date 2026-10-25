@@ -92,6 +92,22 @@ def check():
     for name,expected in manifest['files'].items():
         path=SITE/name
         require(path.is_file() and sha(path)==expected,f'Asset checksum mismatch: {name}')
+    featured=json.loads((SITE/'featured-tasks.json').read_text())['tasks']
+    names={int(t['id']):t for t in tasks}
+    require(len(featured)==6,'Homepage task card count differs from six')
+    for task in featured:
+        require(task.get('title_en')==names[task['number']]['title'],f'English homepage task name missing: {task["number"]}')
+        require(task['title']==names[task['number']]['title_zh'],f'Chinese homepage task name differs: {task["number"]}')
+    for filename,language,other in [('index.html','zh-CN','index.en.html'),('index.en.html','en','index.html')]:
+        raw=(SITE/filename).read_text()
+        require(f'<html lang="{language}">' in raw,f'Homepage document language missing: {filename}')
+        require('class="site-language"' in raw and f'href="{other}" lang=' in raw,f'Homepage language control incomplete: {filename}')
+        require('hreflang="en"' in raw and 'hreflang="zh-CN"' in raw,f'Homepage alternate language missing: {filename}')
+        require(raw.count('aria-current="page"')==1,f'Homepage language selection is ambiguous: {filename}')
+        overview='repository.zh-CN.html' if language=='zh-CN' else 'repository.html'
+        require(f'href="{overview}"' in raw,f'Homepage overview language differs: {filename}')
+        if language=='en':
+            require(not re.search(r'[\u4e00-\u9fff]',raw.replace('简体中文','')), 'English homepage contains untranslated Chinese copy')
     readme=(ROOT/'README.md').read_text()
     require('%%' not in readme,'Unresolved README template token')
     positions=[readme.find(f'assets/fan-{x}.gif') for x in ('isomorphic','heterogeneous','humanoid')]
@@ -103,7 +119,8 @@ def check():
     require(len(re.findall(r'^\| \d{2} \|',chinese,re.M))==20,'Chinese README task catalog has incorrect row count')
     require('href="README.zh-CN.md"' in readme and 'href="README.md"' in chinese,'README language switch is incomplete')
     for name, copy in [('English README',readme),('Chinese README',chinese),
-                       ('Website',(SITE/'index.html').read_text()),
+                       ('Chinese website',(SITE/'index.html').read_text()),
+                       ('English website',(SITE/'index.en.html').read_text()),
                        ('Website player',(SITE/'site.js').read_text())]:
         require('Multidojo²' not in copy and 'MULTIDOJO²' not in copy,f'Outdated brand: {name}')
         require(not re.search(r'3\s*(?:×|倍速)|216\s*(?:scenes|个场景|路视频)|100 reproducible evaluation scenes',copy,re.I),f'Outdated presentation copy: {name}')
