@@ -38,16 +38,22 @@ const scenes={
   humanoid:{label:copy.humanoid,asset:'fan-humanoid'}
 };
 const video=document.getElementById('hero-video');
+const assetVersion=new URL(document.currentScript.src).searchParams.get('v');
+function assetURL(path){
+  const url=new URL(path,location.href);
+  if(assetVersion)url.searchParams.set('v',assetVersion);
+  return url.href;
+}
 let sceneToken=0;
 async function chooseScene(name,play=false){
   if(!Object.hasOwn(scenes,name))return;
   const token=++sceneToken,scene=scenes[name];
-  video.pause();video.poster=`assets/${scene.asset}.jpg`;video.src=`assets/${scene.asset}.mp4`;
+  video.pause();video.poster=assetURL(`assets/${scene.asset}.jpg`);video.src=assetURL(`assets/${scene.asset}.mp4`);
   video.style.aspectRatio=scene.ratio||'8 / 3';video.load();
   document.getElementById('demo-label').textContent=scene.label;
   video.setAttribute('aria-label',scene.label+copy.recording);
   document.getElementById('demo-caption').textContent=scene.caption||copy.fanCaption;
-  document.getElementById('demo-download').href=`assets/${scene.asset}.mp4`;
+  document.getElementById('demo-download').href=assetURL(`assets/${scene.asset}.mp4`);
   document.querySelectorAll('[data-scene]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.scene===name)));
   if(play&&token===sceneToken){try{await video.play();}catch(_){/* Native controls remain available if autoplay is restricted. */}}
 }
@@ -94,7 +100,7 @@ async function init(){
     if(!name)throw Error(copy.taskError);
     const arms=task.task.includes('OctaArm')?8:task.task.includes('QuadArm')?4:task.task.includes('TripleArm')?3:2;
     const card=document.createElement('article');card.className='featured-task';
-    const image=document.createElement('img');image.src=task.poster;image.alt=name+copy.poster;image.loading='lazy';image.width=640;image.height=480;
+    const image=document.createElement('img');image.src=assetURL(task.poster);image.alt=name+copy.poster;image.loading='lazy';image.width=640;image.height=480;
     const body=document.createElement('div'),label=document.createElement('small'),title=document.createElement('h3');
     label.textContent=english?`TASK ${String(task.number).padStart(2,'0')} / ${arms} ARMS`:`任务 ${String(task.number).padStart(2,'0')} / ${arms} 臂`;
     title.textContent=name;body.append(label,title);card.append(image,body);cards.push(card);

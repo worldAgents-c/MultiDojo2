@@ -1,4 +1,4 @@
-<p align="center"><img src="assets/mark.png" width="64" alt="MultiDojo² 标志"></p>
+<p align="center"><img src="assets/mark.png?v=f698878eef2fb317" width="64" alt="MultiDojo² 标志"></p>
 
 <h1 align="center">MultiDojo²</h1>
 
@@ -16,9 +16,9 @@
 
 ## 看见协作
 
-[![十台同构机械臂协作组装风扇](assets/fan-isomorphic.gif)](assets/fan-isomorphic.mp4)
+[![十台同构机械臂协作组装风扇](assets/fan-isomorphic.gif?v=365a4da709ea7f82)](assets/fan-isomorphic.mp4)
 
-<p align="center"><a href="assets/fan-isomorphic.mp4">▶ 观看十臂风扇装配</a> · <a href="assets/collaboration-overview.mp4">观看协作总览</a></p>
+<p align="center"><a href="assets/fan-isomorphic.mp4?v=0f52c6098b1f2308">▶ 观看十臂风扇装配</a> · <a href="assets/collaboration-overview.mp4?v=6367e5af1178d0d2">观看协作总览</a></p>
 
 十台相同机械臂共同完成装配工序，在工位间传递工件、配合操作，一步步组装出完整风扇。
 
@@ -28,7 +28,7 @@
 
 **20+ 类协作操作任务，2,000+ 条经审核的仿真示范。** 每类 100 条轨迹，覆盖物体交接、区域接力、共同搬运、顺序叠放与并行操作。
 
-[![同一条轨迹的四路同步视角，与机器人状态和动作对齐](assets/dataset-perspectives.png)](assets/dataset-perspectives.png)
+[![同一条轨迹的四路同步视角，与机器人状态和动作对齐](assets/dataset-perspectives.png?v=dec5da28d0e72fe9)](assets/dataset-perspectives.png)
 
 - **既看局部操作，也看团队配合。** 每个机械臂均有第一视角，并配有共享工作空间的第三视角。在同一时间线上观察抓取细节与机械臂之间的协作。
 - **观测与动作同步记录。** RGB、机器人状态、原生关节指令、下一时刻观测与相机标定，保留感知和执行之间的对应关系。
@@ -50,21 +50,21 @@
 
 ### 异构机器人团队
 
-[![不同型号机械臂共同组装风扇](assets/fan-heterogeneous.gif)](assets/fan-heterogeneous.mp4)
+[![不同型号机械臂共同组装风扇](assets/fan-heterogeneous.gif?v=179de4d733df0c2a)](assets/fan-heterogeneous.mp4)
 
 不同机械臂在同一装配流程中承担互补角色，围绕共享工件完成传递与操作。
 
-<p align="center"><a href="assets/fan-heterogeneous.mp4">▶ 观看异构风扇装配</a></p>
+<p align="center"><a href="assets/fan-heterogeneous.mp4?v=ed4872c25cd1e2d5">▶ 观看异构风扇装配</a></p>
 
 <br>
 
 ### 人形机器人与机械臂
 
-[![人形机器人与机械臂共同完成风扇装配](assets/fan-humanoid.gif)](assets/fan-humanoid.mp4)
+[![人形机器人与机械臂共同完成风扇装配](assets/fan-humanoid.gif?v=b3a95e01ad1c4066)](assets/fan-humanoid.mp4)
 
 人形机器人与机械臂跨越本体形态差异，在连续装配工序中分工配合。
 
-<p align="center"><a href="assets/fan-humanoid.mp4">▶ 观看人形与机械臂协作</a></p>
+<p align="center"><a href="assets/fan-humanoid.mp4?v=4ca0d45ac0c198d9">▶ 观看人形与机械臂协作</a></p>
 
 *风扇装配与人形机器人协作，进一步展现跨组合、跨形态的协作研究方向。*
 
@@ -74,7 +74,7 @@
 
 **All-to-One** 将多机器人的观测与状态汇聚为统一的世界认知；**One-to-All** 将共享认知转化为适合各机器人本体与角色的协同行动。**One World, One Model** 表达了这一研究愿景。
 
-![All-to-One 汇聚观测与状态，One-to-All 协调不同机器人团队的行动](assets/collaboration-principle.png)
+![All-to-One 汇聚观测与状态，One-to-All 协调不同机器人团队的行动](assets/collaboration-principle.png?v=47a1b70244de0aba)
 
 <a id="tasks"></a>
 
@@ -152,7 +152,7 @@
 
 **把回放证据转化为具体的训练目标。** RSI 连接执行记录、失败说明与后续训练任务，帮助研究者明确策略下一步需要练习什么。
 
-[![RSI 工作流：回放、诊断、任务定义、物理验证、训练与复测](assets/rsi-workflow.png)](assets/rsi-workflow.png)
+[![RSI 工作流：回放、诊断、任务定义、物理验证、训练与复测](assets/rsi-workflow.png?v=8e7efacfb69f1ebc)](assets/rsi-workflow.png)
 
 训练建议具体到参与的机器人、操作物体、起点与终点范围、协作顺序、运动约束和成功条件。候选场景通过原生物理验收后进入训练，再通过复测衡量下一轮训练的效果。
 
@@ -184,8 +184,8 @@ python3 -m http.server 8000 --bind 127.0.0.1 --directory .
 
 ## 2,000+ 条轨迹，汇成协作图景
 
-[![多机器人协作场景持续滚动的视频墙](assets/trajectory-wall.gif)](assets/trajectory-wall.mp4)
+[![多机器人协作场景持续滚动的视频墙](assets/trajectory-wall.gif?v=41b6699d1b7032fc)](assets/trajectory-wall.mp4)
 
-<p align="center"><a href="assets/trajectory-wall.mp4">▶ 浏览完整场景墙 · 4K · 54 秒</a></p>
+<p align="center"><a href="assets/trajectory-wall.mp4?v=11f488fe7cc4ecfb">▶ 浏览完整场景墙 · 4K · 54 秒</a></p>
 
 从双臂交接到八臂工位：持续滚动的场景墙，展现丰富的多机器人训练轨迹与装配研究展示。

@@ -49,6 +49,12 @@ def check():
         require(path.stat().st_size<100*1024**2,f'File reaches GitHub regular Git limit: {relative}')
         if path.suffix not in ('.html','.md','.css','.js','.json','.yml','.yaml'):continue
         raw=path.read_text(encoding='utf-8')
+        if path.suffix in ('.md','.html'):
+            # A cited external paper keeps its actual title.
+            own_copy='\n'.join(line for line in raw.splitlines()
+                               if 'https://arxiv.org/abs/2607.04434' not in line)
+            require(not re.search(r'robo[ _-]?dojo',own_copy,re.I),f'Previous project name: {relative}')
+            require('Multidojo' not in own_copy,f'Previous project capitalization: {relative}')
         require(not re.search(r'(?:sk-|hf_|gh[pousr]_|github_pat_)[A-Za-z0-9_]{20,}',raw),f'Credential-like token: {relative}')
         require('/home/a/' not in raw and '/media/a/' not in raw,f'Local absolute path: {relative}')
         if path.suffix not in ('.html','.md','.css'):continue
@@ -100,6 +106,11 @@ def check():
         require(task['title']==names[task['number']]['title_zh'],f'Chinese homepage task name differs: {task["number"]}')
     for filename,language,other in [('index.html','zh-CN','index.en.html'),('index.en.html','en','index.html')]:
         raw=(SITE/filename).read_text()
+        parser=Links();parser.feed(raw)
+        for link in parser.links:
+            value=urlsplit(link)
+            if not value.scheme and not value.netloc and Path(value.path).suffix in ('.js','.css','.png','.jpg','.gif','.mp4'):
+                require(bool(re.search(r'(?:^|&)v=[a-f0-9]{16}(?:&|$)',value.query)),f'Unversioned homepage asset: {filename}: {link}')
         require(f'<html lang="{language}">' in raw,f'Homepage document language missing: {filename}')
         require('class="site-language"' in raw and f'href="{other}" lang=' in raw,f'Homepage language control incomplete: {filename}')
         require('hreflang="en"' in raw and 'hreflang="zh-CN"' in raw,f'Homepage alternate language missing: {filename}')
@@ -129,6 +140,8 @@ def check():
         require('MultiDojo²' in copy and '2,000+' in copy and '20+' in copy,f'Project identity or collection scale missing: {name}')
     for task in tasks:
         require(task['task'] in readme and task['task'] in chinese,f'Bilingual task identifier missing: {task["id"]}')
+    for path in (ROOT/'LICENSE', SITE/'LICENSE'):
+        require('2026 MultiDojo² contributors' in path.read_text(),f'Outdated copyright name: {path.name}')
     pending=[key for key in ('official_site_url','github_url','live_benchmark_url') if config[key] is None]
     print(json.dumps(dict(passed=not issues,files=len(files),local_links=checked_links,task_families=len(tasks),training_rows=len(covered),pending_public_addresses=pending,issues=issues),ensure_ascii=False,indent=2))
     return 1 if issues else 0

@@ -1,4 +1,4 @@
-<p align="center"><img src="assets/mark.png" width="64" alt="MultiDojo² logo"></p>
+<p align="center"><img src="assets/mark.png?v=f698878eef2fb317" width="64" alt="MultiDojo² logo"></p>
 
 <h1 align="center">MultiDojo²</h1>
 
@@ -14,9 +14,9 @@
 
 ## Collaboration in action
 
-[![Ten homogeneous robot arms assemble a fan](assets/fan-isomorphic.gif)](assets/fan-isomorphic.mp4)
+[![Ten homogeneous robot arms assemble a fan](assets/fan-isomorphic.gif?v=365a4da709ea7f82)](assets/fan-isomorphic.mp4)
 
-<p align="center"><a href="assets/fan-isomorphic.mp4">▶ Watch ten-arm fan assembly</a> · <a href="assets/collaboration-overview.mp4">Watch the collection overview</a></p>
+<p align="center"><a href="assets/fan-isomorphic.mp4?v=0f52c6098b1f2308">▶ Watch ten-arm fan assembly</a> · <a href="assets/collaboration-overview.mp4?v=6367e5af1178d0d2">Watch the collection overview</a></p>
 
 Ten matching arms share an assembly sequence, transferring a workpiece between stations and coordinating each step toward a completed fan.
 
@@ -24,7 +24,7 @@ Ten matching arms share an assembly sequence, transferring a workpiece between s
 
 **A balanced collection of 2,000+ reviewed simulation demonstrations across 20+ collaborative manipulation tasks.** Each task contributes 100 episodes, covering handovers, relays, shared transport, ordered stacking, and parallel manipulation.
 
-[![Four synchronized camera views from one recorded episode, aligned with robot states and actions](assets/dataset-perspectives.png)](assets/dataset-perspectives.png)
+[![Four synchronized camera views from one recorded episode, aligned with robot states and actions](assets/dataset-perspectives.png?v=dec5da28d0e72fe9)](assets/dataset-perspectives.png)
 
 - **See the team and the local interaction.** Every arm has a first-person view, accompanied by third-person views of the shared workspace. Follow grasping details and inter-robot coordination on the same timeline.
 - **Learn from aligned observations and actions.** RGB, robot state, native joint commands, next observations, and camera calibration preserve the connection between what each robot sees and how it moves.
@@ -44,21 +44,21 @@ The first public data release contains **301 complete demonstrations across all 
 
 ### Heterogeneous robot teams
 
-[![Different robot arms collaborate on fan assembly](assets/fan-heterogeneous.gif)](assets/fan-heterogeneous.mp4)
+[![Different robot arms collaborate on fan assembly](assets/fan-heterogeneous.gif?v=179de4d733df0c2a)](assets/fan-heterogeneous.mp4)
 
 Different manipulators take complementary roles in the same assembly workflow, coordinating transfers and operations around a shared workpiece.
 
-<p align="center"><a href="assets/fan-heterogeneous.mp4">▶ Watch heterogeneous fan assembly</a></p>
+<p align="center"><a href="assets/fan-heterogeneous.mp4?v=ed4872c25cd1e2d5">▶ Watch heterogeneous fan assembly</a></p>
 
 <br>
 
 ### Humanoids and manipulators
 
-[![Humanoid robots and manipulators work together on fan assembly](assets/fan-humanoid.gif)](assets/fan-humanoid.mp4)
+[![Humanoid robots and manipulators work together on fan assembly](assets/fan-humanoid.gif?v=b3a95e01ad1c4066)](assets/fan-humanoid.mp4)
 
 Humanoids and robot arms extend the collaboration across body types, working together through the assembly sequence.
 
-<p align="center"><a href="assets/fan-humanoid.mp4">▶ Watch humanoid–manipulator collaboration</a></p>
+<p align="center"><a href="assets/fan-humanoid.mp4?v=4ca0d45ac0c198d9">▶ Watch humanoid–manipulator collaboration</a></p>
 
 *Fan assembly and humanoid–manipulator collaboration extend the research showcases beyond the manipulation task suite.*
 
@@ -68,7 +68,7 @@ Humanoids and robot arms extend the collaboration across body types, working tog
 
 **All-to-One** brings observations and states into a common view of the world. **One-to-All** turns that shared understanding into coordinated actions across different robots. **One World, One Model** expresses the research vision behind this approach.
 
-![All-to-One brings robot observations into shared world understanding; One-to-All coordinates actions across robot teams](assets/collaboration-principle.png)
+![All-to-One brings robot observations into shared world understanding; One-to-All coordinates actions across robot teams](assets/collaboration-principle.png?v=47a1b70244de0aba)
 
 ## Tasks
 
@@ -142,7 +142,7 @@ Success combines task completion with the required grasp, transfer order, suppor
 
 **Turn replay evidence into a focused training objective.** RSI connects execution records with failure explanations and concrete follow-up tasks, helping researchers decide what a policy should practise next.
 
-[![RSI workflow: replay, diagnosis, task specification, physical validation, training, and re-evaluation](assets/rsi-workflow.png)](assets/rsi-workflow.png)
+[![RSI workflow: replay, diagnosis, task specification, physical validation, training, and re-evaluation](assets/rsi-workflow.png?v=8e7efacfb69f1ebc)](assets/rsi-workflow.png)
 
 A training recommendation specifies the participating robots, object, initial and goal ranges, collaboration order, motion constraints, and success conditions. Candidate scenes pass native physical validation before entering training; re-evaluation measures the effect of the next training round.
 
@@ -173,8 +173,8 @@ Website code and documentation: [MIT License](LICENSE) · [Attribution](NOTICE.m
 
 ## 2,000+ trajectories in motion
 
-[![A continuously scrolling gallery of collaborative robot scenes](assets/trajectory-wall.gif)](assets/trajectory-wall.mp4)
+[![A continuously scrolling gallery of collaborative robot scenes](assets/trajectory-wall.gif?v=41b6699d1b7032fc)](assets/trajectory-wall.mp4)
 
-<p align="center"><a href="assets/trajectory-wall.mp4">▶ Explore the full collection · 4K · 54 seconds</a></p>
+<p align="center"><a href="assets/trajectory-wall.mp4?v=11f488fe7cc4ecfb">▶ Explore the full collection · 4K · 54 seconds</a></p>
 
 From dual-arm handovers to eight-arm workstations: a continuously scrolling panorama of collaborative manipulation, accompanied by assembly showcases.
