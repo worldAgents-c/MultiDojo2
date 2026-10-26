@@ -1,22 +1,22 @@
 {
   "brand": "MultiDojo²",
   "files": {
-    "PROJECT.md": "53c05b0dbfa4e29fa2b3671d70efeac9818a5d19efa62037f724aff215ed246f",
-    "README.zh-CN.md": "d7244ee48eb164e457dad634750c6026e259b83925b18a46e513bc22b26e874e",
+    "PROJECT.md": "40be16f0587f9876de913ef8b65a1335d68565a1c105bc7eba8f463fbe058805",
+    "README.zh-CN.md": "0af3382c6f0e0e24bfbb9711ac37f994e38391ad34925b4da7d931b587327451",
     "repository.css": "a1915d40c78a99e1a5e65a02a557c85dd06819e895a9a74108072c1fd8a337ac",
-    "index.en.html": "cb14cb8f1c8754fd1b9733c5bf4f777c97772f601ea169cde7c6881a615981b8",
+    "index.en.html": "fd06a0c692bc01b36706538c3a2e2cde0370f6c9561c1a121ab4f6823e1070ff",
     "RSI-USER.zh.md": "35a454363842075655c435d256c2417dee99a571bc300294a0ab00d02046b291",
     "RELATED_WORK.md": "8a3a48cce04da5f1115b7ac4f311ea4994ef851ce555deeb3cf61c41b88905eb",
-    "repository.zh-CN.html": "74f6392c919fd45fa06b2ce6cc740cc6191db16bcaaab0acdf37056ca4607630",
-    "index.html": "acfe68be9b080ba2e202fd9a56a6aad25bdb00bf78ab367cebfd00a718d2154c",
+    "repository.zh-CN.html": "3fcf9eeae5a7c83a91fdeea834f758f7c49ecbc8d84d6172904f3d6103e1a943",
+    "index.html": "f290da33f5ab0082361d8947e7224d2c038283521b67452cf97ec91b31bd718a",
     "featured-tasks.json": "81f81e7325328cd6c0bd156ba9cffac1e862681798cf77d2a96f75733f03d780",
     "project-config.json": "b4bc0d7f37c413d35838819e97373fb02a4aad6a8a728062998832e441245e89",
     "NOTICE.md": "fdd296b1a27bd8c02b9e186ceb72c2813f38ad6ae0052cab20743aff2d0b480a",
     ".nojekyll": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
     "site.js": "a27829b5a30d9ac8617ae94910db800667c29f88b2087afb05d3ed74082ac70f",
     "site.css": "89df04825eef76bd323da8ae099182d6e8579c12fb6f982114d0f4fd17207e90",
-    "repository.html": "376055c9a9ba27f07d816b53207be93b76dbe67389f01fe2e3e24fb211b02cc9",
-    "README.md": "5666e03d191a133f81164ab1306877f4582f030f7f548e76d172d4f51073d82c",
+    "repository.html": "f32ceb203edc220b68b6aa8168c2eb5e45d2fe04eecbe35a7e87c1ccf1699aa9",
+    "README.md": "75fda19c2ec572b8baf8ce64c6dce8a480f783b125791277cd35e11af5b0d80e",
     "LICENSE": "f6908d66b2ee1fd6e6165a3b7f5d4f2f6192304e6174d4a5ade29ff6e3bb34cf",
     "assets/rsi-workflow.png": "8e7efacfb69f1ebc4d9e4c6c60253329bca3251f78a7aec4dfe93b3e5d245242",
     "assets/fan-isomorphic.jpg": "f84e3ac0be2bc091f3518c83094036d8927f24b5e48f7f81b9ba5730f1db0901",
@@ -53,7 +53,7 @@
     "assets/fan-humanoid.gif": "2e45e24db9ce57b63c0302753a3b4a273e3664b9f2eb21fc183af857d84693e5",
     "assets/trajectory-wall.jpg": "3a94458fa21b5c9abe9b1210a59337159a571b30df3097d19fa2db17f334256d",
     "scripts/update_manifest.py": "f14264186b8d721a4c208ca7e3021d6961d79a97faca2aa051b4fb0b421e2d37",
-    "scripts/check_release.py": "5df2c3b642db0232a1dc033be45374fc6a4ab1539a6c4d3fab190f7df6069d70"
+    "scripts/check_release.py": "f67db1d13333b222021cb9b5f57491472f415cec233cc122e69c874c5b4d69ac"
   },
   "contains_secrets": false,
   "backend_included": false

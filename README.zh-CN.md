@@ -38,7 +38,7 @@
 
 **[前往 Hugging Face 下载训练数据 →](https://huggingface.co/datasets/WorldAgents-c/MultiDojo2)**
 
-首批公开数据包含 **301 条完整轨迹，覆盖全部 20 类任务**，同步保留每臂第一视角、第三视角、原生状态动作与验收记录。各任务的公开轨迹数量及加载方法见数据集页面。
+**2,000+ 条轨迹的数据集正在 Hugging Face 持续开放**，同步保留每臂第一视角、第三视角、原生状态动作与验收信息。下载及加载方法见数据集页面。
 
 [数据格式与加载示例 →](docs/PROJECT.md#dataset) · [机器可读的任务目录 →](docs/assets/task-catalog.json)
 

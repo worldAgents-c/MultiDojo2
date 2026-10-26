@@ -34,7 +34,7 @@ Ten matching arms share an assembly sequence, transferring a workpiece between s
 
 **[Download training data on Hugging Face →](https://huggingface.co/datasets/WorldAgents-c/MultiDojo2)**
 
-The first public data release contains **301 complete demonstrations across all 20 task families**, with synchronized first-person and third-person views, native states/actions, and acceptance records. Per-task release counts and loading instructions are provided in the dataset repository.
+The **2,000+ demonstration collection** is being progressively released on Hugging Face, with synchronized first-person and third-person views, native states/actions, and acceptance metadata. Download and loading instructions are provided in the dataset repository.
 
 [Data format & loader example →](PROJECT.md#dataset) · [Machine-readable task catalog →](assets/task-catalog.json)
 

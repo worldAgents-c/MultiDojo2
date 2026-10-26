@@ -115,7 +115,8 @@ def check():
         require('class="site-language"' in raw and f'href="{other}" lang=' in raw,f'Homepage language control incomplete: {filename}')
         require('hreflang="en"' in raw and 'hreflang="zh-CN"' in raw,f'Homepage alternate language missing: {filename}')
         require(raw.count('aria-current="page"')==1,f'Homepage language selection is ambiguous: {filename}')
-        require('https://huggingface.co/datasets/WorldAgents-c/MultiDojo2' in raw and '301' in raw,f'Public dataset link missing: {filename}')
+        require('https://huggingface.co/datasets/WorldAgents-c/MultiDojo2' in raw and '2,000+' in raw,f'Public dataset link missing: {filename}')
+        require('301 complete' not in raw and '301 条' not in raw,f'Obsolete public release count: {filename}')
         overview='repository.zh-CN.html' if language=='zh-CN' else 'repository.html'
         require(f'href="{overview}"' in raw,f'Homepage overview language differs: {filename}')
         if language=='en':
