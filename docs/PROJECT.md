@@ -90,7 +90,7 @@ Overall score = 100 × mean(success rates across evaluated task families)
 
 Task-specific completion and physical checks cover the required grasp/contact, transfer/order, support, destination, and final stability. Forbidden collisions, failures, timeouts, and runtime errors count as failed trials. RSI provides diagnostic feedback alongside these objective scores.
 
-The evaluation runtime uses GenManip/Isaac, CuRobo, and the corresponding robot/object assets. Its policy adapter defines observations, action semantics, and execution timing. The online evaluation service is coming soon.
+The evaluation runtime is built on Isaac. Its policy adapter defines observations, action semantics, and execution timing. The online evaluation service is coming soon.
 
 Official results cover the declared evaluation task set, retain scene and execution evidence, and undergo independent review and organizer verification. Script experts and visual policies are reported in separate tracks.
 
