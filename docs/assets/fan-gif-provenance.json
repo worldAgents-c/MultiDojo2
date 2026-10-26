@@ -1,61 +1,79 @@
 {
-  "purpose": "GitHub README animated previews linked to the reviewed MP4 excerpts",
+  "purpose": "Continuous full-process animated overviews linked to complete MP4 recordings",
   "simulation_demonstrations": true,
   "not_scored_task_results": true,
   "scenes": {
     "isomorphic": {
       "video": "fan-isomorphic.mp4",
-      "video_sha256": "0f52c6098b1f2308c7165e15caff0b25e9bd3e48c56476f5a0e931c8d740b2ea",
+      "video_sha256": "8cd024945abab6dcc614c79e8a1c164cf94f7b8b898595b8ed976cc7fccb7fba",
       "gif": "fan-isomorphic.gif",
-      "gif_sha256": "365a4da709ea7f82006e559edfbaf6d37facb9d3214c31979305fc483e9cf116",
+      "gif_sha256": "a4aa7ab143a8622237f74b5418befcd0900f4c5e82fcd47f73f20ed58cec58f0",
       "dimensions": [
         960,
         360
       ],
       "palette_colors": 64,
-      "frames": 192,
-      "fps": 8,
-      "duration_seconds": 24,
+      "frames": 164,
+      "fps": 6,
+      "duration_seconds": 27.34,
+      "source_duration_seconds": 261.6,
+      "source_time_range_seconds": [
+        0,
+        261.6
+      ],
       "decoded_all_frames": true,
-      "contains_entire_source_excerpt": true,
+      "contains_entire_source_process": true,
+      "temporal_cuts": false,
       "scene_cropped": false,
       "annotation_bands_removed": true,
       "source_video_unchanged": true
     },
     "heterogeneous": {
       "video": "fan-heterogeneous.mp4",
-      "video_sha256": "ed4872c25cd1e2d5c231aed9b074e00631d759548b265e07c31345b657dc6b5f",
+      "video_sha256": "8655f6cd822451d6d88c4cba6deb564287ec4254387a7f4a602c221ca3179b9e",
       "gif": "fan-heterogeneous.gif",
-      "gif_sha256": "179de4d733df0c2a1eb4ec5ec52fae7c6e94c02d5abc20634208b7bfb53fff6f",
+      "gif_sha256": "4085f93b1e73b28260f3875b61c4ab4b36e88f878f0200e0cc2f3ff5e3ce64a5",
       "dimensions": [
         960,
         360
       ],
       "palette_colors": 64,
-      "frames": 192,
-      "fps": 8,
-      "duration_seconds": 24,
+      "frames": 232,
+      "fps": 6,
+      "duration_seconds": 38.67,
+      "source_duration_seconds": 375.23333333333335,
+      "source_time_range_seconds": [
+        0,
+        375.23333333333335
+      ],
       "decoded_all_frames": true,
-      "contains_entire_source_excerpt": true,
+      "contains_entire_source_process": true,
+      "temporal_cuts": false,
       "scene_cropped": false,
       "annotation_bands_removed": true,
       "source_video_unchanged": true
     },
     "humanoid": {
       "video": "fan-humanoid.mp4",
-      "video_sha256": "4ca0d45ac0c198d98505d19b84f369f0f624dabc88418ea398a7bdf09e511d4b",
+      "video_sha256": "792941acee4b8c404bded080803c53d691e7182af2943c73963776b050b4d318",
       "gif": "fan-humanoid.gif",
-      "gif_sha256": "b3a95e01ad1c4066c23754180e7a2e749f139e9faa70d415a7f31c3e83078422",
+      "gif_sha256": "2e45e24db9ce57b63c0302753a3b4a273e3664b9f2eb21fc183af857d84693e5",
       "dimensions": [
         960,
         360
       ],
       "palette_colors": 64,
-      "frames": 192,
-      "fps": 8,
-      "duration_seconds": 24,
+      "frames": 273,
+      "fps": 6,
+      "duration_seconds": 45.5,
+      "source_duration_seconds": 443.76666666666665,
+      "source_time_range_seconds": [
+        0,
+        443.76666666666665
+      ],
       "decoded_all_frames": true,
-      "contains_entire_source_excerpt": true,
+      "contains_entire_source_process": true,
+      "temporal_cuts": false,
       "scene_cropped": false,
       "annotation_bands_removed": true,
       "source_video_unchanged": true

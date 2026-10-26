@@ -14,9 +14,9 @@
 
 ## Collaboration in action
 
-[![Ten homogeneous robot arms assemble a fan](assets/fan-isomorphic.gif?v=365a4da709ea7f82)](assets/fan-isomorphic.mp4)
+[![Ten homogeneous robot arms assemble a fan](assets/fan-isomorphic.gif?v=a4aa7ab143a86222)](assets/fan-isomorphic.mp4)
 
-<p align="center"><a href="assets/fan-isomorphic.mp4?v=0f52c6098b1f2308">▶ Watch ten-arm fan assembly</a> · <a href="assets/collaboration-overview.mp4?v=6367e5af1178d0d2">Watch the collection overview</a></p>
+<p align="center"><a href="assets/fan-isomorphic.mp4?v=8cd024945abab6dc">▶ Watch the complete ten-arm assembly</a> · <a href="assets/collaboration-overview.mp4?v=6367e5af1178d0d2">Watch the collection overview</a></p>
 
 Ten matching arms share an assembly sequence, transferring a workpiece between stations and coordinating each step toward a completed fan.
 
@@ -44,21 +44,21 @@ The first public data release contains **301 complete demonstrations across all 
 
 ### Heterogeneous robot teams
 
-[![Different robot arms collaborate on fan assembly](assets/fan-heterogeneous.gif?v=179de4d733df0c2a)](assets/fan-heterogeneous.mp4)
+[![Different robot arms collaborate on fan assembly](assets/fan-heterogeneous.gif?v=4085f93b1e73b282)](assets/fan-heterogeneous.mp4)
 
 Different manipulators take complementary roles in the same assembly workflow, coordinating transfers and operations around a shared workpiece.
 
-<p align="center"><a href="assets/fan-heterogeneous.mp4?v=ed4872c25cd1e2d5">▶ Watch heterogeneous fan assembly</a></p>
+<p align="center"><a href="assets/fan-heterogeneous.mp4?v=8655f6cd822451d6">▶ Watch the complete heterogeneous assembly</a></p>
 
 <br>
 
 ### Humanoids and manipulators
 
-[![Humanoid robots and manipulators work together on fan assembly](assets/fan-humanoid.gif?v=b3a95e01ad1c4066)](assets/fan-humanoid.mp4)
+[![Humanoid robots and manipulators work together on fan assembly](assets/fan-humanoid.gif?v=2e45e24db9ce57b6)](assets/fan-humanoid.mp4)
 
 Humanoids and robot arms extend the collaboration across body types, working together through the assembly sequence.
 
-<p align="center"><a href="assets/fan-humanoid.mp4?v=4ca0d45ac0c198d9">▶ Watch humanoid–manipulator collaboration</a></p>
+<p align="center"><a href="assets/fan-humanoid.mp4?v=792941acee4b8c40">▶ Watch the complete humanoid–manipulator assembly</a></p>
 
 *Fan assembly and humanoid–manipulator collaboration extend the research showcases beyond the manipulation task suite.*
 

@@ -16,9 +16,9 @@
 
 ## 看见协作
 
-[![十台同构机械臂协作组装风扇](docs/assets/fan-isomorphic.gif?v=365a4da709ea7f82)](docs/assets/fan-isomorphic.mp4)
+[![十台同构机械臂协作组装风扇](docs/assets/fan-isomorphic.gif?v=a4aa7ab143a86222)](https://worldagents-c.github.io/MultiDojo2/assets/fan-isomorphic.mp4?v=8cd024945abab6dc)
 
-<p align="center"><a href="docs/assets/fan-isomorphic.mp4?v=0f52c6098b1f2308">▶ 观看十臂风扇装配</a> · <a href="docs/assets/collaboration-overview.mp4?v=6367e5af1178d0d2">观看协作总览</a></p>
+<p align="center"><a href="https://worldagents-c.github.io/MultiDojo2/assets/fan-isomorphic.mp4?v=8cd024945abab6dc">▶ 观看十臂装配全流程</a> · <a href="docs/assets/collaboration-overview.mp4?v=6367e5af1178d0d2">观看协作总览</a></p>
 
 十台相同机械臂共同完成装配工序，在工位间传递工件、配合操作，一步步组装出完整风扇。
 
@@ -50,21 +50,21 @@
 
 ### 异构机器人团队
 
-[![不同型号机械臂共同组装风扇](docs/assets/fan-heterogeneous.gif?v=179de4d733df0c2a)](docs/assets/fan-heterogeneous.mp4)
+[![不同型号机械臂共同组装风扇](docs/assets/fan-heterogeneous.gif?v=4085f93b1e73b282)](https://worldagents-c.github.io/MultiDojo2/assets/fan-heterogeneous.mp4?v=8655f6cd822451d6)
 
 不同机械臂在同一装配流程中承担互补角色，围绕共享工件完成传递与操作。
 
-<p align="center"><a href="docs/assets/fan-heterogeneous.mp4?v=ed4872c25cd1e2d5">▶ 观看异构风扇装配</a></p>
+<p align="center"><a href="https://worldagents-c.github.io/MultiDojo2/assets/fan-heterogeneous.mp4?v=8655f6cd822451d6">▶ 观看异构装配全流程</a></p>
 
 <br>
 
 ### 人形机器人与机械臂
 
-[![人形机器人与机械臂共同完成风扇装配](docs/assets/fan-humanoid.gif?v=b3a95e01ad1c4066)](docs/assets/fan-humanoid.mp4)
+[![人形机器人与机械臂共同完成风扇装配](docs/assets/fan-humanoid.gif?v=2e45e24db9ce57b6)](https://worldagents-c.github.io/MultiDojo2/assets/fan-humanoid.mp4?v=792941acee4b8c40)
 
 人形机器人与机械臂跨越本体形态差异，在连续装配工序中分工配合。
 
-<p align="center"><a href="docs/assets/fan-humanoid.mp4?v=4ca0d45ac0c198d9">▶ 观看人形与机械臂协作</a></p>
+<p align="center"><a href="https://worldagents-c.github.io/MultiDojo2/assets/fan-humanoid.mp4?v=792941acee4b8c40">▶ 观看人形与机械臂装配全流程</a></p>
 
 *风扇装配与人形机器人协作，进一步展现跨组合、跨形态的协作研究方向。*
 

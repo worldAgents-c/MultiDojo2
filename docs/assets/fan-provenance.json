@@ -1,7 +1,8 @@
 {
   "brand": "MultiDojo²",
   "purpose": "Collaborative fan-assembly research showcases",
-  "excerpts_have_temporal_cuts": true,
+  "excerpts_have_temporal_cuts": false,
+  "full_process": true,
   "training_data_modified": false,
   "presentation": "Scene-only overview and close-up; source annotation bands removed",
   "scenes": {
@@ -10,18 +11,18 @@
       "native_acceptance_sha256": "3ea1cfc3a0cd616462cf39e874a05915ba4179d20c8a51ece3da72d1eb9e8083",
       "source_frames": 7848,
       "source_duration_seconds": 261.6,
-      "excerpt_start_seconds": [
-        20.928,
-        88.944,
-        164.808,
-        235.44
+      "source_time_range_seconds": [
+        0,
+        261.6
       ],
-      "excerpt_length_seconds": 6,
       "video": "fan-isomorphic.mp4",
-      "video_sha256": "0f52c6098b1f2308c7165e15caff0b25e9bd3e48c56476f5a0e931c8d740b2ea",
+      "video_sha256": "8cd024945abab6dcc614c79e8a1c164cf94f7b8b898595b8ed976cc7fccb7fba",
       "poster": "fan-isomorphic.jpg",
-      "poster_sha256": "1b5c716ab168b35678fc47eb7484af7011af33da6b49ba52a525c90c13ff695e",
-      "duration_seconds": 24,
+      "poster_sha256": "f84e3ac0be2bc091f3518c83094036d8927f24b5e48f7f81b9ba5730f1db0901",
+      "duration_seconds": 261.6,
+      "frames": 7848,
+      "full_process": true,
+      "original_timing_preserved": true,
       "dimensions": [
         1920,
         720
@@ -45,18 +46,18 @@
       "native_acceptance_sha256": "d6cade4f6c4fd6b66cc00722bce7c122997f992f9e930cdc8d383986a117683f",
       "source_frames": 11257,
       "source_duration_seconds": 375.23333333333335,
-      "excerpt_start_seconds": [
-        30.019,
-        127.579,
-        236.397,
-        337.71
+      "source_time_range_seconds": [
+        0,
+        375.23333333333335
       ],
-      "excerpt_length_seconds": 6,
       "video": "fan-heterogeneous.mp4",
-      "video_sha256": "ed4872c25cd1e2d5c231aed9b074e00631d759548b265e07c31345b657dc6b5f",
+      "video_sha256": "8655f6cd822451d6d88c4cba6deb564287ec4254387a7f4a602c221ca3179b9e",
       "poster": "fan-heterogeneous.jpg",
-      "poster_sha256": "44503f71718b2d1aec5d53ace5e2c5f30a02e8d7157c2b7bc721a4d0637b7458",
-      "duration_seconds": 24,
+      "poster_sha256": "405910a7a131a41e233bdb5840641df7f64605fa3834cb6a492aeb388ec80ba8",
+      "duration_seconds": 375.23333333333335,
+      "frames": 11257,
+      "full_process": true,
+      "original_timing_preserved": true,
       "dimensions": [
         1920,
         720
@@ -80,18 +81,18 @@
       "native_acceptance_sha256": "17e5c58e776ff2f58197c19d6c6794a2d26a989208521011fd513b5a2cd2c54e",
       "source_frames": 13313,
       "source_duration_seconds": 443.76666666666665,
-      "excerpt_start_seconds": [
-        35.501,
-        150.881,
-        279.573,
-        399.39
+      "source_time_range_seconds": [
+        0,
+        443.76666666666665
       ],
-      "excerpt_length_seconds": 6,
       "video": "fan-humanoid.mp4",
-      "video_sha256": "4ca0d45ac0c198d98505d19b84f369f0f624dabc88418ea398a7bdf09e511d4b",
+      "video_sha256": "792941acee4b8c404bded080803c53d691e7182af2943c73963776b050b4d318",
       "poster": "fan-humanoid.jpg",
-      "poster_sha256": "dd28728f909d39a55d992da38bbcd7a79235bd830c5f542fc9d0d24f03cc3255",
-      "duration_seconds": 24,
+      "poster_sha256": "c18fb6ece872a21a30f53cf7d417a8b0b3974bc7d79b8b1d4dbcbc054c457848",
+      "duration_seconds": 443.76666666666665,
+      "frames": 13313,
+      "full_process": true,
+      "original_timing_preserved": true,
       "dimensions": [
         1920,
         720

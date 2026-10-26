@@ -1,7 +1,7 @@
 'use strict';
 const english=document.documentElement.lang==='en';
 const copy=english?{
-  fanCaption:'Fan assembly · A full scene view and close-ups show continuous multi-robot collaboration.',
+  fanCaption:'Complete fan assembly · Follow the process from individual parts to the finished fan, with scene and close-up views.',
   overview:'Multi-robot collaboration · 2,000+ trajectories',
   overviewCaption:'From fan assembly to parallel manipulation: collaboration across homogeneous, heterogeneous, and humanoid robot teams.',
   heterogeneous:'Ten heterogeneous robots · Fan assembly',
@@ -16,7 +16,7 @@ const copy=english?{
   taskError:'Unable to load task demonstrations. Please refresh and try again.',
   poster:' · Natural-tabletop demonstration'
 }:{
-  fanCaption:'风扇装配研究展示 · 全景与工件近景，呈现多机器人连续协作。',
+  fanCaption:'风扇装配全流程 · 从零件就位到完成装配，全景与工件近景同步呈现。',
   overview:'多机器人协作 · 2,000+ 条轨迹总览',
   overviewCaption:'从风扇装配到多工位操作，持续呈现同构、异构与跨形态机器人的协作过程。',
   heterogeneous:'异构十机器人 · 风扇装配',
