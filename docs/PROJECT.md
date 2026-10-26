@@ -128,7 +128,7 @@ The manifest records file hashes. Review the rendered page and check results bef
 
 **Which data should I use for training?** The synchronized observation/action release and its authoritative `train.jsonl` index. Website GIFs and MP4s illustrate the collection.
 
-**Where can I download the dataset?** The [training data release on Hugging Face](https://huggingface.co/datasets/WorldAgents-c/MultiDojo2) provides 301 complete episodes across 20 tasks, approximately 133 GiB. Follow the dataset repository’s download, verification, and loader instructions.
+**Where can I download the dataset?** The [training data release on Hugging Face](https://huggingface.co/datasets/WorldAgents-c/MultiDojo2) provides 301 complete episodes across 20 tasks, approximately 98.1 GiB. Follow the dataset repository’s download, verification, and loader instructions.
 
 **What is the license?** The original website code and documentation are [MIT licensed](LICENSE). Scope and attribution are documented in [NOTICE.md](NOTICE.md). Datasets, evaluation runtimes, and third-party assets retain their respective release terms.
 
@@ -142,6 +142,6 @@ The manifest records file hashes. Review the rendered page and check results bef
 - **RSI 评估**：依据回放与执行证据定位协作问题，将改进方向具体化为物体、起终点范围、机械臂分工及验收条件。场景通过物理与数据验收后进入补强训练，再通过复测检验效果。
 - **协作研究展示**：同构十机器人、异构机器人，以及人形机器人与机械臂共同装配风扇，展现跨组合、跨形态的协作研究方向。
 
-**线上测评服务即将上线。[首批训练数据已在 Hugging Face 开放下载](https://huggingface.co/datasets/WorldAgents-c/MultiDojo2)：301 条完整轨迹，覆盖 20 类任务，约 133 GiB。**
+**线上测评服务即将上线。[首批训练数据已在 Hugging Face 开放下载](https://huggingface.co/datasets/WorldAgents-c/MultiDojo2)：301 条完整轨迹，覆盖 20 类任务，约 98.1 GiB。**
 
 [浏览项目官网](https://worldagents-c.github.io/MultiDojo2/) · [访问 GitHub](https://github.com/worldAgents-c/MultiDojo2) · [RSI 使用指南](RSI-USER.zh.md)
