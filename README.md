@@ -159,7 +159,7 @@ python3 -m http.server 8000 --bind 127.0.0.1 --directory docs
 
 Open [localhost:8000](http://localhost:8000/), then explore the dataset, task catalog, and evaluation guide.
 
-[Research & usage guide](docs/PROJECT.md) · [Related work](docs/RELATED_WORK.md) · [Deployment guide](docs/PROJECT.md#deployment)
+[Research & usage guide](docs/PROJECT.md) · [Deployment guide](docs/PROJECT.md#deployment)
 
 For questions or contributions, include the task ID, episode or trial ID, and the steps needed to reproduce the issue.
 

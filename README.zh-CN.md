@@ -171,7 +171,7 @@ python3 -m http.server 8000 --bind 127.0.0.1 --directory docs
 
 打开 [localhost:8000](http://localhost:8000/)，浏览数据集介绍、任务目录和评测指南。
 
-[研究与使用指南](docs/PROJECT.md#中文说明) · [相关研究](docs/RELATED_WORK.md) · [部署指南](docs/PROJECT.md#deployment)
+[研究与使用指南](docs/PROJECT.md#中文说明) · [部署指南](docs/PROJECT.md#deployment)
 
 提出问题或贡献时，请附上任务 ID、轨迹或试次 ID，以及复现步骤。
 
