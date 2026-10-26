@@ -66,7 +66,7 @@
 
 <p align="center"><a href="assets/fan-humanoid.mp4?v=792941acee4b8c40">▶ 观看人形与机械臂装配全流程</a></p>
 
-*风扇装配与人形机器人协作，进一步展现跨组合、跨形态的协作研究方向。*
+*风扇装配展示长时序、多工序协作，覆盖同构、异构与人形机器人组合。*
 
 ## All-to-One. One-to-All.
 

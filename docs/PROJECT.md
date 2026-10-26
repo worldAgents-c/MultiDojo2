@@ -71,11 +71,11 @@ finally:
 
 ## Task IDs
 
-The frozen suite uses zero-based IDs **00–19**. [task-catalog.json](assets/task-catalog.json) maps each ID to its canonical identifier, English/Chinese names, camera set, counts, and row spans in the training index.
+The task registry uses zero-based IDs **00–19** for the current manipulation tasks. [task-catalog.json](assets/task-catalog.json) maps each ID to its canonical identifier, English/Chinese names, camera set, counts, and row spans in the training index.
 
 `training_index_rows_1_based` gives line numbers in the full source index identified by `training_index_sha256`. Each public training release has its own `train.jsonl`; use `tasks.json` and `source_training_index_row_1_based` in that dataset to map release rows back to the collection. Join recordings by `task` and `episode`.
 
-Trial `09-047` is the 48th zero-based trial of task 09, homogeneous four-arm ordered color-block stacking. Task 05 retains a historical `Banana` identifier; its manipulation object is a **long block**, passed from Franka to Piper and placed on the yellow target. Heterogeneous teams combine robot designs, with some models appearing more than once.
+Trial `09-047` is the 48th zero-based trial of task 09, homogeneous four-arm ordered color-block stacking. Task 05 (`HeterogeneousDualArm/FrankPiperBananaHandover`) performs a **long-block** handover from Franka to Piper, followed by placement on the yellow target. Heterogeneous teams combine robot designs with robot-specific joint orders, workspaces, and control semantics.
 
 ## Evaluation
 

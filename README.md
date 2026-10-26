@@ -60,7 +60,7 @@ Humanoids and robot arms extend the collaboration across body types, working tog
 
 <p align="center"><a href="https://worldagents-c.github.io/MultiDojo2/assets/fan-humanoid.mp4?v=792941acee4b8c40">▶ Watch the complete humanoid–manipulator assembly</a></p>
 
-*Fan assembly and humanoid–manipulator collaboration extend the research showcases beyond the manipulation task suite.*
+*Fan assembly highlights long-horizon, multi-stage coordination across homogeneous, heterogeneous, and humanoid teams.*
 
 ## All-to-One. One-to-All.
 

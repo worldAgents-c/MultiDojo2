@@ -11,4 +11,3 @@ license does not grant rights to those materials.
 
 The separately distributed training dataset and evaluation runtime require their
 own release terms; this website license does not assign a license to them.
-The related-work guide credits the research systems discussed by this project.
