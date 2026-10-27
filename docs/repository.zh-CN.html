@@ -1,4 +1,4 @@
-<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>MultiDojo² · 中文项目概览</title><link rel="icon" href="assets/favicon.png?v=af48e177111937ee"><link rel="stylesheet" href="repository.css?v=a1915d40c78a99e1"></head><body>
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>MultiDojo² · 中文项目概览</title><link rel="icon" href="assets/favicon.png?v=af48e177111937ee"><link rel="stylesheet" href="repository.css?v=7e3782f20e9a3472"></head><body>
 <div class="preview-bar"><nav class="language-switch" aria-label="Language"><a href="repository.html" lang="en">English</a><strong lang="zh-CN">简体中文</strong></nav><span>MultiDojo² · 中文项目概览</span><a href="./">项目网站 ↗</a></div>
 <header class="repo-header"><div class="repo-title"><img src="assets/mark.png?v=f698878eef2fb317" alt=""><span>MultiDojo²</span><span class="label">协作评测基准</span></div><nav class="tabs" aria-label="项目导航"><span class="selected">README</span><a href="#dataset">数据集</a><a href="#evaluation">评测</a><a href="./">项目官网 ↗</a></nav></header>
 <main class="repo-layout"><article class="readme"><div class="file-title"><span>README.zh-CN.md</span><a href="README.zh-CN.md" download>下载原始 Markdown ↓</a></div><div class="markdown-body"><p align="center"><img src="assets/mark.png?v=f698878eef2fb317" width="64" alt="MultiDojo² 标志"></p>
@@ -48,7 +48,7 @@
 </ul>
 <p><strong><a href="https://huggingface.co/datasets/WorldAgents-c/MultiDojo2">前往 Hugging Face 下载训练数据 →</a></strong></p>
 <p><strong>2,000+ 条轨迹的数据集正在 Hugging Face 持续开放</strong>，同步保留每臂第一视角、第三视角、原生状态动作与验收信息。下载及加载方法见数据集页面。</p>
-<p><a href="PROJECT.md#dataset">数据格式与加载示例 →</a> · <a href="assets/task-catalog.json">机器可读的任务目录 →</a></p>
+<p><a href="guide.html#dataset">数据格式与加载示例 →</a> · <a href="assets/task-catalog.json">机器可读的任务目录 →</a></p>
 <p><br></p>
 <p><a id="collaboration-across-embodiments"></a></p>
 <h2 id="_3">跨形态协作</h2>
@@ -227,7 +227,7 @@
 19  HeterogeneousQuadArm/WhiteCupZoneRelay</pre>
 </details>
 
-<p><a href="assets/task-catalog.json">任务目录</a> 将 <strong>00–19</strong> 号任务与任务名称、相机集合、训练索引中的轨迹范围对应起来。<a href="PROJECT.md#task-ids">任务与标识说明 →</a></p>
+<p><a href="assets/task-catalog.json">任务目录</a> 将 <strong>00–19</strong> 号任务与任务名称、相机集合、训练索引中的轨迹范围对应起来。<a href="guide.html#task-ids">任务与标识说明 →</a></p>
 <p><a id="evaluation"></a></p>
 <h2 id="_7">评测</h2>
 <p><strong>在受控的场景变化中检验协作。</strong> 评测改变物体与终点位置、允许变化的外观和初始状态，同时保持任务指令和物理要求。</p>
@@ -236,12 +236,12 @@
 </code></pre>
 <p>成功判定结合任务完成情况与真实抓取、交接顺序、物体支撑、终点位置、稳定性及碰撞约束。各任务等权参与总分，执行记录支持复现与复核。</p>
 <p><strong>线上测评服务即将上线。</strong></p>
-<p><a href="PROJECT.md#evaluation">评测协议与策略使用指南 →</a></p>
+<p><a href="guide.html#evaluation">评测协议与策略使用指南 →</a></p>
 <h2 id="rsi">RSI</h2>
 <p><strong>把回放证据转化为具体的训练目标。</strong> RSI 连接执行记录、失败说明与后续训练任务，帮助研究者明确策略下一步需要练习什么。</p>
 <p><a href="assets/rsi-workflow.png?v=8e7efacfb69f1ebc"><img alt="RSI 工作流：回放、诊断、任务定义、物理验证、训练与复测" src="assets/rsi-workflow.png?v=8e7efacfb69f1ebc" /></a></p>
 <p>训练建议具体到参与的机器人、操作物体、起点与终点范围、协作顺序、运动约束和成功条件。候选场景通过原生物理验收后进入训练，再通过复测衡量下一轮训练的效果。</p>
-<p><a href="PROJECT.md#rsi">RSI 工作流说明</a> · <a href="RSI-USER.zh.md">RSI 使用指南 →</a></p>
+<p><a href="guide.html#rsi">RSI 工作流说明</a> · <a href="rsi.html">RSI 使用指南 →</a></p>
 <p><a id="quick-start"></a></p>
 <h2 id="_8">快速开始</h2>
 <p>使用 <strong>Python 3.10+</strong> 在本地浏览项目：</p>
@@ -249,7 +249,7 @@
 python3 -m http.server 8000 --bind 127.0.0.1 --directory .
 </code></pre>
 <p>打开 <a href="http://localhost:8000/">localhost:8000</a>，浏览数据集介绍、任务目录和评测指南。</p>
-<p><a href="PROJECT.md#中文说明">研究与使用指南</a> · <a href="PROJECT.md#deployment">部署指南</a></p>
+<p><a href="guide.html#中文说明">研究与使用指南</a> · <a href="guide.html#deployment">部署指南</a></p>
 <p>提出问题或贡献时，请附上任务 ID、轨迹或试次 ID，以及复现步骤。</p>
 <p>网站代码与文档：<a href="LICENSE">MIT 许可证</a> · <a href="NOTICE.md">素材与第三方归属</a>。</p>
 <p><br></p>

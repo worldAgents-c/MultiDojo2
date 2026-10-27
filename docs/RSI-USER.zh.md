@@ -23,3 +23,23 @@
 训练建议可导出为场景候选。候选经过原生仿真执行，并通过抓取、支撑、碰撞、放置稳定性及数据完整性验收后，进入补强训练。
 
 训练后的策略在独立冻结场景中复测，用各任务成功率和整体成绩追踪改进效果。**RSI 反馈辅助诊断与训练，正式成绩依据统一任务和物理标准计算。**
+
+## English
+
+**RSI connects execution replays to failure diagnosis and specific follow-up training tasks.** Online evaluation is coming soon.
+
+### Workflow
+
+Select a completed evaluation replay and choose **RSI assessment** to view assessment progress, findings, and training recommendations. The report identifies the operation stage, participating robots and objects, and the conditions that affected task completion. Runtime failures or insufficient evidence are reported with the information needed for further investigation.
+
+### Reading a report
+
+- **Locate the problem:** relate the relevant operation stage to the recorded execution evidence.
+- **Analyze the cause:** consider grasping, handover, placement, and support requirements, distinguishing observed facts from causes that still need verification.
+- **Define targeted practice:** specify robot roles, objects, initial and goal position ranges, collaboration order, motion constraints, and success conditions.
+
+For example, a receiving-position error in a two-arm handover can lead to follow-up scenes that preserve the object and handover order while varying the receiving region. Successful reception, accurate placement, and compliance with collision constraints define acceptance.
+
+### From recommendations to training
+
+Recommendations can be exported as candidate scenes. Candidates enter training after native simulation execution and acceptance checks covering grasping, support, prohibited collisions, placement stability, and complete data recording. Re-evaluate the trained policy on independent frozen scenes and track per-task success rates and the overall score. **RSI supports diagnosis and training; official scores follow the common task and physical criteria.**

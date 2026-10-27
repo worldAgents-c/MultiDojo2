@@ -18,7 +18,7 @@
 
 [![十台同构机械臂协作组装风扇](docs/assets/fan-isomorphic.gif?v=a4aa7ab143a86222)](https://worldagents-c.github.io/MultiDojo2/assets/fan-isomorphic.mp4?v=8cd024945abab6dc)
 
-<p align="center"><a href="https://worldagents-c.github.io/MultiDojo2/assets/fan-isomorphic.mp4?v=8cd024945abab6dc">▶ 观看十臂装配全流程</a> · <a href="docs/assets/collaboration-overview.mp4?v=6367e5af1178d0d2">观看协作总览</a></p>
+<p align="center"><a href="https://worldagents-c.github.io/MultiDojo2/assets/fan-isomorphic.mp4?v=8cd024945abab6dc">▶ 观看十臂装配全流程</a> · <a href="https://worldagents-c.github.io/MultiDojo2/assets/collaboration-overview.mp4?v=6367e5af1178d0d2">观看协作总览</a></p>
 
 十台相同机械臂共同完成装配工序，在工位间传递工件、配合操作，一步步组装出完整风扇。
 
@@ -184,8 +184,8 @@ python3 -m http.server 8000 --bind 127.0.0.1 --directory docs
 
 ## 2,000+ 条轨迹，汇成协作图景
 
-[![多机器人协作场景持续滚动的视频墙](docs/assets/trajectory-wall.gif?v=41b6699d1b7032fc)](docs/assets/trajectory-wall.mp4)
+[![多机器人协作场景持续滚动的视频墙](docs/assets/trajectory-wall.gif?v=41b6699d1b7032fc)](https://worldagents-c.github.io/MultiDojo2/assets/trajectory-wall.mp4?v=11f488fe7cc4ecfb)
 
-<p align="center"><a href="docs/assets/trajectory-wall.mp4?v=11f488fe7cc4ecfb">▶ 浏览完整场景墙 · 4K · 54 秒</a></p>
+<p align="center"><a href="https://worldagents-c.github.io/MultiDojo2/assets/trajectory-wall.mp4?v=11f488fe7cc4ecfb">▶ 浏览完整场景墙 · 4K · 54 秒</a></p>
 
 从双臂交接到八臂工位：持续滚动的场景墙，展现丰富的多机器人训练轨迹与装配研究展示。

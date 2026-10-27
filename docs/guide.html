@@ -1,0 +1,90 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>MultiDojo² · Research and usage guide</title><link rel="icon" href="assets/favicon.png?v=af48e177111937ee"><link rel="stylesheet" href="repository.css?v=7e3782f20e9a3472"></head><body class="guide-page"><div class="preview-bar"><a href="index.en.html">MultiDojo² · Project website</a><nav class="language-switch" aria-label="Language"><a href="#" lang="en">English</a><a href="#中文说明" lang="zh-CN">简体中文</a></nav></div><main class="guide-layout"><article class="readme"><div class="file-title"><span>Research and usage guide</span><a href="PROJECT.md" download>Markdown ↓</a></div><div class="markdown-body"><h1 id="multidojo²-research-and-usage-guide">MultiDojo² — Research and usage guide</h1>
+<p>The World's First Self-Evolving Leaderboard for Heterogeneous Multi-Robot Collaboration.</p>
+<p><a href="#quick-start">Quick start</a> · <a href="#dataset">Dataset</a> · <a href="#task-ids">Task IDs</a> · <a href="#evaluation">Evaluation</a> · <a href="#rsi">RSI</a> · <a href="#deployment">Deployment</a> · <a href="#faq">FAQ</a> · <a href="#中文说明">中文说明</a></p>
+<p>MultiDojo² studies collaborative manipulation across homogeneous and heterogeneous robot teams. The scored suite covers <strong>20+ task families with 2, 3, 4, or 8 arms</strong>, complemented by research showcases of ten-robot fan assembly and humanoid–manipulator collaboration.</p>
+<p><a href="https://worldagents-c.github.io/MultiDojo2/index.en.html">Project website</a> · <a href="https://github.com/worldAgents-c/MultiDojo2">GitHub repository</a></p>
+<p><strong>Online evaluation is coming soon. <a href="https://huggingface.co/datasets/WorldAgents-c/MultiDojo2">Explore the 2,000+ demonstration collection on Hugging Face</a>, with data released progressively.</strong></p>
+<h2 id="quick-start">Quick start</h2>
+<p>Explore the project locally with <strong>Python 3.10+</strong> and a modern browser:</p>
+<pre><code class="language-sh">python3 scripts/check_release.py
+python3 -m http.server 8000 --bind 127.0.0.1 --directory docs
+</code></pre>
+<p>Open <code>http://localhost:8000/</code>. The checker verifies links, asset hashes, public configuration, task counts, and release contents.</p>
+<p>For the standalone website ZIP, serve the extracted directory instead:</p>
+<pre><code class="language-sh">python3 scripts/check_release.py
+python3 -m http.server 8000 --bind 127.0.0.1
+</code></pre>
+<p>Use HTTP so the browser can load the task catalog and project resources.</p>
+<h2 id="dataset">Dataset</h2>
+<p>The training collection comprises <strong>2,000+ reviewed simulation episodes, with 100 demonstrations per task</strong>. Data is <a href="https://huggingface.co/datasets/WorldAgents-c/MultiDojo2">progressively released on Hugging Face</a>, retaining camera streams, states/actions, calibration, and acceptance metadata. That repository’s <code>tasks.json</code> maps each task to its downloadable episodes.</p>
+<p>Each accepted episode provides:</p>
+<ul>
+<li>Synchronized 640×480 RGB from every arm's wrist/first-person camera and third-person cameras, with the camera list recorded per episode.</li>
+<li>Robot-specific joint states, velocities, absolute joint-position commands, feedforward effort, and next states.</li>
+<li>Joint names, native units, actuator masks, camera intrinsics/poses, instructions, and acceptance metadata.</li>
+<li>An original trajectory, an LMDB-backed observation/action recording, and terminal images for the final transition.</li>
+</ul>
+<p>Use the release's <strong><code>train.jsonl</code></strong> as the authoritative episode index. Its accepted entries identify the reviewed training recordings and preserve their task and episode provenance.</p>
+<h3 id="alignment-and-action-semantics">Alignment and action semantics</h3>
+<p>For transition <code>t</code>, RGB and state describe the world <strong>before</strong> action <code>t</code>; next-state/RGB describe the result at <code>t + 1</code>. The loader supplies terminal observations for the final transition.</p>
+<p>Actions are <strong>absolute native joint-position commands</strong>. Revolute joints use radians and prismatic joints use metres, in the recorded per-robot joint order. Preserve joint dimensions, units, masks, and camera metadata when converting for a WAM or VLA. Apply model-specific normalization and padding explicitly.</p>
+<h3 id="loader-example">Loader example</h3>
+<p>The data release includes <code>loader.py</code>. From its directory, with <code>numpy</code>, <code>scipy</code>, <code>opencv-python</code>, and <code>lmdb</code> installed:</p>
+<pre><code class="language-python">from loader import TrainingDataset
+
+dataset = TrainingDataset(&quot;train.jsonl&quot;)
+try:
+    sample = dataset.step(episode=0, frame=0, action_horizon=8)
+    print(sample[&quot;task&quot;], sample[&quot;timestamp_s&quot;])
+    print(sample[&quot;images&quot;].keys())
+    for name, robot in sample[&quot;robots&quot;].items():
+        print(name, robot[&quot;joint_names&quot;], robot[&quot;joint_units&quot;])
+        print(robot[&quot;state&quot;].shape, robot[&quot;action_chunk&quot;].shape)
+    print(sample[&quot;action_chunk_mask&quot;])
+finally:
+    dataset.close()
+</code></pre>
+<h2 id="task-ids">Task IDs</h2>
+<p>The task registry uses zero-based IDs <strong>00–19</strong> for the current manipulation tasks. <a href="assets/task-catalog.json">task-catalog.json</a> maps each ID to its canonical identifier, English/Chinese names, camera set, counts, and row spans in the training index.</p>
+<p><code>training_index_rows_1_based</code> gives line numbers in the full source index identified by <code>training_index_sha256</code>. Each public training release has its own <code>train.jsonl</code>; use <code>tasks.json</code> and <code>source_training_index_row_1_based</code> in that dataset to map release rows back to the collection. Join recordings by <code>task</code> and <code>episode</code>.</p>
+<p>Trial <code>09-047</code> is the 48th zero-based trial of task 09, homogeneous four-arm ordered color-block stacking. Task 05 (<code>HeterogeneousDualArm/FrankPiperBananaHandover</code>) performs a <strong>long-block</strong> handover from Franka to Piper, followed by placement on the yellow target. Heterogeneous teams combine robot designs with robot-specific joint orders, workspaces, and control semantics.</p>
+<h2 id="evaluation">Evaluation</h2>
+<p>Evaluation tests policies across varied environments and initial states under a common protocol. Each evaluation run records its task set, scene definitions, and trial budget for reproducible comparison.</p>
+<p>Randomization changes permitted object/goal positions and scene appearance while preserving instructions, semantic colors, object identities, manipulation order, workspace feasibility, and physical requirements. Training episodes and exam scenes are separate inputs.</p>
+<pre><code class="language-text">Task success rate = successful trials / evaluated trials
+Overall score = 100 × mean(success rates across evaluated task families)
+</code></pre>
+<p>Task-specific completion and physical checks cover the required grasp/contact, transfer/order, support, destination, and final stability. Forbidden collisions, failures, timeouts, and runtime errors count as failed trials. RSI provides diagnostic feedback alongside these objective scores.</p>
+<p>The evaluation runtime is built on Isaac. Its policy adapter defines observations, action semantics, and execution timing. The online evaluation service is coming soon.</p>
+<p>Official results cover the declared evaluation task set, retain scene and execution evidence, and undergo independent review and organizer verification. Script experts and visual policies are reported in separate tracks.</p>
+<p>For reproducibility, record the suite revision/hash, policy/checkpoint, observation modalities/cameras, training split, action semantics, execution budget, every trial outcome, all per-task success rates, and overall macro-average. Improvement studies use a pre-frozen re-test split separate from diagnosis and training inputs.</p>
+<h2 id="rsi">RSI</h2>
+<p><strong>Replay → diagnosis → targeted scene candidates → physical validation → training → re-evaluation.</strong></p>
+<p>RSI links execution evidence to failure explanations and concrete training objectives. A recommendation specifies the task, participating robots and roles, objects, initial/goal ranges, collaboration order, motion constraints, and acceptance conditions.</p>
+<p>For example, a stacking-stability failure can lead to follow-up scenes that retain the original objects and order while varying placement positions and focusing on release, retreat, and support. Evidence and hypotheses are distinguished so researchers can investigate the relevant operation stage.</p>
+<p>Candidate scenes enter training after native execution and complete data acceptance. Re-evaluation under frozen rules measures the effect of the next training round. See the <a href="rsi.html">RSI interface guide</a> for the user workflow.</p>
+<h2 id="deployment">Deployment</h2>
+<p>The project website supports GitHub Pages and repository subpaths. In <strong>Settings → Pages</strong>, select <strong>GitHub Actions</strong>. The included workflow validates and publishes <code>docs/</code>; pull requests run the same release checks.</p>
+<p>To review changes locally:</p>
+<pre><code class="language-sh">python3 scripts/update_manifest.py
+python3 scripts/check_release.py
+python3 -m http.server 8000 --bind 127.0.0.1 --directory docs
+</code></pre>
+<p>The manifest records file hashes. Review the rendered page and check results before publishing. See <a href="https://github.com/worldAgents-c/MultiDojo2/blob/main/RELEASE.md">RELEASE.md</a> in the GitHub repository for deployment details.</p>
+<h2 id="faq">FAQ</h2>
+<p><strong>Which tasks contribute to the score?</strong> The task families declared by the evaluation protocol and mapped in the task catalog. Fan assembly and humanoid–manipulator videos extend the collaboration showcases.</p>
+<p><strong>How is the exam organized?</strong> Scene variation follows the task instruction and physical criteria. Every run records its evaluated scenes and outcomes; task success rates form the overall macro-average.</p>
+<p><strong>Which data should I use for training?</strong> The synchronized observation/action release and its authoritative <code>train.jsonl</code> index. Website GIFs and MP4s illustrate the collection.</p>
+<p><strong>Where can I download the dataset?</strong> The <strong>2,000+ demonstration collection</strong> is <a href="https://huggingface.co/datasets/WorldAgents-c/MultiDojo2">progressively released on Hugging Face</a>. Follow the dataset repository’s download, verification, and loader instructions.</p>
+<p><strong>What is the license?</strong> The original website code and documentation are <a href="LICENSE">MIT licensed</a>. Scope and attribution are documented in <a href="NOTICE.md">NOTICE.md</a>. Datasets, evaluation runtimes, and third-party assets retain their respective release terms.</p>
+<h2 id="中文说明">中文说明</h2>
+<p><strong>MultiDojo² 面向同构与异构多机器人协作，连接多视角数据、随机化考试与 RSI 反馈。</strong></p>
+<ul>
+<li><strong>20+ 类协作任务</strong>：覆盖双臂、三臂、四臂与八臂组合，包含交接、接力、共同搬运、顺序叠放和多工位并行操作。</li>
+<li><strong>2,000+ 条训练轨迹</strong>：每类 100 条，同步保存每臂第一视角、第三视角、机器人状态与动作；以 <code>train.jsonl</code> 为正式训练索引。</li>
+<li><strong>随机化评测</strong>：围绕环境条件、物体与终点位置及初始状态组织变化，记录场景与执行证据，按统一任务和物理标准评分，各任务等权参与总分。</li>
+<li><strong>RSI 评估</strong>：依据回放与执行证据定位协作问题，将改进方向具体化为物体、起终点范围、机械臂分工及验收条件。场景通过物理与数据验收后进入补强训练，再通过复测检验效果。</li>
+<li><strong>协作研究展示</strong>：同构十机器人、异构机器人，以及人形机器人与机械臂共同装配风扇，展现跨组合、跨形态的协作研究方向。</li>
+</ul>
+<p><strong>线上测评服务即将上线。<a href="https://huggingface.co/datasets/WorldAgents-c/MultiDojo2">2,000+ 条轨迹的数据集正在 Hugging Face 持续开放</a>。</strong></p>
+<p><a href="https://worldagents-c.github.io/MultiDojo2/">浏览项目官网</a> · <a href="https://github.com/worldAgents-c/MultiDojo2">访问 GitHub</a> · <a href="rsi.html">RSI 使用指南</a></p></div></article></main></body></html>

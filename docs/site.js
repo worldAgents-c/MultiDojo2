@@ -71,11 +71,17 @@ function safeURL(value){
   if(u.username||u.password||u.search||u.hash||!(u.protocol==='https:'||(u.protocol==='http:'&&['127.0.0.1','localhost','[::1]'].includes(u.hostname))))throw Error(copy.badLink);
   return u;
 }
-async function json(url){const r=await fetch(url,{cache:'no-store'});if(!r.ok)throw Error(`${copy.fetchError} (${r.status})`);return r.json();}
+async function json(url){
+  const controller=new AbortController();
+  const timer=setTimeout(()=>controller.abort(),10000);
+  try{const r=await fetch(url,{cache:'no-store',signal:controller.signal});if(!r.ok)throw Error(`${copy.fetchError} (${r.status})`);return await r.json();}
+  finally{clearTimeout(timer);}
+}
 function disableLiveLinks(message){document.querySelectorAll('[data-live-path]').forEach(a=>{a.removeAttribute('href');a.setAttribute('aria-disabled','true');a.title=message;});}
 disableLiveLinks(copy.comingSoon);
 async function init(){
-  const config=await json('project-config.json');
+  const embedded=document.getElementById('public-project-config');
+  const config=embedded?JSON.parse(embedded.textContent):await json('project-config.json');
   if(config.brand!=='MultiDojo²'||!['local','static'].includes(config.deployment))throw Error(copy.badConfig);
   const official=safeURL(config.official_site_url),github=safeURL(config.github_url),service=safeURL(config.live_benchmark_url);
   if(official){
@@ -92,6 +98,10 @@ async function init(){
     else{const base=service?(service.href.endsWith('/')?service.href:service.href+'/'):location.href;a.href=new URL(a.dataset.livePath,base).href;a.removeAttribute('aria-disabled');a.removeAttribute('title');}
   }
   if(config.deployment==='static'){const note=document.getElementById('deployment-note');note.hidden=live;note.textContent=live?'':copy.comingSoon;}
+  // The static export includes complete cards, so they also work offline and
+  // when browser extensions block JSON requests. Local previews use live data.
+  const staticCards=config.deployment==='static'&&document.querySelectorAll('#featured-tasks .featured-task').length===6;
+  if(!staticCards){
   const payload=config.deployment==='static'?await json('featured-tasks.json'):await Promise.all([json('/api/catalog'),json('/api/showcase')]).then(([catalog,show])=>({tasks:catalog.tasks.filter(t=>[0,2,5,9,14,15].includes(t.number)).map(t=>({...t,poster:show.previews.find(p=>p.number===t.number)?.poster}))}));
   const englishTitles=new Map(english&&config.deployment==='local'?(await json('assets/task-catalog.json')).tasks.map(t=>[Number(t.id),t.title]):[]);
   const cards=[];
@@ -106,6 +116,7 @@ async function init(){
     title.textContent=name;body.append(label,title);card.append(image,body);cards.push(card);
   }
   document.getElementById('featured-tasks').replaceChildren(...cards);
+  }
   if(!matchMedia('(prefers-reduced-motion: reduce)').matches){video.play().catch(()=>{});}
 }
-init().catch(()=>{disableLiveLinks(copy.retry);document.getElementById('featured-tasks').textContent=copy.taskError;const note=document.getElementById('deployment-note');note.hidden=false;note.classList.add('error');note.textContent=copy.retry;});
+init().catch(()=>{disableLiveLinks(copy.comingSoon);if(!document.querySelector('#featured-tasks .featured-task'))document.getElementById('featured-tasks').textContent=copy.taskError;const note=document.getElementById('deployment-note');note.hidden=false;note.classList.add('error');note.textContent=copy.retry;});

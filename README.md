@@ -16,7 +16,7 @@
 
 [![Ten homogeneous robot arms assemble a fan](docs/assets/fan-isomorphic.gif?v=a4aa7ab143a86222)](https://worldagents-c.github.io/MultiDojo2/assets/fan-isomorphic.mp4?v=8cd024945abab6dc)
 
-<p align="center"><a href="https://worldagents-c.github.io/MultiDojo2/assets/fan-isomorphic.mp4?v=8cd024945abab6dc">▶ Watch the complete ten-arm assembly</a> · <a href="docs/assets/collaboration-overview.mp4?v=6367e5af1178d0d2">Watch the collection overview</a></p>
+<p align="center"><a href="https://worldagents-c.github.io/MultiDojo2/assets/fan-isomorphic.mp4?v=8cd024945abab6dc">▶ Watch the complete ten-arm assembly</a> · <a href="https://worldagents-c.github.io/MultiDojo2/assets/collaboration-overview.mp4?v=6367e5af1178d0d2">Watch the collection overview</a></p>
 
 Ten matching arms share an assembly sequence, transferring a workpiece between stations and coordinating each step toward a completed fan.
 
@@ -173,8 +173,8 @@ Website code and documentation: [MIT License](docs/LICENSE) · [Attribution](doc
 
 ## 2,000+ trajectories in motion
 
-[![A continuously scrolling gallery of collaborative robot scenes](docs/assets/trajectory-wall.gif?v=41b6699d1b7032fc)](docs/assets/trajectory-wall.mp4)
+[![A continuously scrolling gallery of collaborative robot scenes](docs/assets/trajectory-wall.gif?v=41b6699d1b7032fc)](https://worldagents-c.github.io/MultiDojo2/assets/trajectory-wall.mp4?v=11f488fe7cc4ecfb)
 
-<p align="center"><a href="docs/assets/trajectory-wall.mp4?v=11f488fe7cc4ecfb">▶ Explore the full collection · 4K · 54 seconds</a></p>
+<p align="center"><a href="https://worldagents-c.github.io/MultiDojo2/assets/trajectory-wall.mp4?v=11f488fe7cc4ecfb">▶ Explore the full collection · 4K · 54 seconds</a></p>
 
 From dual-arm handovers to eight-arm workstations: a continuously scrolling panorama of collaborative manipulation, accompanied by assembly showcases.

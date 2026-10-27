@@ -117,11 +117,20 @@ def check():
         require(raw.count('aria-current="page"')==1,f'Homepage language selection is ambiguous: {filename}')
         require('https://huggingface.co/datasets/WorldAgents-c/MultiDojo2' in raw and '2,000+' in raw,f'Public dataset link missing: {filename}')
         require('301 complete' not in raw and '301 条' not in raw,f'Obsolete public release count: {filename}')
+        require(raw.count('class="featured-task"')==6,f'Homepage must include six cards without JavaScript: {filename}')
+        embedded=re.search(r'<script id="public-project-config" type="application/json">(.*?)</script>',raw,re.S)
+        require(bool(embedded) and json.loads(embedded[1])==config,f'Embedded public configuration differs: {filename}')
+        require('href="guide.html' in raw,f'Homepage guide must open a readable page: {filename}')
         overview='repository.zh-CN.html' if language=='zh-CN' else 'repository.html'
         require(f'href="{overview}"' in raw,f'Homepage overview language differs: {filename}')
         if language=='en':
             require(not re.search(r'[\u4e00-\u9fff]',raw.replace('简体中文','')), 'English homepage contains untranslated Chinese copy')
     readme=(ROOT/'README.md').read_text()
+    for name,anchors in [('guide.html',('dataset','task-ids','evaluation','rsi','中文说明')),('rsi.html',('rsi','english'))]:
+        path=SITE/name
+        require(path.is_file(),f'Missing readable guide: {name}')
+        if path.is_file():
+            require(set(anchors)<=ids(path),f'Guide navigation anchors missing: {name}')
     require('%%' not in readme,'Unresolved README template token')
     positions=[readme.find(f'assets/fan-{x}.gif') for x in ('isomorphic','heterogeneous','humanoid')]
     require(all(x>=0 for x in positions) and positions==sorted(positions),'Fan showcase order changed')

@@ -1,4 +1,4 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>MultiDojo² · Project overview</title><link rel="icon" href="assets/favicon.png?v=af48e177111937ee"><link rel="stylesheet" href="repository.css?v=a1915d40c78a99e1"></head><body>
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>MultiDojo² · Project overview</title><link rel="icon" href="assets/favicon.png?v=af48e177111937ee"><link rel="stylesheet" href="repository.css?v=7e3782f20e9a3472"></head><body>
 <div class="preview-bar"><nav class="language-switch" aria-label="Language"><strong lang="en">English</strong><a href="repository.zh-CN.html" lang="zh-CN">简体中文</a></nav><span>MultiDojo² · Project overview</span><a href="index.en.html">Project website ↗</a></div>
 <header class="repo-header"><div class="repo-title"><img src="assets/mark.png?v=f698878eef2fb317" alt=""><span>MultiDojo²</span><span class="label">Research benchmark</span></div><nav class="tabs" aria-label="Project navigation"><span class="selected">README</span><a href="#dataset">Dataset</a><a href="#evaluation">Evaluation</a><a href="index.en.html">Project website ↗</a></nav></header>
 <main class="repo-layout"><article class="readme"><div class="file-title"><span>README.md</span><a href="README.md" download>Raw Markdown ↓</a></div><div class="markdown-body"><p align="center"><img src="assets/mark.png?v=f698878eef2fb317" width="64" alt="MultiDojo² logo"></p>
@@ -46,7 +46,7 @@
 </ul>
 <p><strong><a href="https://huggingface.co/datasets/WorldAgents-c/MultiDojo2">Download training data on Hugging Face →</a></strong></p>
 <p>The <strong>2,000+ demonstration collection</strong> is being progressively released on Hugging Face, with synchronized first-person and third-person views, native states/actions, and acceptance metadata. Download and loading instructions are provided in the dataset repository.</p>
-<p><a href="PROJECT.md#dataset">Data format &amp; loader example →</a> · <a href="assets/task-catalog.json">Machine-readable task catalog →</a></p>
+<p><a href="guide.html#dataset">Data format &amp; loader example →</a> · <a href="assets/task-catalog.json">Machine-readable task catalog →</a></p>
 <p><br></p>
 <h2 id="collaboration-across-embodiments">Collaboration across embodiments</h2>
 <h3 id="heterogeneous-robot-teams">Heterogeneous robot teams</h3>
@@ -223,7 +223,7 @@
 19  HeterogeneousQuadArm/WhiteCupZoneRelay</pre>
 </details>
 
-<p>The <a href="assets/task-catalog.json">task catalog</a> connects IDs <strong>00–19</strong> with task names, camera sets, and episode ranges in the training index. <a href="PROJECT.md#task-ids">Task and identifier guide →</a></p>
+<p>The <a href="assets/task-catalog.json">task catalog</a> connects IDs <strong>00–19</strong> with task names, camera sets, and episode ranges in the training index. <a href="guide.html#task-ids">Task and identifier guide →</a></p>
 <h2 id="evaluation">Evaluation</h2>
 <p><strong>Test collaboration under controlled scene variation.</strong> Evaluation varies object and goal positions, permitted appearance, and initial states while preserving task instructions and physical requirements.</p>
 <pre><code class="language-text">Task success rate = successful trials / evaluated trials
@@ -231,19 +231,19 @@ Overall score = 100 × mean(task success rate across evaluated task families)
 </code></pre>
 <p>Success combines task completion with the required grasp, transfer order, support, destination, stability, and collision constraints. Equal weighting across task families makes results easy to compare, while recorded execution evidence supports reproducibility and review.</p>
 <p><strong>Online evaluation is coming soon.</strong></p>
-<p><a href="PROJECT.md#evaluation">Evaluation protocol &amp; policy integration →</a></p>
+<p><a href="guide.html#evaluation">Evaluation protocol &amp; policy integration →</a></p>
 <h2 id="rsi">RSI</h2>
 <p><strong>Turn replay evidence into a focused training objective.</strong> RSI connects execution records with failure explanations and concrete follow-up tasks, helping researchers decide what a policy should practise next.</p>
 <p><a href="assets/rsi-workflow.png?v=8e7efacfb69f1ebc"><img alt="RSI workflow: replay, diagnosis, task specification, physical validation, training, and re-evaluation" src="assets/rsi-workflow.png?v=8e7efacfb69f1ebc" /></a></p>
 <p>A training recommendation specifies the participating robots, object, initial and goal ranges, collaboration order, motion constraints, and success conditions. Candidate scenes pass native physical validation before entering training; re-evaluation measures the effect of the next training round.</p>
-<p>Use the <a href="PROJECT.md#rsi">RSI workflow guide</a> to connect scene recommendations to your training pipeline. <a href="RSI-USER.zh.md">RSI interface guide / 中文 →</a></p>
+<p>Use the <a href="guide.html#rsi">RSI workflow guide</a> to connect scene recommendations to your training pipeline. <a href="rsi.html">RSI interface guide / 中文 →</a></p>
 <h2 id="quick-start">Quick start</h2>
 <p>Preview the project with <strong>Python 3.10+</strong>:</p>
 <pre><code class="language-sh">python3 scripts/check_release.py
 python3 -m http.server 8000 --bind 127.0.0.1 --directory .
 </code></pre>
 <p>Open <a href="http://localhost:8000/">localhost:8000</a>, then explore the dataset, task catalog, and evaluation guide.</p>
-<p><a href="PROJECT.md">Research &amp; usage guide</a> · <a href="PROJECT.md#deployment">Deployment guide</a></p>
+<p><a href="guide.html">Research &amp; usage guide</a> · <a href="guide.html#deployment">Deployment guide</a></p>
 <p>For questions or contributions, include the task ID, episode or trial ID, and the steps needed to reproduce the issue.</p>
 <p>Website code and documentation: <a href="LICENSE">MIT License</a> · <a href="NOTICE.md">Attribution</a>.</p>
 <p><br></p>
